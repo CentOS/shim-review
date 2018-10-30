@@ -1,16 +1,16 @@
 Name:           shim
-Version:        12
-Release:        2%{?dist}
+Version:        15
+Release:        1%{?dist}
 Summary:        First-stage UEFI bootloader
 
 License:        BSD
 URL:            http://www.codon.org.uk/~mjg59/shim/
-Source0:	https://github.com/mjg59/shim/releases/download/%{version}/shim-%{version}.tar.bz2
-#Source1:	centos.crt
+Source0:        https://github.com/mjg59/shim/releases/download/%{version}/shim-%{version}.tar.bz2
+#Source1:        centos.crt
 # currently here's what's in our dbx: # nothing.
-#Source2:	dbx-x64.esl
-#Source3:	dbx-aa64.esl
-Source4:	shim-find-debuginfo.sh
+#Source2:       dbx-x64.esl
+#Source3:       dbx-aa64.esl
+Source4:        shim-find-debuginfo.sh
 Source5:	centos.esl
 
 Patch0:		0001-Add-vendor-esl.patch
@@ -125,24 +125,26 @@ COMMITID=$(cat %{name}-%{version}-%{efiarch}/commit)
 MAKEFLAGS="RELEASE=%{release} ENABLE_HTTPBOOT=true COMMITID=${COMMITID}"
 %ifarch aarch64
 if [ -f "%{SOURCE1}" ]; then
-	MAKEFLAGS="$MAKEFLAGS VENDOR_CERT_FILE=%{SOURCE1}"
+        MAKEFLAGS="$MAKEFLAGS VENDOR_CERT_FILE=%{SOURCE1}"
 fi
 if [ -f "%{SOURCE3}" ]; then
-	MAKEFLAGS="$MAKEFLAGS VENDOR_DBX_FILE=%{SOURCE3}"
+        MAKEFLAGS="$MAKEFLAGS VENDOR_DBX_FILE=%{SOURCE3}"
 fi
 if [ -f "%{SOURCE5}" ]; then
 	MAKEFLAGS="$MAKEFLAGS VENDOR_ESL_FILE=%{SOURCE5}"
 fi
+
 %else
 if [ -f "%{SOURCE1}" ]; then
-	MAKEFLAGS="$MAKEFLAGS VENDOR_CERT_FILE=%{SOURCE1}"
+        MAKEFLAGS="$MAKEFLAGS VENDOR_CERT_FILE=%{SOURCE1}"
 fi
 if [ -f "%{SOURCE2}" ]; then
-	MAKEFLAGS="$MAKEFLAGS VENDOR_DBX_FILE=%{SOURCE2}"
+        MAKEFLAGS="$MAKEFLAGS VENDOR_DBX_FILE=%{SOURCE2}"
 fi
 if [ -f "%{SOURCE5}" ]; then
 	MAKEFLAGS="$MAKEFLAGS VENDOR_ESL_FILE=%{SOURCE5}"
 fi
+
 %endif
 cd %{name}-%{version}-%{efiarch}
 make 'DEFAULT_LOADER=\\\\grub%{efiarch}.efi' ${MAKEFLAGS} shim%{efiarch}.efi mm%{efiarch}.efi fb%{efiarch}.efi
@@ -159,8 +161,8 @@ pesign -h -P -i shim%{efiarch}.efi -h > shim%{efiarch}.hash
 install -D -d -m 0755 $RPM_BUILD_ROOT%{_datadir}/shim/%{efiarch}-%{version}-%{release}/
 install -m 0644 shim%{efiarch}.hash $RPM_BUILD_ROOT%{_datadir}/shim/%{efiarch}-%{version}-%{release}/shim%{efiarch}.hash
 for x in shim%{efiarch} mm%{efiarch} fb%{efiarch} ; do
-	install -m 0644 $x.efi $RPM_BUILD_ROOT%{_datadir}/shim/%{efiarch}-%{version}-%{release}/
-	install -m 0644 $x.so $RPM_BUILD_ROOT%{_datadir}/shim/%{efiarch}-%{version}-%{release}/
+        install -m 0644 $x.efi $RPM_BUILD_ROOT%{_datadir}/shim/%{efiarch}-%{version}-%{release}/
+        install -m 0644 $x.so $RPM_BUILD_ROOT%{_datadir}/shim/%{efiarch}-%{version}-%{release}/
 done
 
 %ifarch x86_64
@@ -169,40 +171,40 @@ pesign -h -P -i shimia32.efi -h > shimia32.hash
 install -D -d -m 0755 $RPM_BUILD_ROOT%{_datadir}/shim/ia32-%{version}-%{release}/
 install -m 0644 shimia32.hash $RPM_BUILD_ROOT%{_datadir}/shim/ia32-%{version}-%{release}/shimia32.hash
 for x in shimia32 mmia32 fbia32 ; do
-	install -m 0644 $x.efi $RPM_BUILD_ROOT%{_datadir}/shim/ia32-%{version}-%{release}/
-	install -m 0644 $x.so $RPM_BUILD_ROOT%{_datadir}/shim/ia32-%{version}-%{release}/
+        install -m 0644 $x.efi $RPM_BUILD_ROOT%{_datadir}/shim/ia32-%{version}-%{release}/
+        install -m 0644 $x.so $RPM_BUILD_ROOT%{_datadir}/shim/ia32-%{version}-%{release}/
 done
 cd ../%{name}-%{version}-%{efiarch}
 %endif
 
 %ifarch x86_64
-%global __debug_install_post						\
-	bash %{SOURCE4}							\\\
-		%{?_missing_build_ids_terminate_build:--strict-build-id}\\\
-		%{?_find_debuginfo_opts} 				\\\
-		"%{_builddir}/%{?buildsubdir}/%{name}-%{version}-%{efiarch}" \
-	rm -f $RPM_BUILD_ROOT%{_datadir}/shim/%{efiarch}-%{version}-%{release}/*.so \
-	mv debugfiles.list ../debugfiles-%{efiarch}.list		\
-	cd ..								\
-	cd %{name}-%{version}-ia32					\
-	bash %{SOURCE4}							\\\
-		%{?_missing_build_ids_terminate_build:--strict-build-id}\\\
-		%{?_find_debuginfo_opts}				\\\
-		"%{_builddir}/%{?buildsubdir}/%{name}-%{version}-ia32"	\
-	rm -f $RPM_BUILD_ROOT%{_datadir}/shim/ia32-%{version}-%{release}/*.so \
-	mv debugfiles.list ../debugfiles-ia32.list			\
-	cd ..								\
-	%{nil}
+%global __debug_install_post                                            \
+        bash %{SOURCE4}                                                 \\\
+                %{?_missing_build_ids_terminate_build:--strict-build-id}\\\
+                %{?_find_debuginfo_opts}                                \\\
+                "%{_builddir}/%{?buildsubdir}/%{name}-%{version}-%{efiarch}" \
+        rm -f $RPM_BUILD_ROOT%{_datadir}/shim/%{efiarch}-%{version}-%{release}/*.so \
+        mv debugfiles.list ../debugfiles-%{efiarch}.list                \
+        cd ..                                                           \
+        cd %{name}-%{version}-ia32                                      \
+        bash %{SOURCE4}                                                 \\\
+                %{?_missing_build_ids_terminate_build:--strict-build-id}\\\
+                %{?_find_debuginfo_opts}                                \\\
+                "%{_builddir}/%{?buildsubdir}/%{name}-%{version}-ia32"  \
+        rm -f $RPM_BUILD_ROOT%{_datadir}/shim/ia32-%{version}-%{release}/*.so \
+        mv debugfiles.list ../debugfiles-ia32.list                      \
+        cd ..                                                           \
+        %{nil}
 %else
-%global __debug_install_post						\
-	bash %{SOURCE4}							\\\
-		%{?_missing_build_ids_terminate_build:--strict-build-id}\\\
-		%{?_find_debuginfo_opts}				\\\
-		"%{_builddir}/%{?buildsubdir}/%{name}-%{version}-%{efiarch}" \
-	rm -f $RPM_BUILD_ROOT%{_datadir}/shim/%{efiarch}-%{version}-%{release}/*.so \
-	mv debugfiles.list ../debugfiles-%{efiarch}.list		\
-	cd ..								\
-	%{nil}
+%global __debug_install_post                                            \
+        bash %{SOURCE4}                                                 \\\
+                %{?_missing_build_ids_terminate_build:--strict-build-id}\\\
+                %{?_find_debuginfo_opts}                                \\\
+                "%{_builddir}/%{?buildsubdir}/%{name}-%{version}-%{efiarch}" \
+        rm -f $RPM_BUILD_ROOT%{_datadir}/shim/%{efiarch}-%{version}-%{release}/*.so \
+        mv debugfiles.list ../debugfiles-%{efiarch}.list                \
+        cd ..                                                           \
+        %{nil}
 %endif
 
 %files -n shim-unsigned-%{efiarch}
@@ -226,12 +228,13 @@ cd ../%{name}-%{version}-%{efiarch}
 %endif
 
 %changelog
-* Mon Jul 23 2018 Fabian Arrotin <arrfab@centos.org> - 12-2.el7.centos
+* Tue Oct 30 2018 Fabian Arrotin <arrfab@centos.org> - 15-1.el7.centos
 - Added 0001-Add-vendor-esl.patch (Patrick Uiterwijk)
 - Rebuilt with combined centos.esl (so new and previous crt) 
 
-* Tue Aug 08 2017 Karanbir Singh <kbsingh@centos.org> - 12.1.el7.centos
-- Rebuild with CentOS cert
+* Mon Jun 18 2018 Peter Jones <pjones@redhat.com> - 15-1
+- Update to shim 15
+  Resolves: rhbz#1589961
 
 * Thu Apr 27 2017 Peter Jones <pjones@redhat.com> - 12-1
 - Update to 12-1 to work around a signtool.exe bug

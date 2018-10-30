@@ -1,0 +1,7 @@
+[centos-7.6.1810-shim-build-deps]
+name=centos-7.6.1810-shim-build-deps
+baseurl=https://people.centos.org/arrfab/shim/build_repos/7.6.1810/
+enabled=1
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+

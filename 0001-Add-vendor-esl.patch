@@ -1,20 +1,22 @@
-From bc1e30ee1e7940e0e70eab9afd55b6e355ef9899 Mon Sep 17 00:00:00 2001
+From ad8b20e8e2cd71418a536a8068f8e37222bd3855 Mon Sep 17 00:00:00 2001
 From: Patrick Uiterwijk <patrick@puiterwijk.org>
-Date: Sat, 21 Jul 2018 03:27:26 +0200
-Subject: [PATCH] Add vendor_esl
+Date: Sat, 21 Jul 2018 04:12:57 +0200
+Subject: [PATCH] Implement vendor EFI Signature List (ESL)
 
 Signed-off-by: Patrick Uiterwijk <patrick@puiterwijk.org>
 ---
- Makefile |  3 +++
- cert.S   | 30 ++++++++++++++++++++++++++++++
- shim.c   | 36 +++++++++++++++++++++++++++++++++++-
- 3 files changed, 68 insertions(+), 1 deletion(-)
+ Make.defaults |   3 ++
+ cert.S        |  30 +++++++++++++++
+ mok.c         | 100 +++++++++++++++++++++++++++++---------------------
+ shim.c        |  25 +++++++++++++
+ shim.h        |   2 +
+ 5 files changed, 119 insertions(+), 41 deletions(-)
 
-diff --git a/Makefile b/Makefile
-index 6ece282..78688e0 100644
---- a/Makefile
-+++ b/Makefile
-@@ -82,6 +82,9 @@ endif
+diff --git a/Make.defaults b/Make.defaults
+index bbfc1d7f..d8b4ba25 100644
+--- a/Make.defaults
++++ b/Make.defaults
+@@ -124,6 +124,9 @@ CFLAGS += "-DEFI_ARCH=L\"$(ARCH_SUFFIX)\"" "-DDEBUGDIR=L\"/usr/lib/debug/usr/sha
  ifneq ($(origin VENDOR_CERT_FILE), undefined)
  	CFLAGS += -DVENDOR_CERT_FILE=\"$(VENDOR_CERT_FILE)\"
  endif
@@ -25,7 +27,7 @@ index 6ece282..78688e0 100644
  	CFLAGS += -DVENDOR_DBX_FILE=\"$(VENDOR_DBX_FILE)\"
  endif
 diff --git a/cert.S b/cert.S
-index cfc4525..7ad782a 100644
+index cfc4525b..7ad782ab 100644
 --- a/cert.S
 +++ b/cert.S
 @@ -8,12 +8,18 @@ cert_table:
@@ -78,11 +80,172 @@ index cfc4525..7ad782a 100644
  #if defined(VENDOR_DBX_FILE)
  	.data
  	.align	1
+diff --git a/mok.c b/mok.c
+index 38675211..7734806b 100644
+--- a/mok.c
++++ b/mok.c
+@@ -62,12 +62,6 @@ struct mok_state_variable {
+ 	EFI_GUID *guid;
+ 	UINT8 *data;
+ 	UINTN data_size;
+-	/*
+-	 * These two are indirect pointers just to make initialization
+-	 * saner...
+-	 */
+-	UINT8 **addend_source;
+-	UINT32 *addend_size;
+ 	UINT32 yes_attr;
+ 	UINT32 no_attr;
+ 	UINT32 flags;
+@@ -75,10 +69,11 @@ struct mok_state_variable {
+ 	UINT8 *state;
+ };
+ 
+-#define MOK_MIRROR_KEYDB	0x01
+-#define MOK_MIRROR_DELETE_FIRST	0x02
+-#define MOK_VARIABLE_MEASURE	0x04
+-#define MOK_VARIABLE_LOG	0x08
++#define MOK_MIRROR_KEYDB		0x01
++#define MOK_MIRROR_DELETE_FIRST		0x02
++#define MOK_VARIABLE_MEASURE		0x04
++#define MOK_VARIABLE_LOG		0x08
++#define MOK_VARIABLE_APPEND_CERT	0x10
+ 
+ struct mok_state_variable mok_state_variables[] = {
+ 	{.name = L"MokList",
+@@ -88,10 +83,9 @@ struct mok_state_variable mok_state_variables[] = {
+ 	 .yes_attr = EFI_VARIABLE_BOOTSERVICE_ACCESS |
+ 		     EFI_VARIABLE_NON_VOLATILE,
+ 	 .no_attr = EFI_VARIABLE_RUNTIME_ACCESS,
+-	 .addend_source = &vendor_cert,
+-	 .addend_size = &vendor_cert_size,
+ 	 .flags = MOK_MIRROR_KEYDB |
+-		  MOK_VARIABLE_LOG,
++		  MOK_VARIABLE_LOG |
++		  MOK_VARIABLE_APPEND_CERT,
+ 	 .pcr = 14,
+ 	},
+ 	{.name = L"MokListX",
+@@ -138,40 +132,54 @@ static EFI_STATUS mirror_one_mok_variable(struct mok_state_variable *v)
+ 	uint8_t *p = NULL;
+ 
+ 	if ((v->flags & MOK_MIRROR_KEYDB) &&
+-	    v->addend_source && *v->addend_source &&
+-	    v->addend_size && *v->addend_size) {
+-		EFI_SIGNATURE_LIST *CertList = NULL;
+-		EFI_SIGNATURE_DATA *CertData = NULL;
+-		FullDataSize = v->data_size
+-			     + sizeof (*CertList)
+-			     + sizeof (EFI_GUID)
+-			     + *v->addend_size;
++	    (v->flags & MOK_VARIABLE_APPEND_CERT)) {
++		FullDataSize = v->data_size;
++
++		if (vendor_esl_size) {
++			FullDataSize += vendor_esl_size;
++		}
++		if (vendor_cert_size) {
++			FullDataSize += sizeof (EFI_SIGNATURE_LIST)
++				     + sizeof (EFI_GUID)
++			             + vendor_cert_size;
++		}
++
+ 		FullData = AllocatePool(FullDataSize);
+ 		if (!FullData) {
+ 			perror(L"Failed to allocate space for MokListRT\n");
+ 			return EFI_OUT_OF_RESOURCES;
+ 		}
+ 		p = FullData;
+-
+ 		if (!EFI_ERROR(efi_status) && v->data_size > 0) {
+ 			CopyMem(p, v->data, v->data_size);
+ 			p += v->data_size;
+ 		}
+-		CertList = (EFI_SIGNATURE_LIST *)p;
+-		p += sizeof (*CertList);
+-		CertData = (EFI_SIGNATURE_DATA *)p;
+-		p += sizeof (EFI_GUID);
+-
+-		CertList->SignatureType = EFI_CERT_TYPE_X509_GUID;
+-		CertList->SignatureListSize = *v->addend_size
+-					      + sizeof (*CertList)
+-					      + sizeof (*CertData)
+-					      -1;
+-		CertList->SignatureHeaderSize = 0;
+-		CertList->SignatureSize = *v->addend_size + sizeof (EFI_GUID);
+-
+-		CertData->SignatureOwner = SHIM_LOCK_GUID;
+-		CopyMem(p, *v->addend_source, *v->addend_size);
++
++		if (vendor_esl_size) {
++			CopyMem(p, vendor_esl, vendor_esl_size);
++			p += vendor_esl_size;
++		}
++
++		if (vendor_cert_size) {
++			EFI_SIGNATURE_LIST *CertList = NULL;
++			EFI_SIGNATURE_DATA *CertData = NULL;
++
++			CertList = (EFI_SIGNATURE_LIST *)p;
++			p += sizeof (*CertList);
++			CertData = (EFI_SIGNATURE_DATA *)p;
++			p += sizeof (EFI_GUID);
++
++			CertList->SignatureType = EFI_CERT_TYPE_X509_GUID;
++			CertList->SignatureListSize = vendor_cert_size
++						      + sizeof (*CertList)
++						      + sizeof (*CertData)
++						      -1;
++			CertList->SignatureHeaderSize = 0;
++			CertList->SignatureSize = vendor_cert_size + sizeof (EFI_GUID);
++
++			CertData->SignatureOwner = SHIM_LOCK_GUID;
++			CopyMem(p, vendor_cert, vendor_cert_size);
++		}
+ 
+ 		if (v->data && v->data_size)
+ 			FreePool(v->data);
+@@ -223,11 +231,24 @@ EFI_STATUS import_mok_state(EFI_HANDLE image_handle)
+ 		UINT32 attrs = 0;
+ 		BOOLEAN delete = FALSE, present, addend;
+ 
++		addend = (v->flags & MOK_VARIABLE_APPEND_CERT) != 0;
++
+ 		efi_status = get_variable_attr(v->name,
+ 					       &v->data, &v->data_size,
+ 					       *v->guid, &attrs);
+-		if (efi_status == EFI_NOT_FOUND)
++		if (efi_status == EFI_NOT_FOUND) {
++			if (v->rtname && addend) {
++				efi_status = mirror_one_mok_variable(v);
++				if (EFI_ERROR(efi_status) &&
++				    ret != EFI_SECURITY_VIOLATION)
++					ret = efi_status;
++			}
++			/*
++			 * after possibly adding, we can continue, no
++			 * further checks to be done.
++			 */
+ 			continue;
++		}
+ 		if (EFI_ERROR(efi_status)) {
+ 			perror(L"Could not verify %s: %r\n", v->name,
+ 			       efi_status);
+@@ -272,9 +293,6 @@ EFI_STATUS import_mok_state(EFI_HANDLE image_handle)
+ 		}
+ 
+ 		present = (v->data && v->data_size) ? TRUE : FALSE;
+-		addend = (v->addend_source && v->addend_size &&
+-			  *v->addend_source && *v->addend_size)
+-			? TRUE : FALSE;
+ 
+ 		if (v->flags & MOK_VARIABLE_MEASURE && present) {
+ 			/*
 diff --git a/shim.c b/shim.c
-index f8a1e67..d99134f 100644
+index 05fc6500..64b79da5 100644
 --- a/shim.c
 +++ b/shim.c
-@@ -84,14 +84,18 @@ EFI_GUID SHIM_LOCK_GUID = { 0x605dab50, 0xe046, 0x4300, {0xab, 0xb6, 0x3d, 0xd8,
+@@ -66,14 +66,18 @@ static UINT32 load_options_size;
   */
  extern struct {
  	UINT32 vendor_cert_size;
@@ -101,58 +264,33 @@ index f8a1e67..d99134f 100644
  UINT8 *vendor_dbx;
  
  /*
-@@ -1029,6 +1033,18 @@ static EFI_STATUS verify_buffer (char *data, int datasize,
- 			return status;
+@@ -1065,6 +1069,25 @@ static EFI_STATUS verify_buffer (char *data, int datasize,
  		}
+ #endif /* defined(ENABLE_SHIM_CERT) */
  
 +		/*
-+		 * Check if there's a vendor ESL built-in
++		 * Check against a built-in EFI Signature List (ESL)
 +		 */
 +		if (vendor_esl_size &&
-+			check_db_cert_in_ram((EFI_SIGNATURE_LIST*)vendor_esl,
-+					     vendor_esl_size,
-+					     cert,
-+					     sha256hash) == DATA_FOUND) {
-+			status = EFI_SUCCESS;
-+			return status;
++		    check_db_cert_in_ram((EFI_SIGNATURE_LIST*)vendor_esl,
++					 vendor_esl_size,
++					 cert,
++					 sha256hash,
++					 L"Shim",
++					 SHIM_LOCK_GUID) == DATA_FOUND) {
++			update_verification_method(VERIFIED_BY_CERT);
++			// tpm_measurement is done by check_db_cert_in_ram
++			efi_status = EFI_SUCCESS;
++			drain_openssl_errors();
++			return efi_status;
++		} else {
++			LogError(L"check_db_cert_in_ram(vendor_esl) failed\n");
 +		}
 +
  		/*
  		 * And finally, check against shim's built-in key
  		 */
-@@ -1973,6 +1989,22 @@ EFI_STATUS mirror_mok_list()
- 
- 		CertData->SignatureOwner = SHIM_LOCK_GUID;
- 		CopyMem(p, vendor_cert, vendor_cert_size);
-+	} else if (vendor_esl_size) {
-+		FullDataSize = DataSize
-+			     + vendor_esl_size
-+			     ;
-+		FullData = AllocatePool(FullDataSize);
-+		if (!FullData) {
-+			perror(L"Failed to allocate space for MokListRT\n");
-+			return EFI_OUT_OF_RESOURCES;
-+		}
-+		p = FullData;
-+
-+		if (efi_status == EFI_SUCCESS && DataSize > 0) {
-+			CopyMem(p, Data, DataSize);
-+			p += DataSize;
-+		}
-+		CopyMem(p, vendor_esl, vendor_esl_size);
- 	} else {
- 		FullDataSize = DataSize;
- 		FullData = Data;
-@@ -2606,7 +2638,7 @@ shim_init(void)
- 	set_second_stage (global_image_handle);
- 
- 	if (secure_mode()) {
--		if (vendor_cert_size || vendor_dbx_size) {
-+		if (vendor_cert_size || vendor_esl_size || vendor_dbx_size) {
- 			/*
- 			 * If shim includes its own certificates then ensure
- 			 * that anything it boots has performed some
-@@ -2706,8 +2738,10 @@ efi_main (EFI_HANDLE passed_image_handle, EFI_SYSTEM_TABLE *passed_systab)
+@@ -2541,8 +2564,10 @@ efi_main (EFI_HANDLE passed_image_handle, EFI_SYSTEM_TABLE *passed_systab)
  	verification_method = VERIFIED_BY_NOTHING;
  
  	vendor_cert_size = cert_table.vendor_cert_size;
@@ -161,8 +299,20 @@ index f8a1e67..d99134f 100644
  	vendor_cert = (UINT8 *)&cert_table + cert_table.vendor_cert_offset;
 +	vendor_esl = (UINT8 *)&cert_table + cert_table.vendor_esl_offset;
  	vendor_dbx = (UINT8 *)&cert_table + cert_table.vendor_dbx_offset;
+ 	CHAR16 *msgs[] = {
+ 		L"import_mok_state() failed\n",
+diff --git a/shim.h b/shim.h
+index 2b359d82..2e411040 100644
+--- a/shim.h
++++ b/shim.h
+@@ -167,8 +167,10 @@ extern EFI_STATUS start_image(EFI_HANDLE image_handle, CHAR16 *ImagePath);
+ extern EFI_STATUS import_mok_state(EFI_HANDLE image_handle);
  
- 	/*
--- 
-2.18.0
-
+ extern UINT32 vendor_cert_size;
++extern UINT32 vendor_esl_size;
+ extern UINT32 vendor_dbx_size;
+ extern UINT8 *vendor_cert;
++extern UINT8 *vendor_esl;
+ extern UINT8 *vendor_dbx;
+ 
+ extern UINT8 user_insecure_mode;
