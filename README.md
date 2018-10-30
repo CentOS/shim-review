@@ -6,7 +6,7 @@ Red Hat, Inc.
 -------------------------------------------------------------------------------
 What product or service is this for:
 -------------------------------------------------------------------------------
-CentOS Linux 7.5.1804
+CentOS Linux 7.6.1810
 
 -------------------------------------------------------------------------------
 What's the justification that this really does need to be signed for the whole world to be able to boot it:
@@ -37,7 +37,7 @@ https://github.com/rhboot/shim/tree/12
 -------------------------------------------------------------------------------
 URL for a repo that contains the exact code which was built to get this binary:
 -------------------------------------------------------------------------------
-https://github.com/rhboot/shim/tree/12
+https://github.com/rhboot/shim/tree/15
 
 -------------------------------------------------------------------------------
 What patches are being applied and why:
@@ -49,19 +49,19 @@ It's so an "interim" build as we have to "rekey" and so have newer built shim si
 What OS and toolchain must we use to reproduce this build?  Include where to find it, etc.  We're going to try to reproduce your build as close as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
 -------------------------------------------------------------------------------
 It can be built on the centos 7.5 docker image, plus the yum repo at
-https://people.centos.org/arrfab/shim/build_repos/7.5.1804/ .  For your
+https://people.centos.org/arrfab/shim/build_repos/7.6.1810/ .  For your
 convenience, a Dockerfile has been supplied at
-https://github.com/centos/shim-review/blob/7.5.1804/Dockerfile that can be
+https://github.com/centos/shim-review/blob/7.6.1810/Dockerfile that can be
 used to reproduce the entire build using the release tarball from github.  Use
 it like this:
 
-`sudo docker build -f Dockerfile -t centos-7.5.1804-shim-review .`
+`sudo docker build -f Dockerfile -t centos-7.6.1810-shim-review .`
 
 -------------------------------------------------------------------------------
 Which files in this repo are the logs for your build?   This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 -------------------------------------------------------------------------------
-https://github.com/centos/shim-review/blob/7.5.1804/root.log
-https://github.com/centos/shim-review/blob/7.5.1804/build.log
+https://github.com/centos/shim-review/blob/7.6.1810/root.log
+https://github.com/centos/shim-review/blob/7.6.1810/build.log
 
 -------------------------------------------------------------------------------
 Put info about what bootloader you're using, including which patches it includes to enforce Secure Boot here:
