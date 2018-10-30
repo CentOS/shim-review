@@ -19,7 +19,7 @@ Who is the primary contact for security updates, etc.
 - Name: Fabian Arrotin
 - Position: System Administrator
 - Email address: arrfab@redhat.com
-- PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the linux community: https://github.com/centos/shim-review/blob/7.5.1804/arrfab.pub
+- PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the linux community: https://github.com/centos/shim-review/blob/7.6.1810/arrfab.pub
 
 -------------------------------------------------------------------------------
 Who is the secondary contact for security updates, etc.
@@ -27,12 +27,12 @@ Who is the secondary contact for security updates, etc.
 - Name: Jim Perrin
 - Position: Manager
 - Email address: jperrin@redhat.com
-- PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the linux community: https://github.com/centos/shim-review/blob/7.5.1804/jperrin.pub
+- PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the linux community: https://github.com/centos/shim-review/blob/7.6.1810/jperrin.pub
 
 -------------------------------------------------------------------------------
 What upstream shim tag is this starting from:
 -------------------------------------------------------------------------------
-https://github.com/rhboot/shim/tree/12
+https://github.com/rhboot/shim/tree/15
 
 -------------------------------------------------------------------------------
 URL for a repo that contains the exact code which was built to get this binary:
