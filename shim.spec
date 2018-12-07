@@ -1,6 +1,6 @@
 Name:           shim
 Version:        15
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        First-stage UEFI bootloader
 
 License:        BSD
@@ -14,6 +14,7 @@ Source4:        shim-find-debuginfo.sh
 Source5:	centos.esl
 
 Patch0:		0001-Add-vendor-esl.patch
+Patch1:		0002-MokListRT-Fatal.patch
 
 BuildRequires: git openssl-devel openssl
 BuildRequires: pesign >= 0.106-1
@@ -228,6 +229,9 @@ cd ../%{name}-%{version}-%{efiarch}
 %endif
 
 %changelog
+* Thu Dec 06 2018 Fabian Arrotin <arrfab@centos.org> - 15-2.el7.centos
+-  0002-MokListRT-Fatal.patch (https://github.com/rhboot/shim/pull/157) (#15522)
+
 * Tue Oct 30 2018 Fabian Arrotin <arrfab@centos.org> - 15-1.el7.centos
 - Added 0001-Add-vendor-esl.patch (Patrick Uiterwijk)
 - Rebuilt with combined centos.esl (so new and previous crt) 

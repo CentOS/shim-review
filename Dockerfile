@@ -9,8 +9,9 @@ RUN yum-builddep -y /build/builddir/SPECS/shim.spec
 COPY rpmmacros /root/.rpmmacros
 COPY centos.esl /build/builddir/SOURCES/
 COPY 0001-Add-vendor-esl.patch /build/builddir/SOURCES/
+COPY 0002-MokListRT-Fatal.patch /build/builddir/SOURCES/
 COPY shim-find-debuginfo.sh /build/builddir/SOURCES/shim-find-debuginfo.sh
 WORKDIR /build
 RUN wget https://github.com/rhboot/shim/releases/download/15/shim-15.tar.bz2 -O /build/builddir/SOURCES/shim-15.tar.bz2
 RUN rpmbuild -ba --define 'dist .el7.centos' /build/builddir/SPECS/shim.spec --noclean
-RUN sha256sum /build/builddir/BUILDROOT/shim-15-1.el7.centos.x86_64/usr/share/shim/*-15-1.el7.centos/shim*.efi
+RUN sha256sum /build/builddir/BUILDROOT/shim-15-2.el7.centos.x86_64/usr/share/shim/*-15-2.el7.centos/shim*.efi
