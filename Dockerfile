@@ -15,3 +15,11 @@ WORKDIR /build
 RUN wget https://github.com/rhboot/shim/releases/download/15/shim-15.tar.bz2 -O /build/builddir/SOURCES/shim-15.tar.bz2
 RUN rpmbuild -ba --define 'dist .el7.centos' /build/builddir/SPECS/shim.spec --noclean
 RUN sha256sum /build/builddir/BUILDROOT/shim-15-2.el7.centos.x86_64/usr/share/shim/*-15-2.el7.centos/shim*.efi
+
+COPY shimx64.efi /
+RUN hexdump -Cv /build/builddir/BUILDROOT/shim-15-2.el7.centos.x86_64/usr/share/shim/x64-15-2.el7.centos/shimx64.efi > /built.hex
+RUN hexdump -Cv /shimx64.efi > /orig.hex
+RUN diff -u /orig.hex /built.hex || true
+RUN objdump -x /shimx64.efi | head -n 60
+RUN objdump -x /build/builddir/BUILDROOT/shim-15-2.el7.centos.x86_64/usr/share/shim/x64-15-2.el7.centos/shimx64.efi | head -n 60
+
