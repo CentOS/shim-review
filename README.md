@@ -6,7 +6,7 @@ Red Hat, Inc.
 -------------------------------------------------------------------------------
 What product or service is this for:
 -------------------------------------------------------------------------------
-CentOS Linux 7.6.1810
+CentOS Linux 8.0.1905
 
 -------------------------------------------------------------------------------
 What's the justification that this really does need to be signed for the whole world to be able to boot it:
@@ -19,7 +19,7 @@ Who is the primary contact for security updates, etc.
 - Name: Fabian Arrotin
 - Position: System Administrator
 - Email address: arrfab@redhat.com
-- PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the linux community: https://github.com/centos/shim-review/blob/7.6.1810/arrfab.pub
+- PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the linux community: https://github.com/centos/shim-review/blob/8.0.1905/arrfab.pub
 
 -------------------------------------------------------------------------------
 Who is the secondary contact for security updates, etc.
@@ -27,7 +27,7 @@ Who is the secondary contact for security updates, etc.
 - Name: Jim Perrin
 - Position: Manager
 - Email address: jperrin@redhat.com
-- PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the linux community: https://github.com/centos/shim-review/blob/7.6.1810/jperrin.pub
+- PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the linux community: https://github.com/centos/shim-review/blob/8.0.1905/jperrin.pub
 
 -------------------------------------------------------------------------------
 What upstream shim tag is this starting from:
@@ -42,34 +42,31 @@ https://github.com/rhboot/shim/tree/15
 -------------------------------------------------------------------------------
 What patches are being applied and why:
 -------------------------------------------------------------------------------
-- 0001-Add-vendor-esl.patch: We had to patch shim to allow it to boot previous CentOS kernels (built with a now expired key/crt) and also with a new one
-- 0002-MokListRT-Fatal.patch: corresponding to https://github.com/rhboot/shim/pull/157
+There are five patches from the shim-16 development branch included.
+
 -------------------------------------------------------------------------------
 What OS and toolchain must we use to reproduce this build?  Include where to find it, etc.  We're going to try to reproduce your build as close as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
 -------------------------------------------------------------------------------
-It can be built on the centos 7.5 docker image, plus the yum repo at
-https://people.centos.org/arrfab/shim/build_repos/7.6.1810/ .  For your
-convenience, a Dockerfile has been supplied at
-https://github.com/centos/shim-review/blob/7.6.1810-2/Dockerfile that can be
+It's done on something very close to the RHEL 8 public beta.  It can be built
+from the docker image at http://pjones.fedorapeople.org/rhel-8-beta.tar.bz2
+plus the yum repo at https://koji.mbox.centos.org/kojifiles/repos/dist-c8-build/latest/x86_64/ .
+
+For your convenience, a Dockerfile has been supplied at
+https://github.com/centos/shim-review/blob/8.0.1905/Dockerfile that can be
 used to reproduce the entire build using the release tarball from github.  Use
 it like this:
-
-`sudo docker build -f Dockerfile -t centos-7.6.1810-2-shim-review .`
+`
+$ sudo su -
+# docker import https://pjones.fedorapeople.org/rhel-8-beta.img rhel-8-beta:latest
+# docker build - Dockerfile -t centos-8.0.1905-shim-review .
+`
 
 -------------------------------------------------------------------------------
 Which files in this repo are the logs for your build?   This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 -------------------------------------------------------------------------------
-https://github.com/centos/shim-review/blob/7.6.1810-2/root.log
-https://github.com/centos/shim-review/blob/7.6.1810-2/build.log
+https://github.com/centos/shim-review/blob/8.0.1905/root.log
+https://github.com/centos/shim-review/blob/8.0.1905/build.log
 
 -------------------------------------------------------------------------------
-Put info about what bootloader you're using, including which patches it includes to enforce Secure Boot here:
+Add any additional information you think we may need to validate this shim
 -------------------------------------------------------------------------------
-It's grub2 with the well known set of secure boot patches (among other patches.)
-
--------------------------------------------------------------------------------
-Put info about what kernel you're using, including which patches it includes to enforce Secure Boot here:
--------------------------------------------------------------------------------
-It's the CentOS 7.6.1810 kernel, which has the well known set of secure boot patches.
-
-

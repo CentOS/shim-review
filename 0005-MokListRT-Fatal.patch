@@ -44,3 +44,4 @@ index fcc11eb3..89ef0036 100644
  	}
  
  	efi_status = shim_init();
+

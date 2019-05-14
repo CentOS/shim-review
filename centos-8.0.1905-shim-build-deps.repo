@@ -1,0 +1,13 @@
+[centos-8.0.1905-shim-build-deps]
+name=centos-8.0.1905-shim-build-deps
+baseurl=https://koji.mbox.centos.org/kojifiles/repos/dist-c8-build/latest/x86_64/
+sslverify=False
+enabled=1
+exclude=centos-release
+metadata_expire=1m
+repo_gpgcheck=0
+gpgcheck=0
+type=rpm
+skip_if_unavailable=0
+cost=999
+
