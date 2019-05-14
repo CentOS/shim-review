@@ -55,11 +55,12 @@ For your convenience, a Dockerfile has been supplied at
 https://github.com/centos/shim-review/blob/8.0.1905/Dockerfile that can be
 used to reproduce the entire build using the release tarball from github.  Use
 it like this:
-`
+
+```
 $ sudo su -
 # docker import https://pjones.fedorapeople.org/rhel-8-beta.img rhel-8-beta:latest
-# docker build - Dockerfile -t centos-8.0.1905-shim-review .
-`
+# docker build -t centos-8.0.1905-shim-review .
+```
 
 -------------------------------------------------------------------------------
 Which files in this repo are the logs for your build?   This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
