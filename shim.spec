@@ -1,6 +1,6 @@
 Name:           shim
 Version:        15
-Release:        2%{?dist}
+Release:        5%{?dist}
 Summary:        First-stage UEFI bootloader
 
 License:        BSD
@@ -13,8 +13,13 @@ Source0:        https://github.com/mjg59/shim/releases/download/%{version}/shim-
 Source4:        shim-find-debuginfo.sh
 Source5:	centos.esl
 
-Patch0:		0001-Add-vendor-esl.patch
-Patch1:		0002-MokListRT-Fatal.patch
+Patch0001:      0001-Make-sure-that-MOK-variables-always-get-mirrored.patch
+Patch0002:      0002-mok-fix-the-mirroring-of-RT-variables.patch
+Patch0003:      0003-mok-consolidate-mirroring-code-in-a-helper-instead-o.patch
+Patch0004:      0004-Make-VLogError-behave-as-expected.patch
+Patch0005:      0005-Once-again-try-even-harder-to-get-binaries-without-t.patch
+Patch9998:      9998-MokListRT-Fatal.patch
+Patch9999:      9999-Add-vendor-esl.patch
 
 BuildRequires: git openssl-devel openssl
 BuildRequires: pesign >= 0.106-1
@@ -122,8 +127,8 @@ git config --unset user.name
 %endif
 
 %build
-COMMITID=$(cat %{name}-%{version}-%{efiarch}/commit)
-MAKEFLAGS="RELEASE=%{release} ENABLE_HTTPBOOT=true COMMITID=${COMMITID}"
+COMMIT_ID=$(cat %{name}-%{version}-%{efiarch}/commit)
+MAKEFLAGS="RELEASE=%{release} ENABLE_HTTPBOOT=true COMMIT_ID=${COMMIT_ID}"
 %ifarch aarch64
 if [ -f "%{SOURCE1}" ]; then
         MAKEFLAGS="$MAKEFLAGS VENDOR_CERT_FILE=%{SOURCE1}"
@@ -134,7 +139,6 @@ fi
 if [ -f "%{SOURCE5}" ]; then
 	MAKEFLAGS="$MAKEFLAGS VENDOR_ESL_FILE=%{SOURCE5}"
 fi
-
 %else
 if [ -f "%{SOURCE1}" ]; then
         MAKEFLAGS="$MAKEFLAGS VENDOR_CERT_FILE=%{SOURCE1}"
@@ -145,14 +149,13 @@ fi
 if [ -f "%{SOURCE5}" ]; then
 	MAKEFLAGS="$MAKEFLAGS VENDOR_ESL_FILE=%{SOURCE5}"
 fi
-
 %endif
 cd %{name}-%{version}-%{efiarch}
 make 'DEFAULT_LOADER=\\\\grub%{efiarch}.efi' ${MAKEFLAGS} shim%{efiarch}.efi mm%{efiarch}.efi fb%{efiarch}.efi
 
 %ifarch x86_64
 cd ../%{name}-%{version}-ia32
-setarch linux32 -B make 'DEFAULT_LOADER=\\\\grubia32.efi' ARCH=ia32 ${MAKEFLAGS} shimia32.efi mmia32.efi fbia32.efi
+setarch linux32 make 'DEFAULT_LOADER=\\\\grubia32.efi' ARCH=ia32 ${MAKEFLAGS} shimia32.efi mmia32.efi fbia32.efi
 cd ../%{name}-%{version}-%{efiarch}
 %endif
 
@@ -229,12 +232,28 @@ cd ../%{name}-%{version}-%{efiarch}
 %endif
 
 %changelog
-* Thu Dec 06 2018 Fabian Arrotin <arrfab@centos.org> - 15-2.el7.centos
--  0002-MokListRT-Fatal.patch (https://github.com/rhboot/shim/pull/157) (#15522)
-
-* Tue Oct 30 2018 Fabian Arrotin <arrfab@centos.org> - 15-1.el7.centos
-- Added 0001-Add-vendor-esl.patch (Patrick Uiterwijk)
+* Tue Sep 03 2019 Fabian Arrotin <arrfab@centos.org> - 15-5.el7.centos
+- Added 9999-Add-vendor-esl.patch (Patrick Uiterwijk)            
+- Added 9998-MokListRT-Fatal.patch (https://github.com/rhboot/shim/pull/157) (#15522)
 - Rebuilt with combined centos.esl (so new and previous crt) 
+
+* Mon Mar 18 2019 Peter Jones <pjones@redhat.com> - 15-5
+- Fix a couple more things that are breaking reproducability, and thus
+  breaking external review.
+  Related: rhbz#1649270
+
+* Fri Mar 15 2019 Peter Jones <pjones@redhat.com> - 15-4
+- Fight with binutils to try to get a binary without timestamps in it.
+  Again, but without breaking aarch64 this time.
+  Related: rhbz#1649270
+
+* Fri Mar 15 2019 Peter Jones <pjones@redhat.com> - 15-3
+- Fight with binutils to try to get a binary without timestamps in it.  Again.
+  Related: rhbz#1649270
+
+* Tue Feb 12 2019 Peter Jones <pjones@redhat.com> - 15-2
+- Fix MoK mirroring issue which breaks kdump without intervention
+  Related: rhbz#1649270
 
 * Mon Jun 18 2018 Peter Jones <pjones@redhat.com> - 15-1
 - Update to shim 15

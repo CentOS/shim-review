@@ -1,22 +1,22 @@
-From ad8b20e8e2cd71418a536a8068f8e37222bd3855 Mon Sep 17 00:00:00 2001
+From ab26d9a5c035cd56e1b1ae8b0ef74e059fe61d77 Mon Sep 17 00:00:00 2001
 From: Patrick Uiterwijk <patrick@puiterwijk.org>
 Date: Sat, 21 Jul 2018 04:12:57 +0200
 Subject: [PATCH] Implement vendor EFI Signature List (ESL)
 
 Signed-off-by: Patrick Uiterwijk <patrick@puiterwijk.org>
 ---
- Make.defaults |   3 ++
- cert.S        |  30 +++++++++++++++
- mok.c         | 100 +++++++++++++++++++++++++++++---------------------
- shim.c        |  25 +++++++++++++
- shim.h        |   2 +
- 5 files changed, 119 insertions(+), 41 deletions(-)
+ Make.defaults |  3 ++
+ cert.S        | 30 ++++++++++++++++++
+ mok.c         | 86 +++++++++++++++++++++++++++------------------------
+ shim.c        | 25 +++++++++++++++
+ shim.h        |  2 ++
+ 5 files changed, 106 insertions(+), 40 deletions(-)
 
 diff --git a/Make.defaults b/Make.defaults
-index bbfc1d7f..d8b4ba25 100644
+index 4c26c1a..0f9b979 100644
 --- a/Make.defaults
 +++ b/Make.defaults
-@@ -124,6 +124,9 @@ CFLAGS += "-DEFI_ARCH=L\"$(ARCH_SUFFIX)\"" "-DDEBUGDIR=L\"/usr/lib/debug/usr/sha
+@@ -126,6 +126,9 @@ CFLAGS += "-DEFI_ARCH=L\"$(ARCH_SUFFIX)\"" "-DDEBUGDIR=L\"/usr/lib/debug/usr/sha
  ifneq ($(origin VENDOR_CERT_FILE), undefined)
  	CFLAGS += -DVENDOR_CERT_FILE=\"$(VENDOR_CERT_FILE)\"
  endif
@@ -27,7 +27,7 @@ index bbfc1d7f..d8b4ba25 100644
  	CFLAGS += -DVENDOR_DBX_FILE=\"$(VENDOR_DBX_FILE)\"
  endif
 diff --git a/cert.S b/cert.S
-index cfc4525b..7ad782ab 100644
+index cfc4525..7ad782a 100644
 --- a/cert.S
 +++ b/cert.S
 @@ -8,12 +8,18 @@ cert_table:
@@ -81,7 +81,7 @@ index cfc4525b..7ad782ab 100644
  	.data
  	.align	1
 diff --git a/mok.c b/mok.c
-index 38675211..7734806b 100644
+index 2b9d796..f52e286 100644
 --- a/mok.c
 +++ b/mok.c
 @@ -62,12 +62,6 @@ struct mok_state_variable {
@@ -126,7 +126,7 @@ index 38675211..7734806b 100644
  	 .pcr = 14,
  	},
  	{.name = L"MokListX",
-@@ -138,40 +132,54 @@ static EFI_STATUS mirror_one_mok_variable(struct mok_state_variable *v)
+@@ -139,40 +133,54 @@ mirror_one_mok_variable(struct mok_state_variable *v)
  	uint8_t *p = NULL;
  
  	if ((v->flags & MOK_MIRROR_KEYDB) &&
@@ -205,44 +205,19 @@ index 38675211..7734806b 100644
  
  		if (v->data && v->data_size)
  			FreePool(v->data);
-@@ -223,11 +231,24 @@ EFI_STATUS import_mok_state(EFI_HANDLE image_handle)
+@@ -247,9 +255,7 @@ EFI_STATUS import_mok_state(EFI_HANDLE image_handle)
  		UINT32 attrs = 0;
  		BOOLEAN delete = FALSE, present, addend;
  
-+		addend = (v->flags & MOK_VARIABLE_APPEND_CERT) != 0;
-+
- 		efi_status = get_variable_attr(v->name,
- 					       &v->data, &v->data_size,
- 					       *v->guid, &attrs);
--		if (efi_status == EFI_NOT_FOUND)
-+		if (efi_status == EFI_NOT_FOUND) {
-+			if (v->rtname && addend) {
-+				efi_status = mirror_one_mok_variable(v);
-+				if (EFI_ERROR(efi_status) &&
-+				    ret != EFI_SECURITY_VIOLATION)
-+					ret = efi_status;
-+			}
-+			/*
-+			 * after possibly adding, we can continue, no
-+			 * further checks to be done.
-+			 */
- 			continue;
-+		}
- 		if (EFI_ERROR(efi_status)) {
- 			perror(L"Could not verify %s: %r\n", v->name,
- 			       efi_status);
-@@ -272,9 +293,6 @@ EFI_STATUS import_mok_state(EFI_HANDLE image_handle)
- 		}
- 
- 		present = (v->data && v->data_size) ? TRUE : FALSE;
 -		addend = (v->addend_source && v->addend_size &&
 -			  *v->addend_source && *v->addend_size)
 -			? TRUE : FALSE;
++		addend = (v->flags & MOK_VARIABLE_APPEND_CERT) != 0;
  
- 		if (v->flags & MOK_VARIABLE_MEASURE && present) {
- 			/*
+ 		efi_status = get_variable_attr(v->name,
+ 					       &v->data, &v->data_size,
 diff --git a/shim.c b/shim.c
-index 05fc6500..64b79da5 100644
+index 0015534..15b29fb 100644
 --- a/shim.c
 +++ b/shim.c
 @@ -66,14 +66,18 @@ static UINT32 load_options_size;
@@ -264,7 +239,7 @@ index 05fc6500..64b79da5 100644
  UINT8 *vendor_dbx;
  
  /*
-@@ -1065,6 +1069,25 @@ static EFI_STATUS verify_buffer (char *data, int datasize,
+@@ -1059,6 +1063,25 @@ static EFI_STATUS verify_buffer (char *data, int datasize,
  		}
  #endif /* defined(ENABLE_SHIM_CERT) */
  
@@ -290,7 +265,7 @@ index 05fc6500..64b79da5 100644
  		/*
  		 * And finally, check against shim's built-in key
  		 */
-@@ -2541,8 +2564,10 @@ efi_main (EFI_HANDLE passed_image_handle, EFI_SYSTEM_TABLE *passed_systab)
+@@ -2535,8 +2558,10 @@ efi_main (EFI_HANDLE passed_image_handle, EFI_SYSTEM_TABLE *passed_systab)
  	verification_method = VERIFIED_BY_NOTHING;
  
  	vendor_cert_size = cert_table.vendor_cert_size;
@@ -302,10 +277,10 @@ index 05fc6500..64b79da5 100644
  	CHAR16 *msgs[] = {
  		L"import_mok_state() failed\n",
 diff --git a/shim.h b/shim.h
-index 2b359d82..2e411040 100644
+index 04e770b..fb58b69 100644
 --- a/shim.h
 +++ b/shim.h
-@@ -167,8 +167,10 @@ extern EFI_STATUS start_image(EFI_HANDLE image_handle, CHAR16 *ImagePath);
+@@ -169,8 +169,10 @@ extern EFI_STATUS start_image(EFI_HANDLE image_handle, CHAR16 *ImagePath);
  extern EFI_STATUS import_mok_state(EFI_HANDLE image_handle);
  
  extern UINT32 vendor_cert_size;
@@ -316,3 +291,6 @@ index 2b359d82..2e411040 100644
  extern UINT8 *vendor_dbx;
  
  extern UINT8 user_insecure_mode;
+-- 
+2.18.1
+
