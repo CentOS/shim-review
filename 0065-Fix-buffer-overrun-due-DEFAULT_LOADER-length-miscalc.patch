@@ -1,0 +1,37 @@
+From ac610fe45491deccaab2c4ee689cbbdac117930a Mon Sep 17 00:00:00 2001
+From: Javier Martinez Canillas <javierm@redhat.com>
+Date: Tue, 8 Sep 2020 12:26:45 +0200
+Subject: [PATCH] Fix buffer overrun due DEFAULT_LOADER length miscalculation
+
+The DEFAULT_LOADER is a UCS-2 string and the StrLen() function returns the
+number of UCS-2 encoded characters in the string. But the allocated memory
+is in bytes, so only half of the needed memory to store it is allocated.
+
+This leads to a buffer overrun when the StrCpy() function attempts to copy
+the DEFAULT_LOADER to the allocated buffer.
+
+Fixes: 354bd9b1931 ("Actually check for errors from set_second_stage()")
+Reported-by: Stuart Hayes <stuart_hayes@dell.com>
+Signed-off-by: Javier Martinez Canillas <javierm@redhat.com>
+---
+ shim.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/shim.c b/shim.c
+index 34dce25c330..82913c934f6 100644
+--- a/shim.c
++++ b/shim.c
+@@ -2096,8 +2096,9 @@ EFI_STATUS set_second_stage (EFI_HANDLE image_handle)
+ 	unsigned int i;
+ 	UINTN second_stage_len;
+ 
+-	second_stage_len = StrLen(DEFAULT_LOADER) + 1;
++	second_stage_len = (StrLen(DEFAULT_LOADER) + 1) * sizeof(CHAR16);
+ 	second_stage = AllocatePool(second_stage_len);
++
+ 	if (!second_stage) {
+ 		perror(L"Could not allocate %lu bytes\n", second_stage_len);
+ 		return EFI_OUT_OF_RESOURCES;
+-- 
+2.28.0
+

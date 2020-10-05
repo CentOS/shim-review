@@ -1,20 +1,21 @@
-From 29c11483101b460869a5e0dba1f425073862127d Mon Sep 17 00:00:00 2001
+From ff6e5cda136c8fd637d3d6b8334f4f221ba2b1ee Mon Sep 17 00:00:00 2001
 From: Peter Jones <pjones@redhat.com>
 Date: Thu, 31 Jan 2019 13:45:30 -0500
-Subject: [PATCH 3/3] mok: consolidate mirroring code in a helper instead of
+Subject: [PATCH 22/62] mok: consolidate mirroring code in a helper instead of
  using goto
 
 There's no reason to complicate the logic with a goto here, instead just
 pull the logic we're jumping to out to a helper function.
 
 Signed-off-by: Peter Jones <pjones@redhat.com>
+Upstream-commit-id: 29c11483101
 ---
- mok.c  | 41 ++++++++++++++++++++++++++++-------------
+ mok.c  | 42 +++++++++++++++++++++++++++++-------------
  shim.h |  2 ++
- 2 files changed, 30 insertions(+), 13 deletions(-)
+ 2 files changed, 31 insertions(+), 13 deletions(-)
 
 diff --git a/mok.c b/mok.c
-index 41925abbb49..2f495e6cf25 100644
+index 41925abbb49..2b9d796a0e8 100644
 --- a/mok.c
 +++ b/mok.c
 @@ -130,7 +130,8 @@ struct mok_state_variable mok_state_variables[] = {
@@ -105,5 +106,5 @@ index 2b359d821e3..c26d5f06538 100644
  
  #ifdef __x86_64__
 -- 
-2.20.1
+2.26.2
 

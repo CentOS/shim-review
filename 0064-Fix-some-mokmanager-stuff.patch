@@ -1,0 +1,118 @@
+From 18843127dc0eace16d43d479bd091e221e8785c4 Mon Sep 17 00:00:00 2001
+From: Peter Jones <pjones@redhat.com>
+Date: Mon, 17 Aug 2020 15:47:19 -0400
+Subject: [PATCH] Fix some mokmanager stuff
+
+---
+ MokManager.c | 24 +++++++++++++++++++++++-
+ Makefile     |  2 +-
+ 2 files changed, 24 insertions(+), 2 deletions(-)
+
+diff --git a/MokManager.c b/MokManager.c
+index c9949e33bcf..9bae3414fe7 100644
+--- a/MokManager.c
++++ b/MokManager.c
+@@ -9,6 +9,8 @@
+ 
+ #include "shim.h"
+ 
++#include "hexdump.h"
++
+ #define PASSWORD_MAX 256
+ #define PASSWORD_MIN 1
+ #define SB_PASSWORD_LEN 16
+@@ -1050,9 +1052,11 @@ static EFI_STATUS mok_reset_prompt(BOOLEAN MokX)
+ 	if (MokX) {
+ 		LibDeleteVariable(L"MokXNew", &SHIM_LOCK_GUID);
+ 		LibDeleteVariable(L"MokXAuth", &SHIM_LOCK_GUID);
++		LibDeleteVariable(L"MokListX", &SHIM_LOCK_GUID);
+ 	} else {
+ 		LibDeleteVariable(L"MokNew", &SHIM_LOCK_GUID);
+ 		LibDeleteVariable(L"MokAuth", &SHIM_LOCK_GUID);
++		LibDeleteVariable(L"MokList", &SHIM_LOCK_GUID);
+ 	}
+ 
+ 	return EFI_SUCCESS;
+@@ -1075,6 +1079,7 @@ static EFI_STATUS write_back_mok_list(MokListNode * list, INTN key_num,
+ 	else
+ 		db_name = L"MokList";
+ 
++	dprint(L"Writing back %s (%d entries)\n", db_name, key_num);
+ 	for (i = 0; i < key_num; i++) {
+ 		if (list[i].Mok == NULL)
+ 			continue;
+@@ -1085,8 +1090,15 @@ static EFI_STATUS write_back_mok_list(MokListNode * list, INTN key_num,
+ 			DataSize += sizeof(EFI_GUID);
+ 		DataSize += list[i].MokSize;
+ 	}
+-	if (DataSize == 0)
++	if (DataSize == 0) {
++		dprint(L"DataSize = 0; deleting variable %s\n", db_name);
++		efi_status = gRT->SetVariable(db_name, &SHIM_LOCK_GUID,
++					      EFI_VARIABLE_NON_VOLATILE |
++					      EFI_VARIABLE_BOOTSERVICE_ACCESS,
++					      DataSize, Data);
++		dprint(L"efi_status:%llu\n", efi_status);
+ 		return EFI_SUCCESS;
++	}
+ 
+ 	Data = AllocatePool(DataSize);
+ 	if (Data == NULL)
+@@ -1291,11 +1303,15 @@ static EFI_STATUS delete_keys(void *MokDel, UINTN MokDelSize, BOOLEAN MokX)
+ 	}
+ 
+ 	if (auth_size == PASSWORD_CRYPT_SIZE) {
++		dprint(L"matching password with CRYPT");
+ 		efi_status = match_password((PASSWORD_CRYPT *) auth, NULL, 0,
+ 					    NULL, NULL);
++		dprint(L"match_password(0x%llx, NULL, 0, NULL, NULL) = %lu\n", auth, efi_status);
+ 	} else {
++		dprint(L"matching password as sha256sum");
+ 		efi_status =
+ 		    match_password(NULL, MokDel, MokDelSize, auth, NULL);
++		dprint(L"match_password(NULL, 0x%llx, %llu, 0x%llx, NULL) = %lu\n", MokDel, MokDelSize, auth, efi_status);
+ 	}
+ 	if (EFI_ERROR(efi_status))
+ 		return EFI_ACCESS_DENIED;
+@@ -1365,12 +1381,17 @@ static EFI_STATUS delete_keys(void *MokDel, UINTN MokDelSize, BOOLEAN MokX)
+ 	}
+ 
+ 	/* Search and destroy */
++	dprint(L"deleting certs from %a\n", MokX ? "MokListX" : "MokList");
+ 	for (i = 0; i < del_num; i++) {
+ 		type = del_key[i].Type; /* avoid -Werror=address-of-packed-member */
+ 		if (CompareGuid(&type, &X509_GUID) == 0) {
++			dprint(L"deleting key %d (total %d):\n", i, mok_num);
++			dhexdumpat(del_key[i].Mok, del_key[i].MokSize, 0);
+ 			delete_cert(del_key[i].Mok, del_key[i].MokSize,
+ 				    mok, mok_num);
+ 		} else if (is_sha2_hash(del_key[i].Type)) {
++			dprint(L"deleting hash %d (total %d):\n", i, mok_num);
++			dhexdumpat(del_key[i].Mok, del_key[i].MokSize, 0);
+ 			delete_hash_list(del_key[i].Type, del_key[i].Mok,
+ 					 del_key[i].MokSize, mok, mok_num);
+ 		}
+@@ -2564,6 +2585,7 @@ EFI_STATUS efi_main(EFI_HANDLE image_handle, EFI_SYSTEM_TABLE * systab)
+ 
+ 	InitializeLib(image_handle, systab);
+ 
++	setup_verbosity();
+ 	setup_rand();
+ 
+ 	console_mode_handle();
+diff --git a/Makefile b/Makefile
+index 49e14a26521..a17fa2bef14 100644
+--- a/Makefile
++++ b/Makefile
+@@ -36,7 +36,7 @@ endif
+ OBJS	= shim.o mok.o netboot.o cert.o replacements.o tpm.o version.o errlog.o
+ KEYS	= shim_cert.h ocsp.* ca.* shim.crt shim.csr shim.p12 shim.pem shim.key shim.cer
+ ORIG_SOURCES	= shim.c mok.c netboot.c replacements.c tpm.c errlog.c shim.h version.h $(wildcard include/*.h)
+-MOK_OBJS = MokManager.o PasswordCrypt.o crypt_blowfish.o
++MOK_OBJS = MokManager.o PasswordCrypt.o crypt_blowfish.o errlog.o
+ ORIG_MOK_SOURCES = MokManager.c PasswordCrypt.c crypt_blowfish.c shim.h $(wildcard include/*.h)
+ FALLBACK_OBJS = fallback.o tpm.o errlog.o
+ ORIG_FALLBACK_SRCS = fallback.c
+-- 
+2.26.2
+

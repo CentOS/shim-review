@@ -1,0 +1,6 @@
+[c7.2009.00.buildlogs]
+name=c7.2009.00.buildlogs
+baseurl=https://buildlogs.centos.org/c7.2009.00.x86_64/
+enabled=1
+gpgcheck=0
+

@@ -1,7 +1,7 @@
-From 4b27ae034ba9885960e72f77b3f687a9b7fea824 Mon Sep 17 00:00:00 2001
+From f748139695384fb4e09833898f0b8cb3ab85d810 Mon Sep 17 00:00:00 2001
 From: Gary Lin <glin@suse.com>
 Date: Wed, 21 Nov 2018 12:47:43 +0800
-Subject: [PATCH 2/3] mok: fix the mirroring of RT variables
+Subject: [PATCH 21/62] mok: fix the mirroring of RT variables
 
 When there is no key in MokList, import_mok_state() just skipped MokList
 even though it should always mirror the vendor cert. Besides, the faulty
@@ -11,6 +11,7 @@ MokSBStateRT, and MokIgnoreDB.
 https://github.com/rhboot/shim/issues/154
 
 Signed-off-by: Gary Lin <glin@suse.com>
+Upstream-commit-id: 4b27ae034ba
 ---
  mok.c | 11 ++++-------
  1 file changed, 4 insertions(+), 7 deletions(-)
@@ -45,5 +46,5 @@ index 00dd1ad3034..41925abbb49 100644
  				LibDeleteVariable(v->rtname, v->guid);
  
 -- 
-2.20.1
+2.26.2
 

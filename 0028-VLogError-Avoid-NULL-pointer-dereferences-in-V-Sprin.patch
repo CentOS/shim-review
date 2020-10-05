@@ -1,9 +1,25 @@
-From 0bff94b170116737e6e0838c35c0ac376542a5c0 Mon Sep 17 00:00:00 2001
+From 344a8364cb05cdaafc43231d0f73d5217c4e118c Mon Sep 17 00:00:00 2001
 From: Peter Jones <pjones@redhat.com>
 Date: Tue, 12 Feb 2019 18:04:49 -0500
-Subject: [PATCH 4/4] Make VLogError() behave as expected.
+Subject: [PATCH 28/62] VLogError(): Avoid NULL pointer dereferences in
+ (V)Sprint calls
+
+VLogError() calculates the size of format strings by using calls to
+SPrint and VSPrint with a StrSize of 0 and NULL for an output buffer.
+Unfortunately, this is an incorrect usage of (V)Sprint. A StrSize
+of "0" is special-cased to mean "there is no limit". So, we end up
+writing our string to address 0x0. This was discovered because it
+causes a crash on ARM where, unlike x86, it does not necessarily
+have memory mapped at 0x0.
+
+Avoid the (V)Sprint calls altogether by using (V)PoolPrint, which
+handles the size calculation and allocation for us.
 
 Signed-off-by: Peter Jones <pjones@redhat.com>
+Fixes: 25f6fd08cd26 ("try to show errors more usefully.")
+[dannf: commit message ]
+Signed-off-by: dann frazier <dann.frazier@canonical.com>
+Upstream-commit-id: 20e731f423a
 ---
  errlog.c | 15 +++------------
  1 file changed, 3 insertions(+), 12 deletions(-)
@@ -46,5 +62,5 @@ index 18be4822d53..eebb266d396 100644
  
  	nerrs += 2;
 -- 
-2.20.1
+2.26.2
 
