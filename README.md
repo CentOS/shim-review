@@ -16,18 +16,18 @@ CentOS Linux is deployed on a high number of nodes already using it in SecureBoo
 -------------------------------------------------------------------------------
 Who is the primary contact for security updates, etc.
 -------------------------------------------------------------------------------
-- Name: Fabian Arrotin
-- Position: System Administrator
-- Email address: arrfab@redhat.com
-- PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the linux community: https://github.com/centos/shim-review/blob/7.7.1908/arrfab.pub
+- Name: Johnny Hughes
+- Position: Software Engineer
+- Email address: jhughes@redhat.com
+- PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the linux community: https://github.com/CentOS/shim-review/blob/7.9.2009/hughesjr.pub
 
 -------------------------------------------------------------------------------
 Who is the secondary contact for security updates, etc.
 -------------------------------------------------------------------------------
-- Name: Jim Perrin
+- Name: Carl W. George
 - Position: Manager
-- Email address: jperrin@redhat.com
-- PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the linux community: https://github.com/centos/shim-review/blob/7.7.1908/jperrin.pub
+- Email address: carlwgeorge@redhat.com
+- PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the linux community: https://github.com/CentOS/shim-review/blob/7.9.2009/carlwgeorge.pub
 
 -------------------------------------------------------------------------------
 What upstream shim tag is this starting from:
