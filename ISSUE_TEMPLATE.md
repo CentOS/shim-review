@@ -18,7 +18,7 @@ Make sure you have provided the following information:
 ###### Sysdev Submission ID:
 
 ###### What product or service is this for:
-`CentOS Linux 7.6.1810`
+`CentOS Linux 7.9.2009`
 
 ###### What's the justification that this really does need to be signed for the whole world to be able to boot it:
 `CentOS Linux is deployed on a high number of nodes already using it in SecureBoot mode enabled`
