@@ -1,4 +1,4 @@
-FROM docker.io/centos@sha256:b67d21dfe609ddacf404589e04631d90a342921e81c40aeaf3391f6717fa5322
+FROM docker.io/centos@sha256:9b4ebb48de8dbb85a3d9fbdec4d28a3e2e14912f27b7234c10c1658a05c320a5
 COPY c7.2009.00.buildlogs.x86_64.repo /etc/yum.repos.d/
 RUN yum-config-manager --enable c7.2009.00.buildlogs 
 RUN yum update -y 
