@@ -63,11 +63,11 @@ https://github.com/centos/shim-review/blob/7.9.2009/build.log
 -------------------------------------------------------------------------------
 Put info about what bootloader you're using, including which patches it includes to enforce Secure Boot here:
 -------------------------------------------------------------------------------
-It's the upcoming CentOS Linux 7.9.2009 grub2 with the well known set of secure boot patches for RHEL 7.9 (and CentOS Linux debranding patches).
+It's the upcoming CentOS Linux 7.9.2009 grub2 (grub2-2.02-0.87.el7.src.rpm) with the well known set of secure boot patches for RHEL 7.9 (and CentOS Linux debranding patches).
 
 -------------------------------------------------------------------------------
 Put info about what kernel you're using, including which patches it includes to enforce Secure Boot here:
 -------------------------------------------------------------------------------
-It's the upcoming CentOS Linux 7.9.2009 kernel, which has the well known set of secure boot patches.
+It's the upcoming CentOS Linux 7.9.2009 kernel, which has the well known set of secure boot patches from RHEL 7.9 Source Code (kernel-3.10.0-1160.el7.src.rpm).
 
 
