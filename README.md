@@ -26,7 +26,7 @@ Who is the secondary contact for security updates, etc.
 -------------------------------------------------------------------------------
 - Name: Carl W. George
 - Position: Software Engineer
-- Email address: carlwgeorge@redhat.com
+- Email address: carl@redhat.com
 - PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the linux community: https://github.com/CentOS/shim-review/blob/7.9.2009/carlwgeorge.pub
 
 -------------------------------------------------------------------------------
