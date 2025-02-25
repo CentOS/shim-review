@@ -14,8 +14,7 @@ Note that we really only have experience with using GRUB2 or systemd-boot on Lin
 asking us to endorse anything else for signing is going to require some convincing on
 your part.
 
-Check the docs directory in this repo for guidance on submission and
-getting your shim signed.
+Hint: check the [docs](./docs/) directory in this repo for guidance on submission and getting your shim signed.
 
 Here's the template:
 
@@ -23,6 +22,7 @@ Here's the template:
 ### What organization or people are asking to have this signed?
 *******************************************************************************
 The CentOS Project
+https://www.centos.org
 
 
 *******************************************************************************
@@ -30,7 +30,7 @@ The CentOS Project
 The reviewers should be able to easily verify, that your organization is a legal entity, to prevent abuse.
 Provide the information, which can prove the genuineness with certainty.
 *******************************************************************************
-
+Red Hat, Inc.
 ```
 Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1
 Subject: jurisdictionC=US, jurisdictionST=Delaware, businessCategory=Private Organization, serialNumber=2945436, C=US, ST=North Carolina, L=Raleigh, O=Red Hat, Inc., CN=Red Hat, Inc.
@@ -65,22 +65,41 @@ We have our own separate certificates to distinguish from RHEL or Fedora
 - Position: Systems Administrator
 - Email address: arrfab@redhat.com
 - PGP key fingerprint: 7A38A620E0B50E9FF919407B9D5907A356BEC54E
+(Key should be signed by the other security contacts, pushed to a keyserver
+like keyserver.ubuntu.com, and preferably have signatures that are reasonably
+well known in the Linux community.)
+
     
 *******************************************************************************
 ### Were these binaries created from the 15.8 shim release tar?
 Please create your shim binaries starting with the 15.8 shim release tar file: https://github.com/rhboot/shim/releases/download/15.8/shim-15.8.tar.bz2
 This matches https://github.com/rhboot/shim/releases/tag/15.8 and contains the appropriate gnu-efi source.
+
+Make sure the tarball is correct by verifying your download's checksum with the following ones:
+
+```
+a9452c2e6fafe4e1b87ab2e1cac9ec00  shim-15.8.tar.bz2
+cdec924ca437a4509dcb178396996ddf92c11183  shim-15.8.tar.bz2
+a79f0a9b89f3681ab384865b1a46ab3f79d88b11b4ca59aa040ab03fffae80a9  shim-15.8.tar.bz2
+30b3390ae935121ea6fe728d8f59d37ded7b918ad81bea06e213464298b4bdabbca881b30817965bd397facc596db1ad0b8462a84c87896ce6c1204b19371cd1  shim-15.8.tar.bz2
+```
+
+Make sure that you've verified that your build process uses that file as a source of truth (excluding external patches) and its checksum matches. Furthermore, there's [a detached signature as well](https://github.com/rhboot/shim/releases/download/15.8/shim-15.8.tar.bz2.asc) - check with the public key that has the fingerprint `8107B101A432AAC9FE8E547CA348D61BC2713E9F` that the tarball is authentic. Once you're sure, please confirm this here with a simple *yes*.
+
+A short guide on verifying public keys and signatures should be available in the [docs](./docs/) directory.
 *******************************************************************************
 
 SHA512 (shim-15.8.tar.bz2) = 30b3390ae935121ea6fe728d8f59d37ded7b918ad81bea06e213464298b4bdabbca881b30817965bd397facc596db1ad0b8462a84c87896ce6c1204b19371cd1
+### URL for a repo that contains the exact code which was built to result in your binary:
+Hint: If you attach all the patches and modifications that are being used to your application, you can point to the URL of your application here (*`https://github.com/YOUR_ORGANIZATION/shim-review`*).
 
-*******************************************************************************
-### URL for a repo that contains the exact code which was built to get this binary:
+You can also point to your custom git servers, where the code is hosted.
 *******************************************************************************
 https://github.com/rhboot/shim/tree/15
 
 *******************************************************************************
 ### What patches are being applied and why:
+Mention all the external patches and build process modifications, which are used during your building process, that make your shim binary be the exact one that you posted as part of this application.
 *******************************************************************************
 
 None
@@ -93,7 +112,8 @@ See https://techcommunity.microsoft.com/t5/hardware-dev-center/nx-exception-for-
 No
 
 *******************************************************************************
-### If shim is loading GRUB2 bootloader what exact implementation of Secureboot in GRUB2 do you have? (Either Upstream GRUB2 shim_lock verifier or Downstream RHEL/Fedora/Debian/Canonical-like implementation)
+### What exact implementation of Secure Boot in GRUB2 do you have? (Either Upstream GRUB2 shim_lock verifier or Downstream RHEL/Fedora/Debian/Canonical-like implementation)
+Skip this, if you're not using GRUB2.
 *******************************************************************************
 
 RHEL Like
@@ -152,15 +172,18 @@ Same source code as RHEL
 *******************************************************************************
 ### Were old shims hashes provided to Microsoft for verification and to be added to future DBX updates?
 ### Does your new chain of trust disallow booting old GRUB2 builds affected by the CVEs?
+If you had no previous signed shim, say so here. Otherwise a simple _yes_ will do.
 *******************************************************************************
 Yes
 
 *******************************************************************************
 ### If your boot chain of trust includes a Linux kernel:
-### Is upstream commit [1957a85b0032a81e6482ca4aab883643b8dae06e "efi: Restrict efivar_ssdt_load when the kernel is locked down"](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=1957a85b0032a8ommit/?id=75b0cea7bf307f362057cc778efe89af4c615354) applied?
+### Is upstream commit [1957a85b0032a81e6482ca4aab883643b8dae06e "efi: Restrict efivar_ssdt_load when the kernel is locked down"](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=1957a85b0032a81e6482ca4aab883643b8dae06e) applied?
 ### Is upstream commit [75b0cea7bf307f362057cc778efe89af4c615354 "ACPI: configfs: Disallow loading ACPI tables when locked down"](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=75b0cea7bf307f362057cc778efe89af4c615354) applied?
 ### Is upstream commit [eadb2f47a3ced5c64b23b90fd2a3463f63726066 "lockdown: also lock down previous kgdb use"](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=eadb2f47a3ced5c64b23b90fd2a3463f63726066) applied?
-**************************************************************************************************************************************************
+Hint: upstream kernels should have all these applied, but if you ship your own heavily-modified older kernel version, that is being maintained separately from upstream, this may not be the case.  
+If you are shipping an older kernel, double-check your sources; maybe you do not have all the patches, but ship a configuration, that does not expose the issue(s).
+*******************************************************************************
 Yes, we share sources with the RHEL kernel
 *******************************************************************************
 ### How does your signed kernel enforce lockdown when your system runs
@@ -170,8 +193,7 @@ Hint: If it does not, we are not likely to sign your shim.
 The CentOS Stream kernel includes the usual kernel lockdown functionality natively.
 
 *******************************************************************************
-### Do you build your signed kernel with additional local patches? What do they
-do?
+### Do you build your signed kernel with additional local patches? What do they do?
 *******************************************************************************
 
 The CentOS Stream kernel shares sources with the RHEL kernel, the patches we
@@ -272,6 +294,9 @@ fwupd-efi.rhel,1,Red Hat Enterprise Linux,fwupd,1.9.26,mail:secalert@redhat.com
 
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader, which modules are built into your signed GRUB2 image?
+Skip this, if you're not using GRUB2.
+
+Hint: this is about those modules that are in the binary itself, not the `.mod` files in your filesystem.
 *******************************************************************************
 all_video boot blscfg cat configfile cryptodisk
 echo ext2 f2fs fat font
