@@ -1,4 +1,4 @@
-FROM centos:stream10
+FROM quay.io/centos:stream10
 RUN whoami
 
 WORKDIR /root

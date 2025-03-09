@@ -95,7 +95,7 @@ Hint: If you attach all the patches and modifications that are being used to you
 
 You can also point to your custom git servers, where the code is hosted.
 *******************************************************************************
-https://github.com/rhboot/shim/tree/15
+https://github.com/rhboot/shim/tree/15.8
 
 *******************************************************************************
 ### What patches are being applied and why:
@@ -341,11 +341,6 @@ Built in checks
 
 *******************************************************************************
 ### Does your shim load any loaders that support loading unsigned kernels (e.g. certain GRUB2 configurations)?
-*******************************************************************************
-No
-
-*******************************************************************************
-### Does your SHIM load any loaders that support loading unsigned kernels (e.g. GRUB2)?
 *******************************************************************************
 No
 
