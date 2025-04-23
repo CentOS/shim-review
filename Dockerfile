@@ -1,7 +1,8 @@
-FROM quay.io/centos:stream10
+FROM quay.io/centos/centos:stream10
 RUN whoami
 
 WORKDIR /root
+COPY centos.repo /etc/yum.repos.d/centos.repo
 RUN dnf -y install dnf-plugins-core rpm-build
 COPY rpmmacros /root/.rpmmacros
 RUN curl -O https://kojihub.stream.centos.org/kojifiles/packages/shim-unsigned-x64/15.8/3.el10.centos/src/shim-unsigned-x64-15.8-3.el10.centos.src.rpm
