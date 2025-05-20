@@ -279,6 +279,7 @@ shim.centos,3,The CentOS Project,shim,15.8,security@centos.org
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,3,Free Software Foundation,grub,2.12,https//www.gnu.org/software/grub/
 grub.rh,2,Red Hat,grub2,2.12-1.el10,mailto:secalert@redhat.com
+grub.centos,2,Red Hat,grub2,2.12-1.el10,mailto:secalert@redhat.com (See [commit](https://gitlab.com/redhat/centos-stream/rpms/grub2/-/commit/81cae7e22736d144f1698f1ea3bad47ea61a716a) and [build](https://kojihub.stream.centos.org/koji/buildinfo?buildID=77920))
 
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 linux,1,Red Hat,linux,6.12.0-30.el10.x86_64,mailto:secalert@redhat.com
