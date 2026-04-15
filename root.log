@@ -1,0 +1,1999 @@
+INFO buildroot.py:602:  Mock Version: 5.4
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/result
+INFO buildroot.py:284:  calling preinit hooks
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/usr/bin/lscpu'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:463:  Architecture:        x86_64
+DEBUG util.py:463:  CPU op-mode(s):      32-bit, 64-bit
+DEBUG util.py:463:  Byte Order:          Little Endian
+DEBUG util.py:463:  CPU(s):              40
+DEBUG util.py:463:  On-line CPU(s) list: 0-39
+DEBUG util.py:463:  Thread(s) per core:  1
+DEBUG util.py:463:  Core(s) per socket:  1
+DEBUG util.py:463:  Socket(s):           40
+DEBUG util.py:463:  NUMA node(s):        1
+DEBUG util.py:463:  Vendor ID:           GenuineIntel
+DEBUG util.py:463:  CPU family:          6
+DEBUG util.py:463:  Model:               85
+DEBUG util.py:463:  Model name:          Intel Xeon Processor (Cascadelake)
+DEBUG util.py:463:  Stepping:            5
+DEBUG util.py:463:  CPU MHz:             2095.104
+DEBUG util.py:463:  BogoMIPS:            4190.20
+DEBUG util.py:463:  Virtualization:      VT-x
+DEBUG util.py:463:  Hypervisor vendor:   KVM
+DEBUG util.py:463:  Virtualization type: full
+DEBUG util.py:463:  L1d cache:           32K
+DEBUG util.py:463:  L1i cache:           32K
+DEBUG util.py:463:  L2 cache:            4096K
+DEBUG util.py:463:  L3 cache:            16384K
+DEBUG util.py:463:  NUMA node0 CPU(s):   0-39
+DEBUG util.py:463:  Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves arat umip pku ospke avx512_vnni md_clear arch_capabilities
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/free'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:463:                total        used        free      shared  buff/cache   available
+DEBUG util.py:463:  Mem:      131997612     1355628   113085260     4096568    17556724   125295992
+DEBUG util.py:463:  Swap:       2097148      129424     1967724
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/df', '-H', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root', '/var/cache/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:463:  Filesystem                   Size  Used Avail Use% Mounted on
+DEBUG util.py:463:  /dev/mapper/vg_x86--05-root  417G  6.9G  389G   2% /
+DEBUG util.py:463:  /dev/mapper/vg_x86--05-root  417G  6.9G  389G   2% /
+DEBUG util.py:610:  Child return code was: 0
+DEBUG buildroot.py:658:  create skeleton dirs
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/rpm
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/rpm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/yum
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/dbus
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/dbus
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/log
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/log
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/cache/dnf
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/cache/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/cache/yum
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/cache/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/rpm
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/rpm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/tmp
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/tmp
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/tmp/ccache
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/tmp/ccache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/tmp
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/tmp
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf/vars
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf/vars
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/yum.repos.d
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/yum.repos.d
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/yum
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/mapper
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/mapper
+DEBUG buildroot.py:802:  kernel version == 4.18.0-553.27.1.el8_10.x86_64
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/fstab
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/yum/yum.conf
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf/dnf.conf
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/log/yum.log
+DEBUG buildroot.py:298:  rootdir = /var/lib/stream-mock/c9s-pesign-build-825735-820916/root
+DEBUG buildroot.py:299:  resultdir = /var/lib/stream-mock/c9s-pesign-build-825735-820916/result
+DEBUG package_manager.py:56:  searching for 'dnf' package manager or alternatives
+INFO buildroot.py:175:  Package manager dnf detected and used (fallback)
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/mock
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/mock
+DEBUG file_util.py:158:  Updating files in /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust with files from /etc/pki/ca-trust
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/./extracted
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/./extracted
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/./source
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/./source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/java
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/java
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/pem
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/pem
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/edk2
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/edk2
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/openssl
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/openssl
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/source/anchors
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/source/anchors
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/source/blacklist
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/source/blacklist
+DEBUG file_util.py:158:  Updating files in /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source with files from /usr/share/pki/ca-trust-source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source/./anchors
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source/./anchors
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source/./blacklist
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source/./blacklist
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf
+DEBUG package_manager.py:689:  configure DNF vars
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/proc', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/sys', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.kr4sluwu', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys/fs/selinux
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/installation-homedir
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/installation-homedir
+DEBUG package_manager.py:289:  ['/usr/bin/dnf-3', '--installroot', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=versionlock', 'install', '@build']
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/usr/bin/dnf-3', '--installroot', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=versionlock', 'install', '@build', '--setopt=tsflags=nocontexts'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8'} and shell False
+DEBUG util.py:461:  Unable to detect release version (use '--releasever' to specify release version)
+DEBUG util.py:463:  Updating Subscription Management repositories.
+DEBUG util.py:463:  Unable to read consumer identity
+DEBUG util.py:463:  This system is not registered with an entitlement server. You can use subscription-manager to register.
+DEBUG util.py:463:  Last metadata expiration check: 0:00:02 ago on Mon Apr 13 15:19:35 2026.
+DEBUG util.py:463:  Dependencies resolved.
+DEBUG util.py:463:  ================================================================================
+DEBUG util.py:463:   Package                      Arch    Version                      Repo    Size
+DEBUG util.py:463:  ================================================================================
+DEBUG util.py:463:  Installing group/module packages:
+DEBUG util.py:463:   bash                         x86_64  5.1.8-9.el9                  build  1.7 M
+DEBUG util.py:463:   bzip2                        x86_64  1.0.8-11.el9                 build   51 k
+DEBUG util.py:463:   centos-stream-release        noarch  9.0-36.el9                   build   22 k
+DEBUG util.py:463:   centpkg-minimal              noarch  2.1.0-3.el9                  build   11 k
+DEBUG util.py:463:   coreutils                    x86_64  8.32-40.el9                  build  1.1 M
+DEBUG util.py:463:   cpio                         x86_64  2.13-16.el9                  build  269 k
+DEBUG util.py:463:   diffutils                    x86_64  3.7-12.el9                   build  388 k
+DEBUG util.py:463:   findutils                    x86_64  1:4.8.0-7.el9                build  536 k
+DEBUG util.py:463:   gawk                         x86_64  5.1.0-6.el9                  build  996 k
+DEBUG util.py:463:   glibc-minimal-langpack       x86_64  2.34-262.el9                 build   27 k
+DEBUG util.py:463:   grep                         x86_64  3.6-5.el9                    build  257 k
+DEBUG util.py:463:   gzip                         x86_64  1.12-1.el9                   build  157 k
+DEBUG util.py:463:   info                         x86_64  6.7-15.el9                   build  224 k
+DEBUG util.py:463:   make                         x86_64  1:4.3-8.el9                  build  529 k
+DEBUG util.py:463:   patch                        x86_64  2.7.6-16.el9                 build  127 k
+DEBUG util.py:463:   redhat-rpm-config            noarch  210-1.el9                    build   64 k
+DEBUG util.py:463:   rh-dupsign-macros            noarch  1.7-1.el9                    build   11 k
+DEBUG util.py:463:   rpm-build                    x86_64  4.16.1.3-40.el9              build   58 k
+DEBUG util.py:463:   sed                          x86_64  4.8-10.el9                   build  295 k
+DEBUG util.py:463:   shadow-utils                 x86_64  2:4.9-16.el9                 build  1.1 M
+DEBUG util.py:463:   tar                          x86_64  2:1.34-11.el9                build  876 k
+DEBUG util.py:463:   unzip                        x86_64  6.0-59.el9                   build  179 k
+DEBUG util.py:463:   util-linux                   x86_64  2.37.4-25.el9                build  2.2 M
+DEBUG util.py:463:   which                        x86_64  2.21-30.el9                  build   40 k
+DEBUG util.py:463:   xz                           x86_64  5.2.5-8.el9                  build  214 k
+DEBUG util.py:463:  Installing dependencies:
+DEBUG util.py:463:   alternatives                 x86_64  1.24-2.el9                   build   38 k
+DEBUG util.py:463:   audit-libs                   x86_64  3.1.5-8.el9                  build  121 k
+DEBUG util.py:463:   basesystem                   noarch  11-13.el9                    build  6.9 k
+DEBUG util.py:463:   binutils                     x86_64  2.35.2-72.el9                build  4.5 M
+DEBUG util.py:463:   binutils-gold                x86_64  2.35.2-72.el9                build  734 k
+DEBUG util.py:463:   bzip2-libs                   x86_64  1.0.8-11.el9                 build   39 k
+DEBUG util.py:463:   ca-certificates              noarch  2025.2.80_v9.0.305-91.el9    build  943 k
+DEBUG util.py:463:   centos-gpg-keys              noarch  9.0-36.el9                   build   24 k
+DEBUG util.py:463:   centos-stream-repos          noarch  9.0-36.el9                   build  8.7 k
+DEBUG util.py:463:   coreutils-common             x86_64  8.32-40.el9                  build  2.0 M
+DEBUG util.py:463:   cracklib                     x86_64  2.9.6-28.el9                 build   80 k
+DEBUG util.py:463:   cracklib-dicts               x86_64  2.9.6-28.el9                 build  3.6 M
+DEBUG util.py:463:   crypto-policies              noarch  20260224-1.gitea0f072.el9    build   56 k
+DEBUG util.py:463:   curl                         x86_64  7.76.1-40.el9                build  292 k
+DEBUG util.py:463:   cyrus-sasl-lib               x86_64  2.1.27-21.el9                build  764 k
+DEBUG util.py:463:   debugedit                    x86_64  5.0-11.el9                   build   76 k
+DEBUG util.py:463:   dwz                          x86_64  0.16-1.el9                   build  133 k
+DEBUG util.py:463:   ed                           x86_64  1.14.2-12.el9                build   73 k
+DEBUG util.py:463:   efi-srpm-macros              noarch  6-4.el9                      build   21 k
+DEBUG util.py:463:   elfutils                     x86_64  0.194-1.el9                  build  592 k
+DEBUG util.py:463:   elfutils-debuginfod-client   x86_64  0.194-1.el9                  build   43 k
+DEBUG util.py:463:   elfutils-default-yama-scope  noarch  0.194-1.el9                  build  8.7 k
+DEBUG util.py:463:   elfutils-libelf              x86_64  0.194-1.el9                  build  201 k
+DEBUG util.py:463:   elfutils-libs                x86_64  0.194-1.el9                  build  268 k
+DEBUG util.py:463:   expat                        x86_64  2.5.0-6.el9                  build  117 k
+DEBUG util.py:463:   file                         x86_64  5.39-17.el9                  build   47 k
+DEBUG util.py:463:   file-libs                    x86_64  5.39-17.el9                  build  587 k
+DEBUG util.py:463:   filesystem                   x86_64  3.16-5.el9                   build  1.1 M
+DEBUG util.py:463:   fonts-srpm-macros            noarch  1:2.0.5-7.el9.1              build   27 k
+DEBUG util.py:463:   gdb-minimal                  x86_64  16.3-3.el9                   build  4.4 M
+DEBUG util.py:463:   gdbm-libs                    x86_64  1:1.23-1.el9                 build   55 k
+DEBUG util.py:463:   ghc-srpm-macros              noarch  1.5.0-6.el9                  build  7.7 k
+DEBUG util.py:463:   git-core                     x86_64  2.52.0-1.el9                 build  5.0 M
+DEBUG util.py:463:   glibc                        x86_64  2.34-262.el9                 build  2.0 M
+DEBUG util.py:463:   glibc-common                 x86_64  2.34-262.el9                 build  299 k
+DEBUG util.py:463:   glibc-gconv-extra            x86_64  2.34-262.el9                 build  1.6 M
+DEBUG util.py:463:   gmp                          x86_64  1:6.2.0-13.el9               build  314 k
+DEBUG util.py:463:   go-srpm-macros               noarch  3.8.1-1.el9                  build   27 k
+DEBUG util.py:463:   groff-base                   x86_64  1.22.4-10.el9                build  1.0 M
+DEBUG util.py:463:   json-c                       x86_64  0.14-11.el9                  build   42 k
+DEBUG util.py:463:   kernel-srpm-macros           noarch  1.0-14.el9                   build   14 k
+DEBUG util.py:463:   keyutils-libs                x86_64  1.6.3-1.el9                  build   31 k
+DEBUG util.py:463:   krb5-libs                    x86_64  1.21.1-8.el9                 build  755 k
+DEBUG util.py:463:   less                         x86_64  590-6.el9                    build  160 k
+DEBUG util.py:463:   libacl                       x86_64  2.3.1-4.el9                  build   22 k
+DEBUG util.py:463:   libarchive                   x86_64  3.5.3-8.el9                  build  387 k
+DEBUG util.py:463:   libattr                      x86_64  2.5.1-3.el9                  build   18 k
+DEBUG util.py:463:   libblkid                     x86_64  2.37.4-25.el9                build  105 k
+DEBUG util.py:463:   libbrotli                    x86_64  1.0.9-9.el9                  build  312 k
+DEBUG util.py:463:   libcap                       x86_64  2.48-10.el9                  build   66 k
+DEBUG util.py:463:   libcap-ng                    x86_64  0.8.2-7.el9                  build   32 k
+DEBUG util.py:463:   libcbor                      x86_64  0.7.0-5.el9                  build   56 k
+DEBUG util.py:463:   libcom_err                   x86_64  1.46.5-8.el9                 build   25 k
+DEBUG util.py:463:   libcurl                      x86_64  7.76.1-40.el9                build  283 k
+DEBUG util.py:463:   libdb                        x86_64  5.3.28-57.el9                build  734 k
+DEBUG util.py:463:   libeconf                     x86_64  0.4.1-5.el9                  build   26 k
+DEBUG util.py:463:   libedit                      x86_64  3.1-39.20210216cvs.el9       build  104 k
+DEBUG util.py:463:   libevent                     x86_64  2.1.12-8.el9                 build  259 k
+DEBUG util.py:463:   libfdisk                     x86_64  2.37.4-25.el9                build  152 k
+DEBUG util.py:463:   libffi                       x86_64  3.4.2-8.el9                  build   37 k
+DEBUG util.py:463:   libfido2                     x86_64  1.13.0-2.el9                 build   98 k
+DEBUG util.py:463:   libgcc                       x86_64  11.5.0-14.el9                build   85 k
+DEBUG util.py:463:   libgcrypt                    x86_64  1.10.0-11.el9                build  507 k
+DEBUG util.py:463:   libgomp                      x86_64  11.5.0-14.el9                build  257 k
+DEBUG util.py:463:   libgpg-error                 x86_64  1.42-5.el9                   build  211 k
+DEBUG util.py:463:   libidn2                      x86_64  2.3.0-7.el9                  build   95 k
+DEBUG util.py:463:   libmount                     x86_64  2.37.4-25.el9                build  133 k
+DEBUG util.py:463:   libnghttp2                   x86_64  1.43.0-7.el9                 build   72 k
+DEBUG util.py:463:   libpkgconf                   x86_64  1.7.3-10.el9                 build   35 k
+DEBUG util.py:463:   libpsl                       x86_64  0.21.1-5.el9                 build   63 k
+DEBUG util.py:463:   libpwquality                 x86_64  1.4.4-8.el9                  build  105 k
+DEBUG util.py:463:   libselinux                   x86_64  3.6-3.el9                    build   85 k
+DEBUG util.py:463:   libsemanage                  x86_64  3.6-5.el9                    build  117 k
+DEBUG util.py:463:   libsepol                     x86_64  3.6-3.el9                    build  328 k
+DEBUG util.py:463:   libsigsegv                   x86_64  2.13-4.el9                   build   26 k
+DEBUG util.py:463:   libsmartcols                 x86_64  2.37.4-25.el9                build   61 k
+DEBUG util.py:463:   libssh                       x86_64  0.10.4-18.el9                build  213 k
+DEBUG util.py:463:   libssh-config                noarch  0.10.4-18.el9                build  8.0 k
+DEBUG util.py:463:   libstdc++                    x86_64  11.5.0-14.el9                build  739 k
+DEBUG util.py:463:   libtasn1                     x86_64  4.16.0-9.el9                 build   73 k
+DEBUG util.py:463:   libtool-ltdl                 x86_64  2.4.6-46.el9                 build   34 k
+DEBUG util.py:463:   libunistring                 x86_64  0.9.10-15.el9                build  495 k
+DEBUG util.py:463:   libutempter                  x86_64  1.2.1-6.el9                  build   26 k
+DEBUG util.py:463:   libuuid                      x86_64  2.37.4-25.el9                build   26 k
+DEBUG util.py:463:   libverto                     x86_64  0.3.2-3.el9                  build   21 k
+DEBUG util.py:463:   libxcrypt                    x86_64  4.4.18-3.el9                 build  115 k
+DEBUG util.py:463:   libxml2                      x86_64  2.9.13-14.el9                build  746 k
+DEBUG util.py:463:   libzstd                      x86_64  1.5.5-1.el9                  build  294 k
+DEBUG util.py:463:   lua-libs                     x86_64  5.4.4-4.el9                  build  129 k
+DEBUG util.py:463:   lua-srpm-macros              noarch  1-6.el9                      build  8.4 k
+DEBUG util.py:463:   lz4-libs                     x86_64  1.9.3-5.el9                  build   67 k
+DEBUG util.py:463:   mpfr                         x86_64  4.1.0-10.el9                 build  324 k
+DEBUG util.py:463:   ncurses                      x86_64  6.2-12.20210508.el9          build  399 k
+DEBUG util.py:463:   ncurses-base                 noarch  6.2-12.20210508.el9          build   60 k
+DEBUG util.py:463:   ncurses-libs                 x86_64  6.2-12.20210508.el9          build  322 k
+DEBUG util.py:463:   ocaml-srpm-macros            noarch  6-6.el9                      build  7.7 k
+DEBUG util.py:463:   openblas-srpm-macros         noarch  2-11.el9                     build  7.3 k
+DEBUG util.py:463:   openldap                     x86_64  2.6.8-4.el9                  build  266 k
+DEBUG util.py:463:   openssh                      x86_64  9.9p1-7.el9                  build  420 k
+DEBUG util.py:463:   openssh-clients              x86_64  9.9p1-7.el9                  build  767 k
+DEBUG util.py:463:   openssl                      x86_64  1:3.5.5-1.el9                build  1.4 M
+DEBUG util.py:463:   openssl-fips-provider        x86_64  1:3.5.5-1.el9                build  814 k
+DEBUG util.py:463:   openssl-libs                 x86_64  1:3.5.5-1.el9                build  2.3 M
+DEBUG util.py:463:   p11-kit                      x86_64  0.26.2-1.el9                 build  584 k
+DEBUG util.py:463:   p11-kit-trust                x86_64  0.26.2-1.el9                 build  155 k
+DEBUG util.py:463:   pam                          x86_64  1.5.1-28.el9                 build  544 k
+DEBUG util.py:463:   pcre                         x86_64  8.44-4.el9                   build  196 k
+DEBUG util.py:463:   pcre2                        x86_64  10.40-6.el9                  build  233 k
+DEBUG util.py:463:   pcre2-syntax                 noarch  10.40-6.el9                  build  140 k
+DEBUG util.py:463:   perl-AutoLoader              noarch  5.74-483.el9                 build   20 k
+DEBUG util.py:463:   perl-B                       x86_64  1.80-483.el9                 build  178 k
+DEBUG util.py:463:   perl-Carp                    noarch  1.50-460.el9                 build   29 k
+DEBUG util.py:463:   perl-Class-Struct            noarch  0.66-483.el9                 build   21 k
+DEBUG util.py:463:   perl-Data-Dumper             x86_64  2.174-462.el9                build   55 k
+DEBUG util.py:463:   perl-Digest                  noarch  1.19-4.el9                   build   25 k
+DEBUG util.py:463:   perl-Digest-MD5              x86_64  2.58-4.el9                   build   36 k
+DEBUG util.py:463:   perl-Encode                  x86_64  4:3.08-462.el9               build  1.7 M
+DEBUG util.py:463:   perl-Errno                   x86_64  1.30-483.el9                 build   13 k
+DEBUG util.py:463:   perl-Exporter                noarch  5.74-461.el9                 build   31 k
+DEBUG util.py:463:   perl-Fcntl                   x86_64  1.13-483.el9                 build   19 k
+DEBUG util.py:463:   perl-File-Basename           noarch  2.85-483.el9                 build   16 k
+DEBUG util.py:463:   perl-File-Path               noarch  2.18-4.el9                   build   35 k
+DEBUG util.py:463:   perl-File-Temp               noarch  1:0.231.100-4.el9            build   59 k
+DEBUG util.py:463:   perl-File-stat               noarch  1.09-483.el9                 build   16 k
+DEBUG util.py:463:   perl-FileHandle              noarch  2.03-483.el9                 build   14 k
+DEBUG util.py:463:   perl-Getopt-Long             noarch  1:2.52-4.el9                 build   59 k
+DEBUG util.py:463:   perl-Getopt-Std              noarch  1.12-483.el9                 build   14 k
+DEBUG util.py:463:   perl-HTTP-Tiny               noarch  0.076-462.el9                build   53 k
+DEBUG util.py:463:   perl-IO                      x86_64  1.43-483.el9                 build   85 k
+DEBUG util.py:463:   perl-IO-Socket-IP            noarch  0.41-5.el9                   build   42 k
+DEBUG util.py:463:   perl-IO-Socket-SSL           noarch  2.073-2.el9                  build  214 k
+DEBUG util.py:463:   perl-IPC-Open3               noarch  1.21-483.el9                 build   21 k
+DEBUG util.py:463:   perl-MIME-Base64             x86_64  3.16-4.el9                   build   30 k
+DEBUG util.py:463:   perl-Mozilla-CA              noarch  20200520-6.el9               build   12 k
+DEBUG util.py:463:   perl-Net-SSLeay              x86_64  1.94-3.el9                   build  390 k
+DEBUG util.py:463:   perl-POSIX                   x86_64  1.94-483.el9                 build   95 k
+DEBUG util.py:463:   perl-PathTools               x86_64  3.78-461.el9                 build   85 k
+DEBUG util.py:463:   perl-Pod-Escapes             noarch  1:1.07-460.el9               build   20 k
+DEBUG util.py:463:   perl-Pod-Perldoc             noarch  3.28.01-461.el9              build   83 k
+DEBUG util.py:463:   perl-Pod-Simple              noarch  1:3.42-4.el9                 build  215 k
+DEBUG util.py:463:   perl-Pod-Usage               noarch  4:2.01-4.el9                 build   40 k
+DEBUG util.py:463:   perl-Scalar-List-Utils       x86_64  4:1.56-462.el9               build   70 k
+DEBUG util.py:463:   perl-SelectSaver             noarch  1.02-483.el9                 build   10 k
+DEBUG util.py:463:   perl-Socket                  x86_64  4:2.031-4.el9                build   54 k
+DEBUG util.py:463:   perl-Storable                x86_64  1:3.21-460.el9               build   95 k
+DEBUG util.py:463:   perl-Symbol                  noarch  1.08-483.el9                 build   13 k
+DEBUG util.py:463:   perl-Term-ANSIColor          noarch  5.01-461.el9                 build   48 k
+DEBUG util.py:463:   perl-Term-Cap                noarch  1.17-460.el9                 build   22 k
+DEBUG util.py:463:   perl-Text-ParseWords         noarch  3.30-460.el9                 build   16 k
+DEBUG util.py:463:   perl-Text-Tabs+Wrap          noarch  2013.0523-460.el9            build   22 k
+DEBUG util.py:463:   perl-Time-Local              noarch  2:1.300-7.el9                build   33 k
+DEBUG util.py:463:   perl-URI                     noarch  5.09-3.el9                   build  108 k
+DEBUG util.py:463:   perl-base                    noarch  2.27-483.el9                 build   15 k
+DEBUG util.py:463:   perl-constant                noarch  1.33-461.el9                 build   23 k
+DEBUG util.py:463:   perl-if                      noarch  0.60.800-483.el9             build   12 k
+DEBUG util.py:463:   perl-interpreter             x86_64  4:5.32.1-483.el9             build   69 k
+DEBUG util.py:463:   perl-libnet                  noarch  3.13-4.el9                   build  125 k
+DEBUG util.py:463:   perl-libs                    x86_64  4:5.32.1-483.el9             build  2.0 M
+DEBUG util.py:463:   perl-mro                     x86_64  1.23-483.el9                 build   27 k
+DEBUG util.py:463:   perl-overload                noarch  1.31-483.el9                 build   44 k
+DEBUG util.py:463:   perl-overloading             noarch  0.02-483.el9                 build   11 k
+DEBUG util.py:463:   perl-parent                  noarch  1:0.238-460.el9              build   14 k
+DEBUG util.py:463:   perl-podlators               noarch  1:4.14-460.el9               build  111 k
+DEBUG util.py:463:   perl-srpm-macros             noarch  1-41.el9                     build  8.0 k
+DEBUG util.py:463:   perl-subs                    noarch  1.03-483.el9                 build   10 k
+DEBUG util.py:463:   perl-vars                    noarch  1.05-483.el9                 build   11 k
+DEBUG util.py:463:   pkgconf                      x86_64  1.7.3-10.el9                 build   40 k
+DEBUG util.py:463:   pkgconf-m4                   noarch  1.7.3-10.el9                 build   14 k
+DEBUG util.py:463:   pkgconf-pkg-config           x86_64  1.7.3-10.el9                 build  9.9 k
+DEBUG util.py:463:   popt                         x86_64  1.18-8.el9                   build   58 k
+DEBUG util.py:463:   publicsuffix-list-dafsa      noarch  20210518-3.el9               build   57 k
+DEBUG util.py:463:   pyproject-srpm-macros        noarch  1.18.5-1.el9                 build   12 k
+DEBUG util.py:463:   python-srpm-macros           noarch  3.9-54.el9                   build   16 k
+DEBUG util.py:463:   qt5-srpm-macros              noarch  5.15.9-1.el9                 build  7.7 k
+DEBUG util.py:463:   readline                     x86_64  8.1-4.el9                    build  211 k
+DEBUG util.py:463:   rpm                          x86_64  4.16.1.3-40.el9              build  483 k
+DEBUG util.py:463:   rpm-build-libs               x86_64  4.16.1.3-40.el9              build   88 k
+DEBUG util.py:463:   rpm-libs                     x86_64  4.16.1.3-40.el9              build  307 k
+DEBUG util.py:463:   rust-srpm-macros             noarch  17-4.el9                     build  9.2 k
+DEBUG util.py:463:   setup                        noarch  2.13.7-10.el9                build  140 k
+DEBUG util.py:463:   sqlite-libs                  x86_64  3.34.1-9.el9                 build  642 k
+DEBUG util.py:463:   systemd-libs                 x86_64  252-67.el9                   build  658 k
+DEBUG util.py:463:   tzdata                       noarch  2026a-1.el9                  build  496 k
+DEBUG util.py:463:   util-linux-core              x86_64  2.37.4-25.el9                build  431 k
+DEBUG util.py:463:   xz-libs                      x86_64  5.2.5-8.el9                  build   92 k
+DEBUG util.py:463:   zip                          x86_64  3.0-35.el9                   build  263 k
+DEBUG util.py:463:   zlib                         x86_64  1.2.11-40.el9                build   90 k
+DEBUG util.py:463:   zstd                         x86_64  1.5.5-1.el9                  build  462 k
+DEBUG util.py:463:  Installing Groups:
+DEBUG util.py:463:   build                                                                         
+DEBUG util.py:463:  Transaction Summary
+DEBUG util.py:463:  ================================================================================
+DEBUG util.py:463:  Install  213 Packages
+DEBUG util.py:463:  Total download size: 71 M
+DEBUG util.py:463:  Installed size: 254 M
+DEBUG util.py:463:  Downloading Packages:
+DEBUG util.py:463:  --------------------------------------------------------------------------------
+DEBUG util.py:463:  Total                                            93 MB/s |  71 MB     00:00     
+DEBUG util.py:463:  Running transaction check
+DEBUG util.py:463:  Transaction check succeeded.
+DEBUG util.py:463:  Running transaction test
+DEBUG util.py:463:  Transaction test succeeded.
+DEBUG util.py:463:  Running transaction
+DEBUG util.py:463:  Installed products updated.
+DEBUG util.py:463:  Installed:
+DEBUG util.py:463:    alternatives-1.24-2.el9.x86_64                                                
+DEBUG util.py:463:    audit-libs-3.1.5-8.el9.x86_64                                                 
+DEBUG util.py:463:    basesystem-11-13.el9.noarch                                                   
+DEBUG util.py:463:    bash-5.1.8-9.el9.x86_64                                                       
+DEBUG util.py:463:    binutils-2.35.2-72.el9.x86_64                                                 
+DEBUG util.py:463:    binutils-gold-2.35.2-72.el9.x86_64                                            
+DEBUG util.py:463:    bzip2-1.0.8-11.el9.x86_64                                                     
+DEBUG util.py:463:    bzip2-libs-1.0.8-11.el9.x86_64                                                
+DEBUG util.py:463:    ca-certificates-2025.2.80_v9.0.305-91.el9.noarch                              
+DEBUG util.py:463:    centos-gpg-keys-9.0-36.el9.noarch                                             
+DEBUG util.py:463:    centos-stream-release-9.0-36.el9.noarch                                       
+DEBUG util.py:463:    centos-stream-repos-9.0-36.el9.noarch                                         
+DEBUG util.py:463:    centpkg-minimal-2.1.0-3.el9.noarch                                            
+DEBUG util.py:463:    coreutils-8.32-40.el9.x86_64                                                  
+DEBUG util.py:463:    coreutils-common-8.32-40.el9.x86_64                                           
+DEBUG util.py:463:    cpio-2.13-16.el9.x86_64                                                       
+DEBUG util.py:463:    cracklib-2.9.6-28.el9.x86_64                                                  
+DEBUG util.py:463:    cracklib-dicts-2.9.6-28.el9.x86_64                                            
+DEBUG util.py:463:    crypto-policies-20260224-1.gitea0f072.el9.noarch                              
+DEBUG util.py:463:    curl-7.76.1-40.el9.x86_64                                                     
+DEBUG util.py:463:    cyrus-sasl-lib-2.1.27-21.el9.x86_64                                           
+DEBUG util.py:463:    debugedit-5.0-11.el9.x86_64                                                   
+DEBUG util.py:463:    diffutils-3.7-12.el9.x86_64                                                   
+DEBUG util.py:463:    dwz-0.16-1.el9.x86_64                                                         
+DEBUG util.py:463:    ed-1.14.2-12.el9.x86_64                                                       
+DEBUG util.py:463:    efi-srpm-macros-6-4.el9.noarch                                                
+DEBUG util.py:463:    elfutils-0.194-1.el9.x86_64                                                   
+DEBUG util.py:463:    elfutils-debuginfod-client-0.194-1.el9.x86_64                                 
+DEBUG util.py:463:    elfutils-default-yama-scope-0.194-1.el9.noarch                                
+DEBUG util.py:463:    elfutils-libelf-0.194-1.el9.x86_64                                            
+DEBUG util.py:463:    elfutils-libs-0.194-1.el9.x86_64                                              
+DEBUG util.py:463:    expat-2.5.0-6.el9.x86_64                                                      
+DEBUG util.py:463:    file-5.39-17.el9.x86_64                                                       
+DEBUG util.py:463:    file-libs-5.39-17.el9.x86_64                                                  
+DEBUG util.py:463:    filesystem-3.16-5.el9.x86_64                                                  
+DEBUG util.py:463:    findutils-1:4.8.0-7.el9.x86_64                                                
+DEBUG util.py:463:    fonts-srpm-macros-1:2.0.5-7.el9.1.noarch                                      
+DEBUG util.py:463:    gawk-5.1.0-6.el9.x86_64                                                       
+DEBUG util.py:463:    gdb-minimal-16.3-3.el9.x86_64                                                 
+DEBUG util.py:463:    gdbm-libs-1:1.23-1.el9.x86_64                                                 
+DEBUG util.py:463:    ghc-srpm-macros-1.5.0-6.el9.noarch                                            
+DEBUG util.py:463:    git-core-2.52.0-1.el9.x86_64                                                  
+DEBUG util.py:463:    glibc-2.34-262.el9.x86_64                                                     
+DEBUG util.py:463:    glibc-common-2.34-262.el9.x86_64                                              
+DEBUG util.py:463:    glibc-gconv-extra-2.34-262.el9.x86_64                                         
+DEBUG util.py:463:    glibc-minimal-langpack-2.34-262.el9.x86_64                                    
+DEBUG util.py:463:    gmp-1:6.2.0-13.el9.x86_64                                                     
+DEBUG util.py:463:    go-srpm-macros-3.8.1-1.el9.noarch                                             
+DEBUG util.py:463:    grep-3.6-5.el9.x86_64                                                         
+DEBUG util.py:463:    groff-base-1.22.4-10.el9.x86_64                                               
+DEBUG util.py:463:    gzip-1.12-1.el9.x86_64                                                        
+DEBUG util.py:463:    info-6.7-15.el9.x86_64                                                        
+DEBUG util.py:463:    json-c-0.14-11.el9.x86_64                                                     
+DEBUG util.py:463:    kernel-srpm-macros-1.0-14.el9.noarch                                          
+DEBUG util.py:463:    keyutils-libs-1.6.3-1.el9.x86_64                                              
+DEBUG util.py:463:    krb5-libs-1.21.1-8.el9.x86_64                                                 
+DEBUG util.py:463:    less-590-6.el9.x86_64                                                         
+DEBUG util.py:463:    libacl-2.3.1-4.el9.x86_64                                                     
+DEBUG util.py:463:    libarchive-3.5.3-8.el9.x86_64                                                 
+DEBUG util.py:463:    libattr-2.5.1-3.el9.x86_64                                                    
+DEBUG util.py:463:    libblkid-2.37.4-25.el9.x86_64                                                 
+DEBUG util.py:463:    libbrotli-1.0.9-9.el9.x86_64                                                  
+DEBUG util.py:463:    libcap-2.48-10.el9.x86_64                                                     
+DEBUG util.py:463:    libcap-ng-0.8.2-7.el9.x86_64                                                  
+DEBUG util.py:463:    libcbor-0.7.0-5.el9.x86_64                                                    
+DEBUG util.py:463:    libcom_err-1.46.5-8.el9.x86_64                                                
+DEBUG util.py:463:    libcurl-7.76.1-40.el9.x86_64                                                  
+DEBUG util.py:463:    libdb-5.3.28-57.el9.x86_64                                                    
+DEBUG util.py:463:    libeconf-0.4.1-5.el9.x86_64                                                   
+DEBUG util.py:463:    libedit-3.1-39.20210216cvs.el9.x86_64                                         
+DEBUG util.py:463:    libevent-2.1.12-8.el9.x86_64                                                  
+DEBUG util.py:463:    libfdisk-2.37.4-25.el9.x86_64                                                 
+DEBUG util.py:463:    libffi-3.4.2-8.el9.x86_64                                                     
+DEBUG util.py:463:    libfido2-1.13.0-2.el9.x86_64                                                  
+DEBUG util.py:463:    libgcc-11.5.0-14.el9.x86_64                                                   
+DEBUG util.py:463:    libgcrypt-1.10.0-11.el9.x86_64                                                
+DEBUG util.py:463:    libgomp-11.5.0-14.el9.x86_64                                                  
+DEBUG util.py:463:    libgpg-error-1.42-5.el9.x86_64                                                
+DEBUG util.py:463:    libidn2-2.3.0-7.el9.x86_64                                                    
+DEBUG util.py:463:    libmount-2.37.4-25.el9.x86_64                                                 
+DEBUG util.py:463:    libnghttp2-1.43.0-7.el9.x86_64                                                
+DEBUG util.py:463:    libpkgconf-1.7.3-10.el9.x86_64                                                
+DEBUG util.py:463:    libpsl-0.21.1-5.el9.x86_64                                                    
+DEBUG util.py:463:    libpwquality-1.4.4-8.el9.x86_64                                               
+DEBUG util.py:463:    libselinux-3.6-3.el9.x86_64                                                   
+DEBUG util.py:463:    libsemanage-3.6-5.el9.x86_64                                                  
+DEBUG util.py:463:    libsepol-3.6-3.el9.x86_64                                                     
+DEBUG util.py:463:    libsigsegv-2.13-4.el9.x86_64                                                  
+DEBUG util.py:463:    libsmartcols-2.37.4-25.el9.x86_64                                             
+DEBUG util.py:463:    libssh-0.10.4-18.el9.x86_64                                                   
+DEBUG util.py:463:    libssh-config-0.10.4-18.el9.noarch                                            
+DEBUG util.py:463:    libstdc++-11.5.0-14.el9.x86_64                                                
+DEBUG util.py:463:    libtasn1-4.16.0-9.el9.x86_64                                                  
+DEBUG util.py:463:    libtool-ltdl-2.4.6-46.el9.x86_64                                              
+DEBUG util.py:463:    libunistring-0.9.10-15.el9.x86_64                                             
+DEBUG util.py:463:    libutempter-1.2.1-6.el9.x86_64                                                
+DEBUG util.py:463:    libuuid-2.37.4-25.el9.x86_64                                                  
+DEBUG util.py:463:    libverto-0.3.2-3.el9.x86_64                                                   
+DEBUG util.py:463:    libxcrypt-4.4.18-3.el9.x86_64                                                 
+DEBUG util.py:463:    libxml2-2.9.13-14.el9.x86_64                                                  
+DEBUG util.py:463:    libzstd-1.5.5-1.el9.x86_64                                                    
+DEBUG util.py:463:    lua-libs-5.4.4-4.el9.x86_64                                                   
+DEBUG util.py:463:    lua-srpm-macros-1-6.el9.noarch                                                
+DEBUG util.py:463:    lz4-libs-1.9.3-5.el9.x86_64                                                   
+DEBUG util.py:463:    make-1:4.3-8.el9.x86_64                                                       
+DEBUG util.py:463:    mpfr-4.1.0-10.el9.x86_64                                                      
+DEBUG util.py:463:    ncurses-6.2-12.20210508.el9.x86_64                                            
+DEBUG util.py:463:    ncurses-base-6.2-12.20210508.el9.noarch                                       
+DEBUG util.py:463:    ncurses-libs-6.2-12.20210508.el9.x86_64                                       
+DEBUG util.py:463:    ocaml-srpm-macros-6-6.el9.noarch                                              
+DEBUG util.py:463:    openblas-srpm-macros-2-11.el9.noarch                                          
+DEBUG util.py:463:    openldap-2.6.8-4.el9.x86_64                                                   
+DEBUG util.py:463:    openssh-9.9p1-7.el9.x86_64                                                    
+DEBUG util.py:463:    openssh-clients-9.9p1-7.el9.x86_64                                            
+DEBUG util.py:463:    openssl-1:3.5.5-1.el9.x86_64                                                  
+DEBUG util.py:463:    openssl-fips-provider-1:3.5.5-1.el9.x86_64                                    
+DEBUG util.py:463:    openssl-libs-1:3.5.5-1.el9.x86_64                                             
+DEBUG util.py:463:    p11-kit-0.26.2-1.el9.x86_64                                                   
+DEBUG util.py:463:    p11-kit-trust-0.26.2-1.el9.x86_64                                             
+DEBUG util.py:463:    pam-1.5.1-28.el9.x86_64                                                       
+DEBUG util.py:463:    patch-2.7.6-16.el9.x86_64                                                     
+DEBUG util.py:463:    pcre-8.44-4.el9.x86_64                                                        
+DEBUG util.py:463:    pcre2-10.40-6.el9.x86_64                                                      
+DEBUG util.py:463:    pcre2-syntax-10.40-6.el9.noarch                                               
+DEBUG util.py:463:    perl-AutoLoader-5.74-483.el9.noarch                                           
+DEBUG util.py:463:    perl-B-1.80-483.el9.x86_64                                                    
+DEBUG util.py:463:    perl-Carp-1.50-460.el9.noarch                                                 
+DEBUG util.py:463:    perl-Class-Struct-0.66-483.el9.noarch                                         
+DEBUG util.py:463:    perl-Data-Dumper-2.174-462.el9.x86_64                                         
+DEBUG util.py:463:    perl-Digest-1.19-4.el9.noarch                                                 
+DEBUG util.py:463:    perl-Digest-MD5-2.58-4.el9.x86_64                                             
+DEBUG util.py:463:    perl-Encode-4:3.08-462.el9.x86_64                                             
+DEBUG util.py:463:    perl-Errno-1.30-483.el9.x86_64                                                
+DEBUG util.py:463:    perl-Exporter-5.74-461.el9.noarch                                             
+DEBUG util.py:463:    perl-Fcntl-1.13-483.el9.x86_64                                                
+DEBUG util.py:463:    perl-File-Basename-2.85-483.el9.noarch                                        
+DEBUG util.py:463:    perl-File-Path-2.18-4.el9.noarch                                              
+DEBUG util.py:463:    perl-File-Temp-1:0.231.100-4.el9.noarch                                       
+DEBUG util.py:463:    perl-File-stat-1.09-483.el9.noarch                                            
+DEBUG util.py:463:    perl-FileHandle-2.03-483.el9.noarch                                           
+DEBUG util.py:463:    perl-Getopt-Long-1:2.52-4.el9.noarch                                          
+DEBUG util.py:463:    perl-Getopt-Std-1.12-483.el9.noarch                                           
+DEBUG util.py:463:    perl-HTTP-Tiny-0.076-462.el9.noarch                                           
+DEBUG util.py:463:    perl-IO-1.43-483.el9.x86_64                                                   
+DEBUG util.py:463:    perl-IO-Socket-IP-0.41-5.el9.noarch                                           
+DEBUG util.py:463:    perl-IO-Socket-SSL-2.073-2.el9.noarch                                         
+DEBUG util.py:463:    perl-IPC-Open3-1.21-483.el9.noarch                                            
+DEBUG util.py:463:    perl-MIME-Base64-3.16-4.el9.x86_64                                            
+DEBUG util.py:463:    perl-Mozilla-CA-20200520-6.el9.noarch                                         
+DEBUG util.py:463:    perl-Net-SSLeay-1.94-3.el9.x86_64                                             
+DEBUG util.py:463:    perl-POSIX-1.94-483.el9.x86_64                                                
+DEBUG util.py:463:    perl-PathTools-3.78-461.el9.x86_64                                            
+DEBUG util.py:463:    perl-Pod-Escapes-1:1.07-460.el9.noarch                                        
+DEBUG util.py:463:    perl-Pod-Perldoc-3.28.01-461.el9.noarch                                       
+DEBUG util.py:463:    perl-Pod-Simple-1:3.42-4.el9.noarch                                           
+DEBUG util.py:463:    perl-Pod-Usage-4:2.01-4.el9.noarch                                            
+DEBUG util.py:463:    perl-Scalar-List-Utils-4:1.56-462.el9.x86_64                                  
+DEBUG util.py:463:    perl-SelectSaver-1.02-483.el9.noarch                                          
+DEBUG util.py:463:    perl-Socket-4:2.031-4.el9.x86_64                                              
+DEBUG util.py:463:    perl-Storable-1:3.21-460.el9.x86_64                                           
+DEBUG util.py:463:    perl-Symbol-1.08-483.el9.noarch                                               
+DEBUG util.py:463:    perl-Term-ANSIColor-5.01-461.el9.noarch                                       
+DEBUG util.py:463:    perl-Term-Cap-1.17-460.el9.noarch                                             
+DEBUG util.py:463:    perl-Text-ParseWords-3.30-460.el9.noarch                                      
+DEBUG util.py:463:    perl-Text-Tabs+Wrap-2013.0523-460.el9.noarch                                  
+DEBUG util.py:463:    perl-Time-Local-2:1.300-7.el9.noarch                                          
+DEBUG util.py:463:    perl-URI-5.09-3.el9.noarch                                                    
+DEBUG util.py:463:    perl-base-2.27-483.el9.noarch                                                 
+DEBUG util.py:463:    perl-constant-1.33-461.el9.noarch                                             
+DEBUG util.py:463:    perl-if-0.60.800-483.el9.noarch                                               
+DEBUG util.py:463:    perl-interpreter-4:5.32.1-483.el9.x86_64                                      
+DEBUG util.py:463:    perl-libnet-3.13-4.el9.noarch                                                 
+DEBUG util.py:463:    perl-libs-4:5.32.1-483.el9.x86_64                                             
+DEBUG util.py:463:    perl-mro-1.23-483.el9.x86_64                                                  
+DEBUG util.py:463:    perl-overload-1.31-483.el9.noarch                                             
+DEBUG util.py:463:    perl-overloading-0.02-483.el9.noarch                                          
+DEBUG util.py:463:    perl-parent-1:0.238-460.el9.noarch                                            
+DEBUG util.py:463:    perl-podlators-1:4.14-460.el9.noarch                                          
+DEBUG util.py:463:    perl-srpm-macros-1-41.el9.noarch                                              
+DEBUG util.py:463:    perl-subs-1.03-483.el9.noarch                                                 
+DEBUG util.py:463:    perl-vars-1.05-483.el9.noarch                                                 
+DEBUG util.py:463:    pkgconf-1.7.3-10.el9.x86_64                                                   
+DEBUG util.py:463:    pkgconf-m4-1.7.3-10.el9.noarch                                                
+DEBUG util.py:463:    pkgconf-pkg-config-1.7.3-10.el9.x86_64                                        
+DEBUG util.py:463:    popt-1.18-8.el9.x86_64                                                        
+DEBUG util.py:463:    publicsuffix-list-dafsa-20210518-3.el9.noarch                                 
+DEBUG util.py:463:    pyproject-srpm-macros-1.18.5-1.el9.noarch                                     
+DEBUG util.py:463:    python-srpm-macros-3.9-54.el9.noarch                                          
+DEBUG util.py:463:    qt5-srpm-macros-5.15.9-1.el9.noarch                                           
+DEBUG util.py:463:    readline-8.1-4.el9.x86_64                                                     
+DEBUG util.py:463:    redhat-rpm-config-210-1.el9.noarch                                            
+DEBUG util.py:463:    rh-dupsign-macros-1.7-1.el9.noarch                                            
+DEBUG util.py:463:    rpm-4.16.1.3-40.el9.x86_64                                                    
+DEBUG util.py:463:    rpm-build-4.16.1.3-40.el9.x86_64                                              
+DEBUG util.py:463:    rpm-build-libs-4.16.1.3-40.el9.x86_64                                         
+DEBUG util.py:463:    rpm-libs-4.16.1.3-40.el9.x86_64                                               
+DEBUG util.py:463:    rust-srpm-macros-17-4.el9.noarch                                              
+DEBUG util.py:463:    sed-4.8-10.el9.x86_64                                                         
+DEBUG util.py:463:    setup-2.13.7-10.el9.noarch                                                    
+DEBUG util.py:463:    shadow-utils-2:4.9-16.el9.x86_64                                              
+DEBUG util.py:463:    sqlite-libs-3.34.1-9.el9.x86_64                                               
+DEBUG util.py:463:    systemd-libs-252-67.el9.x86_64                                                
+DEBUG util.py:463:    tar-2:1.34-11.el9.x86_64                                                      
+DEBUG util.py:463:    tzdata-2026a-1.el9.noarch                                                     
+DEBUG util.py:463:    unzip-6.0-59.el9.x86_64                                                       
+DEBUG util.py:463:    util-linux-2.37.4-25.el9.x86_64                                               
+DEBUG util.py:463:    util-linux-core-2.37.4-25.el9.x86_64                                          
+DEBUG util.py:463:    which-2.21-30.el9.x86_64                                                      
+DEBUG util.py:463:    xz-5.2.5-8.el9.x86_64                                                         
+DEBUG util.py:463:    xz-libs-5.2.5-8.el9.x86_64                                                    
+DEBUG util.py:463:    zip-3.0-35.el9.x86_64                                                         
+DEBUG util.py:463:    zlib-1.2.11-40.el9.x86_64                                                     
+DEBUG util.py:463:    zstd-1.5.5-1.el9.x86_64                                                       
+DEBUG util.py:463:  Complete!
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:185:  kill orphans in chroot /var/lib/stream-mock/c9s-pesign-build-825735-820916/root
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/os-release
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/RPMS
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/RPMS
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/SPECS
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/SPECS
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/SRPMS
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/SRPMS
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/SOURCES
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/SOURCES
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/BUILD
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/BUILD
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/BUILDROOT
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/BUILDROOT
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/originals
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/originals
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['userdel', '-f', 'mockbuild', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:461:  configuration error - unknown item 'HMAC_CRYPTO_ALGO' (notify administrator)
+DEBUG util.py:461:  userdel: user 'mockbuild' does not exist
+DEBUG util.py:610:  Child return code was: 6
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['groupdel', 'mock', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:461:  configuration error - unknown item 'HMAC_CRYPTO_ALGO' (notify administrator)
+DEBUG util.py:610:  Child return code was: 6
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['groupadd', 'mock', '-g', '135', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:461:  configuration error - unknown item 'HMAC_CRYPTO_ALGO' (notify administrator)
+DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
+DEBUG util.py:461:  Higher version of database is expected!
+DEBUG util.py:461:  In order to upgrade the database, you must run SSSD.
+DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue, but note that removing cache files will also remove all of your cached credentials.
+DEBUG util.py:461:  Could not open available domains
+DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
+DEBUG util.py:461:  Higher version of database is expected!
+DEBUG util.py:461:  In order to upgrade the database, you must run SSSD.
+DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue, but note that removing cache files will also remove all of your cached credentials.
+DEBUG util.py:461:  Could not open available domains
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['useradd', 'mockbuild', '-o', '-u', '988', '-g', '135', '-N', '-d', '/builddir', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:461:  configuration error - unknown item 'HMAC_CRYPTO_ALGO' (notify administrator)
+DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
+DEBUG util.py:461:  Higher version of database is expected!
+DEBUG util.py:461:  In order to upgrade the database, you must run SSSD.
+DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue, but note that removing cache files will also remove all of your cached credentials.
+DEBUG util.py:461:  Could not open available domains
+DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
+DEBUG util.py:461:  Higher version of database is expected!
+DEBUG util.py:461:  In order to upgrade the database, you must run SSSD.
+DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue, but note that removing cache files will also remove all of your cached credentials.
+DEBUG util.py:461:  Could not open available domains
+DEBUG util.py:461:  useradd: warning: the home directory already exists.
+DEBUG util.py:461:  Not copying any file from skel directory into it.
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/.initialized
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/rpm', '-qa', '--root', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:463:  rust-srpm-macros-17-4.el9.noarch
+DEBUG util.py:463:  publicsuffix-list-dafsa-20210518-3.el9.noarch
+DEBUG util.py:463:  perl-srpm-macros-1-41.el9.noarch
+DEBUG util.py:463:  openblas-srpm-macros-2-11.el9.noarch
+DEBUG util.py:463:  ncurses-base-6.2-12.20210508.el9.noarch
+DEBUG util.py:463:  ghc-srpm-macros-1.5.0-6.el9.noarch
+DEBUG util.py:463:  centos-gpg-keys-9.0-36.el9.noarch
+DEBUG util.py:463:  centos-stream-release-9.0-36.el9.noarch
+DEBUG util.py:463:  filesystem-3.16-5.el9.x86_64
+DEBUG util.py:463:  ncurses-libs-6.2-12.20210508.el9.x86_64
+DEBUG util.py:463:  libgcc-11.5.0-14.el9.x86_64
+DEBUG util.py:463:  glibc-minimal-langpack-2.34-262.el9.x86_64
+DEBUG util.py:463:  glibc-2.34-262.el9.x86_64
+DEBUG util.py:463:  xz-libs-5.2.5-8.el9.x86_64
+DEBUG util.py:463:  libzstd-1.5.5-1.el9.x86_64
+DEBUG util.py:463:  libstdc++-11.5.0-14.el9.x86_64
+DEBUG util.py:463:  libuuid-2.37.4-25.el9.x86_64
+DEBUG util.py:463:  libattr-2.5.1-3.el9.x86_64
+DEBUG util.py:463:  libcap-2.48-10.el9.x86_64
+DEBUG util.py:463:  crypto-policies-20260224-1.gitea0f072.el9.noarch
+DEBUG util.py:463:  lz4-libs-1.9.3-5.el9.x86_64
+DEBUG util.py:463:  mpfr-4.1.0-10.el9.x86_64
+DEBUG util.py:463:  unzip-6.0-59.el9.x86_64
+DEBUG util.py:463:  file-5.39-17.el9.x86_64
+DEBUG util.py:463:  alternatives-1.24-2.el9.x86_64
+DEBUG util.py:463:  audit-libs-3.1.5-8.el9.x86_64
+DEBUG util.py:463:  libsepol-3.6-3.el9.x86_64
+DEBUG util.py:463:  gawk-5.1.0-6.el9.x86_64
+DEBUG util.py:463:  libtasn1-4.16.0-9.el9.x86_64
+DEBUG util.py:463:  libunistring-0.9.10-15.el9.x86_64
+DEBUG util.py:463:  lua-libs-5.4.4-4.el9.x86_64
+DEBUG util.py:463:  libselinux-3.6-3.el9.x86_64
+DEBUG util.py:463:  findutils-4.8.0-7.el9.x86_64
+DEBUG util.py:463:  shadow-utils-4.9-16.el9.x86_64
+DEBUG util.py:463:  tar-1.34-11.el9.x86_64
+DEBUG util.py:463:  p11-kit-trust-0.26.2-1.el9.x86_64
+DEBUG util.py:463:  zstd-1.5.5-1.el9.x86_64
+DEBUG util.py:463:  bzip2-1.0.8-11.el9.x86_64
+DEBUG util.py:463:  info-6.7-15.el9.x86_64
+DEBUG util.py:463:  patch-2.7.6-16.el9.x86_64
+DEBUG util.py:463:  diffutils-3.7-12.el9.x86_64
+DEBUG util.py:463:  gdbm-libs-1.23-1.el9.x86_64
+DEBUG util.py:463:  keyutils-libs-1.6.3-1.el9.x86_64
+DEBUG util.py:463:  libbrotli-1.0.9-9.el9.x86_64
+DEBUG util.py:463:  libdb-5.3.28-57.el9.x86_64
+DEBUG util.py:463:  libedit-3.1-39.20210216cvs.el9.x86_64
+DEBUG util.py:463:  libgpg-error-1.42-5.el9.x86_64
+DEBUG util.py:463:  libnghttp2-1.43.0-7.el9.x86_64
+DEBUG util.py:463:  pkgconf-1.7.3-10.el9.x86_64
+DEBUG util.py:463:  libtool-ltdl-2.4.6-46.el9.x86_64
+DEBUG util.py:463:  ncurses-6.2-12.20210508.el9.x86_64
+DEBUG util.py:463:  grep-3.6-5.el9.x86_64
+DEBUG util.py:463:  openssl-libs-3.5.5-1.el9.x86_64
+DEBUG util.py:463:  ca-certificates-2025.2.80_v9.0.305-91.el9.noarch
+DEBUG util.py:463:  libblkid-2.37.4-25.el9.x86_64
+DEBUG util.py:463:  libmount-2.37.4-25.el9.x86_64
+DEBUG util.py:463:  cracklib-2.9.6-28.el9.x86_64
+DEBUG util.py:463:  xz-5.2.5-8.el9.x86_64
+DEBUG util.py:463:  util-linux-core-2.37.4-25.el9.x86_64
+DEBUG util.py:463:  libfdisk-2.37.4-25.el9.x86_64
+DEBUG util.py:463:  libssh-0.10.4-18.el9.x86_64
+DEBUG util.py:463:  perl-Digest-MD5-2.58-4.el9.x86_64
+DEBUG util.py:463:  perl-FileHandle-2.03-483.el9.noarch
+DEBUG util.py:463:  perl-libnet-3.13-4.el9.noarch
+DEBUG util.py:463:  perl-base-2.27-483.el9.noarch
+DEBUG util.py:463:  perl-if-0.60.800-483.el9.noarch
+DEBUG util.py:463:  perl-Time-Local-1.300-7.el9.noarch
+DEBUG util.py:463:  perl-IO-Socket-SSL-2.073-2.el9.noarch
+DEBUG util.py:463:  perl-Pod-Escapes-1.07-460.el9.noarch
+DEBUG util.py:463:  perl-Mozilla-CA-20200520-6.el9.noarch
+DEBUG util.py:463:  perl-POSIX-1.94-483.el9.x86_64
+DEBUG util.py:463:  perl-IPC-Open3-1.21-483.el9.noarch
+DEBUG util.py:463:  perl-File-Temp-0.231.100-4.el9.noarch
+DEBUG util.py:463:  perl-Pod-Simple-3.42-4.el9.noarch
+DEBUG util.py:463:  perl-Socket-2.031-4.el9.x86_64
+DEBUG util.py:463:  perl-Symbol-1.08-483.el9.noarch
+DEBUG util.py:463:  perl-podlators-4.14-460.el9.noarch
+DEBUG util.py:463:  perl-Fcntl-1.13-483.el9.x86_64
+DEBUG util.py:463:  perl-mro-1.23-483.el9.x86_64
+DEBUG util.py:463:  perl-overloading-0.02-483.el9.noarch
+DEBUG util.py:463:  perl-Errno-1.30-483.el9.x86_64
+DEBUG util.py:463:  perl-Getopt-Std-1.12-483.el9.noarch
+DEBUG util.py:463:  perl-Scalar-List-Utils-1.56-462.el9.x86_64
+DEBUG util.py:463:  perl-Storable-3.21-460.el9.x86_64
+DEBUG util.py:463:  perl-parent-0.238-460.el9.noarch
+DEBUG util.py:463:  perl-Getopt-Long-2.52-4.el9.noarch
+DEBUG util.py:463:  perl-Exporter-5.74-461.el9.noarch
+DEBUG util.py:463:  perl-Encode-3.08-462.el9.x86_64
+DEBUG util.py:463:  perl-interpreter-5.32.1-483.el9.x86_64
+DEBUG util.py:463:  openssl-3.5.5-1.el9.x86_64
+DEBUG util.py:463:  pam-1.5.1-28.el9.x86_64
+DEBUG util.py:463:  openssh-9.9p1-7.el9.x86_64
+DEBUG util.py:463:  libevent-2.1.12-8.el9.x86_64
+DEBUG util.py:463:  libcurl-7.76.1-40.el9.x86_64
+DEBUG util.py:463:  rpm-4.16.1.3-40.el9.x86_64
+DEBUG util.py:463:  efi-srpm-macros-6-4.el9.noarch
+DEBUG util.py:463:  git-core-2.52.0-1.el9.x86_64
+DEBUG util.py:463:  elfutils-libs-0.194-1.el9.x86_64
+DEBUG util.py:463:  binutils-gold-2.35.2-72.el9.x86_64
+DEBUG util.py:463:  elfutils-0.194-1.el9.x86_64
+DEBUG util.py:463:  debugedit-5.0-11.el9.x86_64
+DEBUG util.py:463:  fonts-srpm-macros-2.0.5-7.el9.1.noarch
+DEBUG util.py:463:  python-srpm-macros-3.9-54.el9.noarch
+DEBUG util.py:463:  redhat-rpm-config-210-1.el9.noarch
+DEBUG util.py:463:  centpkg-minimal-2.1.0-3.el9.noarch
+DEBUG util.py:463:  which-2.21-30.el9.x86_64
+DEBUG util.py:463:  tzdata-2026a-1.el9.noarch
+DEBUG util.py:463:  qt5-srpm-macros-5.15.9-1.el9.noarch
+DEBUG util.py:463:  pkgconf-m4-1.7.3-10.el9.noarch
+DEBUG util.py:463:  pcre2-syntax-10.40-6.el9.noarch
+DEBUG util.py:463:  ocaml-srpm-macros-6-6.el9.noarch
+DEBUG util.py:463:  libssh-config-0.10.4-18.el9.noarch
+DEBUG util.py:463:  coreutils-common-8.32-40.el9.x86_64
+DEBUG util.py:463:  centos-stream-repos-9.0-36.el9.noarch
+DEBUG util.py:463:  setup-2.13.7-10.el9.noarch
+DEBUG util.py:463:  basesystem-11-13.el9.noarch
+DEBUG util.py:463:  bash-5.1.8-9.el9.x86_64
+DEBUG util.py:463:  glibc-gconv-extra-2.34-262.el9.x86_64
+DEBUG util.py:463:  glibc-common-2.34-262.el9.x86_64
+DEBUG util.py:463:  zlib-1.2.11-40.el9.x86_64
+DEBUG util.py:463:  bzip2-libs-1.0.8-11.el9.x86_64
+DEBUG util.py:463:  elfutils-libelf-0.194-1.el9.x86_64
+DEBUG util.py:463:  libxcrypt-4.4.18-3.el9.x86_64
+DEBUG util.py:463:  gmp-6.2.0-13.el9.x86_64
+DEBUG util.py:463:  libacl-2.3.1-4.el9.x86_64
+DEBUG util.py:463:  popt-1.18-8.el9.x86_64
+DEBUG util.py:463:  libcom_err-1.46.5-8.el9.x86_64
+DEBUG util.py:463:  readline-8.1-4.el9.x86_64
+DEBUG util.py:463:  dwz-0.16-1.el9.x86_64
+DEBUG util.py:463:  file-libs-5.39-17.el9.x86_64
+DEBUG util.py:463:  sqlite-libs-3.34.1-9.el9.x86_64
+DEBUG util.py:463:  libcap-ng-0.8.2-7.el9.x86_64
+DEBUG util.py:463:  libffi-3.4.2-8.el9.x86_64
+DEBUG util.py:463:  libsigsegv-2.13-4.el9.x86_64
+DEBUG util.py:463:  libsmartcols-2.37.4-25.el9.x86_64
+DEBUG util.py:463:  p11-kit-0.26.2-1.el9.x86_64
+DEBUG util.py:463:  libidn2-2.3.0-7.el9.x86_64
+DEBUG util.py:463:  pcre2-10.40-6.el9.x86_64
+DEBUG util.py:463:  sed-4.8-10.el9.x86_64
+DEBUG util.py:463:  libsemanage-3.6-5.el9.x86_64
+DEBUG util.py:463:  libutempter-1.2.1-6.el9.x86_64
+DEBUG util.py:463:  libpsl-0.21.1-5.el9.x86_64
+DEBUG util.py:463:  zip-3.0-35.el9.x86_64
+DEBUG util.py:463:  groff-base-1.22.4-10.el9.x86_64
+DEBUG util.py:463:  libxml2-2.9.13-14.el9.x86_64
+DEBUG util.py:463:  ed-1.14.2-12.el9.x86_64
+DEBUG util.py:463:  cpio-2.13-16.el9.x86_64
+DEBUG util.py:463:  expat-2.5.0-6.el9.x86_64
+DEBUG util.py:463:  json-c-0.14-11.el9.x86_64
+DEBUG util.py:463:  less-590-6.el9.x86_64
+DEBUG util.py:463:  libcbor-0.7.0-5.el9.x86_64
+DEBUG util.py:463:  libeconf-0.4.1-5.el9.x86_64
+DEBUG util.py:463:  libgomp-11.5.0-14.el9.x86_64
+DEBUG util.py:463:  libgcrypt-1.10.0-11.el9.x86_64
+DEBUG util.py:463:  libpkgconf-1.7.3-10.el9.x86_64
+DEBUG util.py:463:  pkgconf-pkg-config-1.7.3-10.el9.x86_64
+DEBUG util.py:463:  libverto-0.3.2-3.el9.x86_64
+DEBUG util.py:463:  pcre-8.44-4.el9.x86_64
+DEBUG util.py:463:  openssl-fips-provider-3.5.5-1.el9.x86_64
+DEBUG util.py:463:  coreutils-8.32-40.el9.x86_64
+DEBUG util.py:463:  krb5-libs-1.21.1-8.el9.x86_64
+DEBUG util.py:463:  systemd-libs-252-67.el9.x86_64
+DEBUG util.py:463:  gzip-1.12-1.el9.x86_64
+DEBUG util.py:463:  libarchive-3.5.3-8.el9.x86_64
+DEBUG util.py:463:  cracklib-dicts-2.9.6-28.el9.x86_64
+DEBUG util.py:463:  libfido2-1.13.0-2.el9.x86_64
+DEBUG util.py:463:  cyrus-sasl-lib-2.1.27-21.el9.x86_64
+DEBUG util.py:463:  perl-Digest-1.19-4.el9.noarch
+DEBUG util.py:463:  perl-B-1.80-483.el9.x86_64
+DEBUG util.py:463:  perl-Data-Dumper-2.174-462.el9.x86_64
+DEBUG util.py:463:  perl-AutoLoader-5.74-483.el9.noarch
+DEBUG util.py:463:  perl-URI-5.09-3.el9.noarch
+DEBUG util.py:463:  perl-IO-Socket-IP-0.41-5.el9.noarch
+DEBUG util.py:463:  perl-File-Path-2.18-4.el9.noarch
+DEBUG util.py:463:  perl-Net-SSLeay-1.94-3.el9.x86_64
+DEBUG util.py:463:  perl-Text-Tabs+Wrap-2013.0523-460.el9.noarch
+DEBUG util.py:463:  perl-Class-Struct-0.66-483.el9.noarch
+DEBUG util.py:463:  perl-Term-ANSIColor-5.01-461.el9.noarch
+DEBUG util.py:463:  perl-subs-1.03-483.el9.noarch
+DEBUG util.py:463:  perl-Term-Cap-1.17-460.el9.noarch
+DEBUG util.py:463:  perl-HTTP-Tiny-0.076-462.el9.noarch
+DEBUG util.py:463:  perl-SelectSaver-1.02-483.el9.noarch
+DEBUG util.py:463:  perl-File-stat-1.09-483.el9.noarch
+DEBUG util.py:463:  perl-Pod-Perldoc-3.28.01-461.el9.noarch
+DEBUG util.py:463:  perl-Text-ParseWords-3.30-460.el9.noarch
+DEBUG util.py:463:  perl-IO-1.43-483.el9.x86_64
+DEBUG util.py:463:  perl-Pod-Usage-2.01-4.el9.noarch
+DEBUG util.py:463:  perl-File-Basename-2.85-483.el9.noarch
+DEBUG util.py:463:  perl-MIME-Base64-3.16-4.el9.x86_64
+DEBUG util.py:463:  perl-constant-1.33-461.el9.noarch
+DEBUG util.py:463:  perl-overload-1.31-483.el9.noarch
+DEBUG util.py:463:  perl-vars-1.05-483.el9.noarch
+DEBUG util.py:463:  perl-Carp-1.50-460.el9.noarch
+DEBUG util.py:463:  perl-PathTools-3.78-461.el9.x86_64
+DEBUG util.py:463:  perl-libs-5.32.1-483.el9.x86_64
+DEBUG util.py:463:  kernel-srpm-macros-1.0-14.el9.noarch
+DEBUG util.py:463:  libpwquality-1.4.4-8.el9.x86_64
+DEBUG util.py:463:  util-linux-2.37.4-25.el9.x86_64
+DEBUG util.py:463:  openssh-clients-9.9p1-7.el9.x86_64
+DEBUG util.py:463:  openldap-2.6.8-4.el9.x86_64
+DEBUG util.py:463:  curl-7.76.1-40.el9.x86_64
+DEBUG util.py:463:  rpm-libs-4.16.1.3-40.el9.x86_64
+DEBUG util.py:463:  lua-srpm-macros-1-6.el9.noarch
+DEBUG util.py:463:  elfutils-default-yama-scope-0.194-1.el9.noarch
+DEBUG util.py:463:  elfutils-debuginfod-client-0.194-1.el9.x86_64
+DEBUG util.py:463:  binutils-2.35.2-72.el9.x86_64
+DEBUG util.py:463:  gdb-minimal-16.3-3.el9.x86_64
+DEBUG util.py:463:  rpm-build-libs-4.16.1.3-40.el9.x86_64
+DEBUG util.py:463:  go-srpm-macros-3.8.1-1.el9.noarch
+DEBUG util.py:463:  pyproject-srpm-macros-1.18.5-1.el9.noarch
+DEBUG util.py:463:  rpm-build-4.16.1.3-40.el9.x86_64
+DEBUG util.py:463:  make-4.3-8.el9.x86_64
+DEBUG util.py:463:  rh-dupsign-macros-1.7-1.el9.noarch
+DEBUG util.py:610:  Child return code was: 0
+INFO backend.py:234:  Installed packages:
+INFO backend.py:235:  alternatives-1.24-2.el9.x86_64
+audit-libs-3.1.5-8.el9.x86_64
+basesystem-11-13.el9.noarch
+bash-5.1.8-9.el9.x86_64
+binutils-2.35.2-72.el9.x86_64
+binutils-gold-2.35.2-72.el9.x86_64
+bzip2-1.0.8-11.el9.x86_64
+bzip2-libs-1.0.8-11.el9.x86_64
+ca-certificates-2025.2.80_v9.0.305-91.el9.noarch
+centos-gpg-keys-9.0-36.el9.noarch
+centos-stream-release-9.0-36.el9.noarch
+centos-stream-repos-9.0-36.el9.noarch
+centpkg-minimal-2.1.0-3.el9.noarch
+coreutils-8.32-40.el9.x86_64
+coreutils-common-8.32-40.el9.x86_64
+cpio-2.13-16.el9.x86_64
+cracklib-2.9.6-28.el9.x86_64
+cracklib-dicts-2.9.6-28.el9.x86_64
+crypto-policies-20260224-1.gitea0f072.el9.noarch
+curl-7.76.1-40.el9.x86_64
+cyrus-sasl-lib-2.1.27-21.el9.x86_64
+debugedit-5.0-11.el9.x86_64
+diffutils-3.7-12.el9.x86_64
+dwz-0.16-1.el9.x86_64
+ed-1.14.2-12.el9.x86_64
+efi-srpm-macros-6-4.el9.noarch
+elfutils-0.194-1.el9.x86_64
+elfutils-debuginfod-client-0.194-1.el9.x86_64
+elfutils-default-yama-scope-0.194-1.el9.noarch
+elfutils-libelf-0.194-1.el9.x86_64
+elfutils-libs-0.194-1.el9.x86_64
+expat-2.5.0-6.el9.x86_64
+file-5.39-17.el9.x86_64
+file-libs-5.39-17.el9.x86_64
+filesystem-3.16-5.el9.x86_64
+findutils-4.8.0-7.el9.x86_64
+fonts-srpm-macros-2.0.5-7.el9.1.noarch
+gawk-5.1.0-6.el9.x86_64
+gdb-minimal-16.3-3.el9.x86_64
+gdbm-libs-1.23-1.el9.x86_64
+ghc-srpm-macros-1.5.0-6.el9.noarch
+git-core-2.52.0-1.el9.x86_64
+glibc-2.34-262.el9.x86_64
+glibc-common-2.34-262.el9.x86_64
+glibc-gconv-extra-2.34-262.el9.x86_64
+glibc-minimal-langpack-2.34-262.el9.x86_64
+gmp-6.2.0-13.el9.x86_64
+go-srpm-macros-3.8.1-1.el9.noarch
+grep-3.6-5.el9.x86_64
+groff-base-1.22.4-10.el9.x86_64
+gzip-1.12-1.el9.x86_64
+info-6.7-15.el9.x86_64
+json-c-0.14-11.el9.x86_64
+kernel-srpm-macros-1.0-14.el9.noarch
+keyutils-libs-1.6.3-1.el9.x86_64
+krb5-libs-1.21.1-8.el9.x86_64
+less-590-6.el9.x86_64
+libacl-2.3.1-4.el9.x86_64
+libarchive-3.5.3-8.el9.x86_64
+libattr-2.5.1-3.el9.x86_64
+libblkid-2.37.4-25.el9.x86_64
+libbrotli-1.0.9-9.el9.x86_64
+libcap-2.48-10.el9.x86_64
+libcap-ng-0.8.2-7.el9.x86_64
+libcbor-0.7.0-5.el9.x86_64
+libcom_err-1.46.5-8.el9.x86_64
+libcurl-7.76.1-40.el9.x86_64
+libdb-5.3.28-57.el9.x86_64
+libeconf-0.4.1-5.el9.x86_64
+libedit-3.1-39.20210216cvs.el9.x86_64
+libevent-2.1.12-8.el9.x86_64
+libfdisk-2.37.4-25.el9.x86_64
+libffi-3.4.2-8.el9.x86_64
+libfido2-1.13.0-2.el9.x86_64
+libgcc-11.5.0-14.el9.x86_64
+libgcrypt-1.10.0-11.el9.x86_64
+libgomp-11.5.0-14.el9.x86_64
+libgpg-error-1.42-5.el9.x86_64
+libidn2-2.3.0-7.el9.x86_64
+libmount-2.37.4-25.el9.x86_64
+libnghttp2-1.43.0-7.el9.x86_64
+libpkgconf-1.7.3-10.el9.x86_64
+libpsl-0.21.1-5.el9.x86_64
+libpwquality-1.4.4-8.el9.x86_64
+libselinux-3.6-3.el9.x86_64
+libsemanage-3.6-5.el9.x86_64
+libsepol-3.6-3.el9.x86_64
+libsigsegv-2.13-4.el9.x86_64
+libsmartcols-2.37.4-25.el9.x86_64
+libssh-0.10.4-18.el9.x86_64
+libssh-config-0.10.4-18.el9.noarch
+libstdc++-11.5.0-14.el9.x86_64
+libtasn1-4.16.0-9.el9.x86_64
+libtool-ltdl-2.4.6-46.el9.x86_64
+libunistring-0.9.10-15.el9.x86_64
+libutempter-1.2.1-6.el9.x86_64
+libuuid-2.37.4-25.el9.x86_64
+libverto-0.3.2-3.el9.x86_64
+libxcrypt-4.4.18-3.el9.x86_64
+libxml2-2.9.13-14.el9.x86_64
+libzstd-1.5.5-1.el9.x86_64
+lua-libs-5.4.4-4.el9.x86_64
+lua-srpm-macros-1-6.el9.noarch
+lz4-libs-1.9.3-5.el9.x86_64
+make-4.3-8.el9.x86_64
+mpfr-4.1.0-10.el9.x86_64
+ncurses-6.2-12.20210508.el9.x86_64
+ncurses-base-6.2-12.20210508.el9.noarch
+ncurses-libs-6.2-12.20210508.el9.x86_64
+ocaml-srpm-macros-6-6.el9.noarch
+openblas-srpm-macros-2-11.el9.noarch
+openldap-2.6.8-4.el9.x86_64
+openssh-9.9p1-7.el9.x86_64
+openssh-clients-9.9p1-7.el9.x86_64
+openssl-3.5.5-1.el9.x86_64
+openssl-fips-provider-3.5.5-1.el9.x86_64
+openssl-libs-3.5.5-1.el9.x86_64
+p11-kit-0.26.2-1.el9.x86_64
+p11-kit-trust-0.26.2-1.el9.x86_64
+pam-1.5.1-28.el9.x86_64
+patch-2.7.6-16.el9.x86_64
+pcre-8.44-4.el9.x86_64
+pcre2-10.40-6.el9.x86_64
+pcre2-syntax-10.40-6.el9.noarch
+perl-AutoLoader-5.74-483.el9.noarch
+perl-B-1.80-483.el9.x86_64
+perl-Carp-1.50-460.el9.noarch
+perl-Class-Struct-0.66-483.el9.noarch
+perl-Data-Dumper-2.174-462.el9.x86_64
+perl-Digest-1.19-4.el9.noarch
+perl-Digest-MD5-2.58-4.el9.x86_64
+perl-Encode-3.08-462.el9.x86_64
+perl-Errno-1.30-483.el9.x86_64
+perl-Exporter-5.74-461.el9.noarch
+perl-Fcntl-1.13-483.el9.x86_64
+perl-File-Basename-2.85-483.el9.noarch
+perl-File-Path-2.18-4.el9.noarch
+perl-File-Temp-0.231.100-4.el9.noarch
+perl-File-stat-1.09-483.el9.noarch
+perl-FileHandle-2.03-483.el9.noarch
+perl-Getopt-Long-2.52-4.el9.noarch
+perl-Getopt-Std-1.12-483.el9.noarch
+perl-HTTP-Tiny-0.076-462.el9.noarch
+perl-IO-1.43-483.el9.x86_64
+perl-IO-Socket-IP-0.41-5.el9.noarch
+perl-IO-Socket-SSL-2.073-2.el9.noarch
+perl-IPC-Open3-1.21-483.el9.noarch
+perl-MIME-Base64-3.16-4.el9.x86_64
+perl-Mozilla-CA-20200520-6.el9.noarch
+perl-Net-SSLeay-1.94-3.el9.x86_64
+perl-POSIX-1.94-483.el9.x86_64
+perl-PathTools-3.78-461.el9.x86_64
+perl-Pod-Escapes-1.07-460.el9.noarch
+perl-Pod-Perldoc-3.28.01-461.el9.noarch
+perl-Pod-Simple-3.42-4.el9.noarch
+perl-Pod-Usage-2.01-4.el9.noarch
+perl-Scalar-List-Utils-1.56-462.el9.x86_64
+perl-SelectSaver-1.02-483.el9.noarch
+perl-Socket-2.031-4.el9.x86_64
+perl-Storable-3.21-460.el9.x86_64
+perl-Symbol-1.08-483.el9.noarch
+perl-Term-ANSIColor-5.01-461.el9.noarch
+perl-Term-Cap-1.17-460.el9.noarch
+perl-Text-ParseWords-3.30-460.el9.noarch
+perl-Text-Tabs+Wrap-2013.0523-460.el9.noarch
+perl-Time-Local-1.300-7.el9.noarch
+perl-URI-5.09-3.el9.noarch
+perl-base-2.27-483.el9.noarch
+perl-constant-1.33-461.el9.noarch
+perl-if-0.60.800-483.el9.noarch
+perl-interpreter-5.32.1-483.el9.x86_64
+perl-libnet-3.13-4.el9.noarch
+perl-libs-5.32.1-483.el9.x86_64
+perl-mro-1.23-483.el9.x86_64
+perl-overload-1.31-483.el9.noarch
+perl-overloading-0.02-483.el9.noarch
+perl-parent-0.238-460.el9.noarch
+perl-podlators-4.14-460.el9.noarch
+perl-srpm-macros-1-41.el9.noarch
+perl-subs-1.03-483.el9.noarch
+perl-vars-1.05-483.el9.noarch
+pkgconf-1.7.3-10.el9.x86_64
+pkgconf-m4-1.7.3-10.el9.noarch
+pkgconf-pkg-config-1.7.3-10.el9.x86_64
+popt-1.18-8.el9.x86_64
+publicsuffix-list-dafsa-20210518-3.el9.noarch
+pyproject-srpm-macros-1.18.5-1.el9.noarch
+python-srpm-macros-3.9-54.el9.noarch
+qt5-srpm-macros-5.15.9-1.el9.noarch
+readline-8.1-4.el9.x86_64
+redhat-rpm-config-210-1.el9.noarch
+rh-dupsign-macros-1.7-1.el9.noarch
+rpm-4.16.1.3-40.el9.x86_64
+rpm-build-4.16.1.3-40.el9.x86_64
+rpm-build-libs-4.16.1.3-40.el9.x86_64
+rpm-libs-4.16.1.3-40.el9.x86_64
+rust-srpm-macros-17-4.el9.noarch
+sed-4.8-10.el9.x86_64
+setup-2.13.7-10.el9.noarch
+shadow-utils-4.9-16.el9.x86_64
+sqlite-libs-3.34.1-9.el9.x86_64
+systemd-libs-252-67.el9.x86_64
+tar-1.34-11.el9.x86_64
+tzdata-2026a-1.el9.noarch
+unzip-6.0-59.el9.x86_64
+util-linux-2.37.4-25.el9.x86_64
+util-linux-core-2.37.4-25.el9.x86_64
+which-2.21-30.el9.x86_64
+xz-5.2.5-8.el9.x86_64
+xz-libs-5.2.5-8.el9.x86_64
+zip-3.0-35.el9.x86_64
+zlib-1.2.11-40.el9.x86_64
+zstd-1.5.5-1.el9.x86_64
+DEBUG util.py:185:  kill orphans in chroot /var/lib/stream-mock/c9s-pesign-build-825735-820916/root
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+INFO buildroot.py:602:  Mock Version: 5.4
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/result
+INFO buildroot.py:284:  calling preinit hooks
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/usr/bin/lscpu'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:463:  Architecture:        x86_64
+DEBUG util.py:463:  CPU op-mode(s):      32-bit, 64-bit
+DEBUG util.py:463:  Byte Order:          Little Endian
+DEBUG util.py:463:  CPU(s):              40
+DEBUG util.py:463:  On-line CPU(s) list: 0-39
+DEBUG util.py:463:  Thread(s) per core:  1
+DEBUG util.py:463:  Core(s) per socket:  1
+DEBUG util.py:463:  Socket(s):           40
+DEBUG util.py:463:  NUMA node(s):        1
+DEBUG util.py:463:  Vendor ID:           GenuineIntel
+DEBUG util.py:463:  CPU family:          6
+DEBUG util.py:463:  Model:               85
+DEBUG util.py:463:  Model name:          Intel Xeon Processor (Cascadelake)
+DEBUG util.py:463:  Stepping:            5
+DEBUG util.py:463:  CPU MHz:             2095.104
+DEBUG util.py:463:  BogoMIPS:            4190.20
+DEBUG util.py:463:  Virtualization:      VT-x
+DEBUG util.py:463:  Hypervisor vendor:   KVM
+DEBUG util.py:463:  Virtualization type: full
+DEBUG util.py:463:  L1d cache:           32K
+DEBUG util.py:463:  L1i cache:           32K
+DEBUG util.py:463:  L2 cache:            4096K
+DEBUG util.py:463:  L3 cache:            16384K
+DEBUG util.py:463:  NUMA node0 CPU(s):   0-39
+DEBUG util.py:463:  Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves arat umip pku ospke avx512_vnni md_clear arch_capabilities
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/free'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:463:                total        used        free      shared  buff/cache   available
+DEBUG util.py:463:  Mem:      131997612     1357488   112680272     4096592    17959852   125294108
+DEBUG util.py:463:  Swap:       2097148      129424     1967724
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/df', '-H', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root', '/var/cache/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:463:  Filesystem                   Size  Used Avail Use% Mounted on
+DEBUG util.py:463:  /dev/mapper/vg_x86--05-root  417G  7.3G  388G   2% /
+DEBUG util.py:463:  /dev/mapper/vg_x86--05-root  417G  7.3G  388G   2% /
+DEBUG util.py:610:  Child return code was: 0
+DEBUG buildroot.py:658:  create skeleton dirs
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/rpm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/dbus
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/log
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/cache/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/cache/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/rpm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/tmp
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/tmp/ccache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/tmp
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf/vars
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/yum.repos.d
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/mapper
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/mapper
+DEBUG buildroot.py:802:  kernel version == 4.18.0-553.27.1.el8_10.x86_64
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/fstab
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/yum/yum.conf
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf/dnf.conf
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/log/yum.log
+DEBUG buildroot.py:298:  rootdir = /var/lib/stream-mock/c9s-pesign-build-825735-820916/root
+DEBUG buildroot.py:299:  resultdir = /var/lib/stream-mock/c9s-pesign-build-825735-820916/result
+DEBUG package_manager.py:56:  searching for 'dnf' package manager or alternatives
+INFO buildroot.py:175:  Package manager dnf detected and used (fallback)
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/mock
+DEBUG file_util.py:158:  Updating files in /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust with files from /etc/pki/ca-trust
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/./extracted
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/./source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/java
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/pem
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/edk2
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/openssl
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/source/anchors
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/source/blacklist
+DEBUG file_util.py:158:  Updating files in /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source with files from /usr/share/pki/ca-trust-source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source/./anchors
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source/./blacklist
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf
+DEBUG package_manager.py:689:  configure DNF vars
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/proc', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/sys', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.m6kyvn0d', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys/fs/selinux
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['userdel', '-f', 'mockbuild', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:461:  configuration error - unknown item 'HMAC_CRYPTO_ALGO' (notify administrator)
+DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
+DEBUG util.py:461:  Higher version of database is expected!
+DEBUG util.py:461:  In order to upgrade the database, you must run SSSD.
+DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue, but note that removing cache files will also remove all of your cached credentials.
+DEBUG util.py:461:  Could not open available domains
+DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
+DEBUG util.py:461:  Higher version of database is expected!
+DEBUG util.py:461:  In order to upgrade the database, you must run SSSD.
+DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue, but note that removing cache files will also remove all of your cached credentials.
+DEBUG util.py:461:  Could not open available domains
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['groupdel', 'mock', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:461:  configuration error - unknown item 'HMAC_CRYPTO_ALGO' (notify administrator)
+DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
+DEBUG util.py:461:  Higher version of database is expected!
+DEBUG util.py:461:  In order to upgrade the database, you must run SSSD.
+DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue, but note that removing cache files will also remove all of your cached credentials.
+DEBUG util.py:461:  Could not open available domains
+DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
+DEBUG util.py:461:  Higher version of database is expected!
+DEBUG util.py:461:  In order to upgrade the database, you must run SSSD.
+DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue, but note that removing cache files will also remove all of your cached credentials.
+DEBUG util.py:461:  Could not open available domains
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['groupadd', 'mock', '-g', '135', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:461:  configuration error - unknown item 'HMAC_CRYPTO_ALGO' (notify administrator)
+DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
+DEBUG util.py:461:  Higher version of database is expected!
+DEBUG util.py:461:  In order to upgrade the database, you must run SSSD.
+DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue, but note that removing cache files will also remove all of your cached credentials.
+DEBUG util.py:461:  Could not open available domains
+DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
+DEBUG util.py:461:  Higher version of database is expected!
+DEBUG util.py:461:  In order to upgrade the database, you must run SSSD.
+DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue, but note that removing cache files will also remove all of your cached credentials.
+DEBUG util.py:461:  Could not open available domains
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['useradd', 'mockbuild', '-o', '-u', '988', '-g', '135', '-N', '-d', '/builddir', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:461:  configuration error - unknown item 'HMAC_CRYPTO_ALGO' (notify administrator)
+DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
+DEBUG util.py:461:  Higher version of database is expected!
+DEBUG util.py:461:  In order to upgrade the database, you must run SSSD.
+DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue, but note that removing cache files will also remove all of your cached credentials.
+DEBUG util.py:461:  Could not open available domains
+DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
+DEBUG util.py:461:  Higher version of database is expected!
+DEBUG util.py:461:  In order to upgrade the database, you must run SSSD.
+DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue, but note that removing cache files will also remove all of your cached credentials.
+DEBUG util.py:461:  Could not open available domains
+DEBUG util.py:461:  useradd: warning: the home directory already exists.
+DEBUG util.py:461:  Not copying any file from skel directory into it.
+DEBUG util.py:461:  Creating mailbox file: File exists
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/.initialized
+INFO backend.py:391:  Running in chroot: ['uname -r']
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['uname -r'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell True
+DEBUG util.py:463:  4.18.0-553.27.1.el8_10.x86_64
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:185:  kill orphans in chroot /var/lib/stream-mock/c9s-pesign-build-825735-820916/root
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+INFO buildroot.py:602:  Mock Version: 5.4
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/result
+INFO buildroot.py:284:  calling preinit hooks
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/usr/bin/lscpu'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:463:  Architecture:        x86_64
+DEBUG util.py:463:  CPU op-mode(s):      32-bit, 64-bit
+DEBUG util.py:463:  Byte Order:          Little Endian
+DEBUG util.py:463:  CPU(s):              40
+DEBUG util.py:463:  On-line CPU(s) list: 0-39
+DEBUG util.py:463:  Thread(s) per core:  1
+DEBUG util.py:463:  Core(s) per socket:  1
+DEBUG util.py:463:  Socket(s):           40
+DEBUG util.py:463:  NUMA node(s):        1
+DEBUG util.py:463:  Vendor ID:           GenuineIntel
+DEBUG util.py:463:  CPU family:          6
+DEBUG util.py:463:  Model:               85
+DEBUG util.py:463:  Model name:          Intel Xeon Processor (Cascadelake)
+DEBUG util.py:463:  Stepping:            5
+DEBUG util.py:463:  CPU MHz:             2095.104
+DEBUG util.py:463:  BogoMIPS:            4190.20
+DEBUG util.py:463:  Virtualization:      VT-x
+DEBUG util.py:463:  Hypervisor vendor:   KVM
+DEBUG util.py:463:  Virtualization type: full
+DEBUG util.py:463:  L1d cache:           32K
+DEBUG util.py:463:  L1i cache:           32K
+DEBUG util.py:463:  L2 cache:            4096K
+DEBUG util.py:463:  L3 cache:            16384K
+DEBUG util.py:463:  NUMA node0 CPU(s):   0-39
+DEBUG util.py:463:  Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves arat umip pku ospke avx512_vnni md_clear arch_capabilities
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/free'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:463:                total        used        free      shared  buff/cache   available
+DEBUG util.py:463:  Mem:      131997612     1432712   112598648     4096588    17966252   125218892
+DEBUG util.py:463:  Swap:       2097148      129424     1967724
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/df', '-H', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root', '/var/cache/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:463:  Filesystem                   Size  Used Avail Use% Mounted on
+DEBUG util.py:463:  /dev/mapper/vg_x86--05-root  417G  7.3G  388G   2% /
+DEBUG util.py:463:  /dev/mapper/vg_x86--05-root  417G  7.3G  388G   2% /
+DEBUG util.py:610:  Child return code was: 0
+DEBUG buildroot.py:658:  create skeleton dirs
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/rpm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/dbus
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/log
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/cache/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/cache/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/rpm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/tmp
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/tmp/ccache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/tmp
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf/vars
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/yum.repos.d
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/yum.repos.d
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/mapper
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/mapper
+DEBUG buildroot.py:802:  kernel version == 4.18.0-553.27.1.el8_10.x86_64
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/fstab
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/yum/yum.conf
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf/dnf.conf
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/log/yum.log
+DEBUG buildroot.py:298:  rootdir = /var/lib/stream-mock/c9s-pesign-build-825735-820916/root
+DEBUG buildroot.py:299:  resultdir = /var/lib/stream-mock/c9s-pesign-build-825735-820916/result
+DEBUG package_manager.py:56:  searching for 'dnf' package manager or alternatives
+INFO buildroot.py:175:  Package manager dnf detected and used (fallback)
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/mock
+DEBUG file_util.py:158:  Updating files in /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust with files from /etc/pki/ca-trust
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/./extracted
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/./source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/java
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/pem
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/edk2
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/openssl
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/source/anchors
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/source/blacklist
+DEBUG file_util.py:158:  Updating files in /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source with files from /usr/share/pki/ca-trust-source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source/./anchors
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source/./blacklist
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf
+DEBUG package_manager.py:689:  configure DNF vars
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/proc', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/sys', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.yzgqq86u', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys/fs/selinux
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['rpm', '-q', 'rpm', 'rpm-sequoia', 'python3-dnf', 'python3-dnf-plugins-core', 'yum', 'yum-utils', 'dnf5', 'dnf5-plugins'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:463:  rpm-4.14.3-32.el8_10.x86_64
+DEBUG util.py:463:  package rpm-sequoia is not installed
+DEBUG util.py:463:  python3-dnf-4.7.0-21.el8_10.noarch
+DEBUG util.py:463:  python3-dnf-plugins-core-4.0.21-25.el8.noarch
+DEBUG util.py:463:  yum-4.7.0-21.el8_10.noarch
+DEBUG util.py:463:  yum-utils-4.0.21-25.el8.noarch
+DEBUG util.py:463:  package dnf5 is not installed
+DEBUG util.py:463:  package dnf5-plugins is not installed
+DEBUG util.py:610:  Child return code was: 3
+INFO package_manager.py:195:  Buildroot is handled by package management from host and used with --installroot:
+  rpm-4.14.3-32.el8_10.x86_64
+  python3-dnf-4.7.0-21.el8_10.noarch
+  python3-dnf-plugins-core-4.0.21-25.el8.noarch
+  yum-4.7.0-21.el8_10.noarch
+  yum-utils-4.0.21-25.el8.noarch
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/RPMS
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/RPMS
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/SPECS
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/SPECS
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/SRPMS
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/SRPMS
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/SOURCES
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/BUILD
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/BUILD
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/BUILDROOT
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/BUILDROOT
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/originals
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/originals
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['userdel', '-f', 'mockbuild', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:461:  configuration error - unknown item 'HMAC_CRYPTO_ALGO' (notify administrator)
+DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
+DEBUG util.py:461:  Higher version of database is expected!
+DEBUG util.py:461:  In order to upgrade the database, you must run SSSD.
+DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue, but note that removing cache files will also remove all of your cached credentials.
+DEBUG util.py:461:  Could not open available domains
+DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
+DEBUG util.py:461:  Higher version of database is expected!
+DEBUG util.py:461:  In order to upgrade the database, you must run SSSD.
+DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue, but note that removing cache files will also remove all of your cached credentials.
+DEBUG util.py:461:  Could not open available domains
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['groupdel', 'mock', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:461:  configuration error - unknown item 'HMAC_CRYPTO_ALGO' (notify administrator)
+DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
+DEBUG util.py:461:  Higher version of database is expected!
+DEBUG util.py:461:  In order to upgrade the database, you must run SSSD.
+DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue, but note that removing cache files will also remove all of your cached credentials.
+DEBUG util.py:461:  Could not open available domains
+DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
+DEBUG util.py:461:  Higher version of database is expected!
+DEBUG util.py:461:  In order to upgrade the database, you must run SSSD.
+DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue, but note that removing cache files will also remove all of your cached credentials.
+DEBUG util.py:461:  Could not open available domains
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['groupadd', 'mock', '-g', '135', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:461:  configuration error - unknown item 'HMAC_CRYPTO_ALGO' (notify administrator)
+DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
+DEBUG util.py:461:  Higher version of database is expected!
+DEBUG util.py:461:  In order to upgrade the database, you must run SSSD.
+DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue, but note that removing cache files will also remove all of your cached credentials.
+DEBUG util.py:461:  Could not open available domains
+DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
+DEBUG util.py:461:  Higher version of database is expected!
+DEBUG util.py:461:  In order to upgrade the database, you must run SSSD.
+DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue, but note that removing cache files will also remove all of your cached credentials.
+DEBUG util.py:461:  Could not open available domains
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['useradd', 'mockbuild', '-o', '-u', '988', '-g', '135', '-N', '-d', '/builddir', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:461:  configuration error - unknown item 'HMAC_CRYPTO_ALGO' (notify administrator)
+DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
+DEBUG util.py:461:  Higher version of database is expected!
+DEBUG util.py:461:  In order to upgrade the database, you must run SSSD.
+DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue, but note that removing cache files will also remove all of your cached credentials.
+DEBUG util.py:461:  Could not open available domains
+DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
+DEBUG util.py:461:  Higher version of database is expected!
+DEBUG util.py:461:  In order to upgrade the database, you must run SSSD.
+DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue, but note that removing cache files will also remove all of your cached credentials.
+DEBUG util.py:461:  Could not open available domains
+DEBUG util.py:461:  useradd: warning: the home directory already exists.
+DEBUG util.py:461:  Not copying any file from skel directory into it.
+DEBUG util.py:461:  Creating mailbox file: File exists
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/.initialized
+DEBUG buildroot.py:621:  removing 3 rpm db files
+DEBUG buildroot.py:626:  nuke_rpm_db: removing /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/rpm/__db.001
+DEBUG buildroot.py:626:  nuke_rpm_db: removing /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/rpm/__db.003
+DEBUG buildroot.py:626:  nuke_rpm_db: removing /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/rpm/__db.002
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/rpm', '-Uvh', '--nodeps', '/builddir/build/originals/shim-unsigned-x64-16.1-1.el9.centos.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:461:  warning: Found bdb_ro Packages database while attempting sqlite backend: using bdb_ro backend.
+DEBUG util.py:463:  Updating / installing...
+DEBUG util.py:463:  shim-unsigned-x64-16.1-1.el9.centos   ########################################
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/rpm', '-qpl', '/builddir/build/originals/shim-unsigned-x64-16.1-1.el9.centos.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:461:  warning: Found bdb_ro Packages database while attempting sqlite backend: using bdb_ro backend.
+DEBUG util.py:463:  centos_vendordb.esl
+DEBUG util.py:463:  sbat.centos.csv
+DEBUG util.py:463:  shim-16.1.tar.bz2
+DEBUG util.py:463:  shim-find-debuginfo.sh
+DEBUG util.py:463:  shim-unsigned-x64.spec
+DEBUG util.py:463:  shim.patches
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: case $(rpmbuild --help) in *--noclean*) exit 0; esac; exit 1 with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell True
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/installation-homedir
+DEBUG package_manager.py:289:  ['/usr/bin/dnf-3', 'builddep', '--installroot', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=versionlock', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root//builddir/build/SRPMS/shim-unsigned-x64-16.1-1.el9.centos.src.rpm']
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/usr/bin/dnf-3', 'builddep', '--installroot', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=versionlock', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root//builddir/build/SRPMS/shim-unsigned-x64-16.1-1.el9.centos.src.rpm', '--setopt=tsflags=nocontexts'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8'} and shell False
+DEBUG util.py:463:  Updating Subscription Management repositories.
+DEBUG util.py:463:  Unable to read consumer identity
+DEBUG util.py:463:  This system is not registered with an entitlement server. You can use subscription-manager to register.
+DEBUG util.py:463:  Package findutils-1:4.8.0-7.el9.x86_64 is already installed.
+DEBUG util.py:463:  Package make-1:4.3-8.el9.x86_64 is already installed.
+DEBUG util.py:463:  Package openssl-1:3.5.5-1.el9.x86_64 is already installed.
+DEBUG util.py:463:  Dependencies resolved.
+DEBUG util.py:463:  ================================================================================
+DEBUG util.py:463:   Package                    Arch     Version                      Repo     Size
+DEBUG util.py:463:  ================================================================================
+DEBUG util.py:463:  Installing:
+DEBUG util.py:463:   centos-sb-certs            noarch   9.0-36.el9                   build    16 k
+DEBUG util.py:463:   dos2unix                   x86_64   7.4.2-4.el9                  build   235 k
+DEBUG util.py:463:   elfutils-libelf-devel      x86_64   0.194-1.el9                  build    67 k
+DEBUG util.py:463:   gcc                        x86_64   11.5.0-14.el9                build    32 M
+DEBUG util.py:463:   git                        x86_64   2.52.0-1.el9                 build    39 k
+DEBUG util.py:463:   openssl-devel              x86_64   1:3.5.5-1.el9                build   3.4 M
+DEBUG util.py:463:   pesign                     x86_64   115-6.el9                    build   167 k
+DEBUG util.py:463:  Installing dependencies:
+DEBUG util.py:463:   annobin                    x86_64   12.98-2.el9                  build   1.1 M
+DEBUG util.py:463:   cpp                        x86_64   11.5.0-14.el9                build    11 M
+DEBUG util.py:463:   crypto-policies-scripts    noarch   20260224-1.gitea0f072.el9    build    87 k
+DEBUG util.py:463:   efivar-libs                x86_64   38-3.el9                     build   120 k
+DEBUG util.py:463:   gcc-plugin-annobin         x86_64   11.5.0-14.el9                build    37 k
+DEBUG util.py:463:   git-core-doc               noarch   2.52.0-1.el9                 build   2.8 M
+DEBUG util.py:463:   glibc-devel                x86_64   2.34-262.el9                 build    36 k
+DEBUG util.py:463:   glibc-headers              x86_64   2.34-262.el9                 build   443 k
+DEBUG util.py:463:   kernel-headers             x86_64   5.14.0-691.el9               build   1.7 M
+DEBUG util.py:463:   libmpc                     x86_64   1.2.1-4.el9                  build    61 k
+DEBUG util.py:463:   libxcrypt-devel            x86_64   4.4.18-3.el9                 build    28 k
+DEBUG util.py:463:   libzstd-devel              x86_64   1.5.5-1.el9                  build    50 k
+DEBUG util.py:463:   llvm-filesystem            x86_64   21.1.8-2.el9                 build    13 k
+DEBUG util.py:463:   llvm-libs                  x86_64   21.1.8-2.el9                 build    31 M
+DEBUG util.py:463:   nspr                       x86_64   4.36.0-8.el9                 build   133 k
+DEBUG util.py:463:   nss                        x86_64   3.112.0-8.el9                build   722 k
+DEBUG util.py:463:   nss-softokn                x86_64   3.112.0-8.el9                build   398 k
+DEBUG util.py:463:   nss-softokn-freebl         x86_64   3.112.0-8.el9                build   415 k
+DEBUG util.py:463:   nss-sysinit                x86_64   3.112.0-8.el9                build    18 k
+DEBUG util.py:463:   nss-tools                  x86_64   3.112.0-8.el9                build   432 k
+DEBUG util.py:463:   nss-util                   x86_64   3.112.0-8.el9                build    89 k
+DEBUG util.py:463:   perl-DynaLoader            x86_64   1.47-483.el9                 build    24 k
+DEBUG util.py:463:   perl-Error                 noarch   1:0.17029-7.el9              build    41 k
+DEBUG util.py:463:   perl-Git                   noarch   2.52.0-1.el9                 build    37 k
+DEBUG util.py:463:   perl-TermReadKey           x86_64   2.38-11.el9                  build    36 k
+DEBUG util.py:463:   perl-lib                   x86_64   0.65-483.el9                 build    13 k
+DEBUG util.py:463:   python3                    x86_64   3.9.25-5.el9                 build    26 k
+DEBUG util.py:463:   python3-libs               x86_64   3.9.25-5.el9                 build   7.5 M
+DEBUG util.py:463:   python3-pip-wheel          noarch   21.3.1-1.el9                 build   1.1 M
+DEBUG util.py:463:   python3-setuptools-wheel   noarch   53.0.0-15.el9                build   467 k
+DEBUG util.py:463:   zlib-devel                 x86_64   1.2.11-40.el9                build    44 k
+DEBUG util.py:463:  Transaction Summary
+DEBUG util.py:463:  ================================================================================
+DEBUG util.py:463:  Install  38 Packages
+DEBUG util.py:463:  Total download size: 96 M
+DEBUG util.py:463:  Installed size: 314 M
+DEBUG util.py:463:  Downloading Packages:
+DEBUG util.py:463:  --------------------------------------------------------------------------------
+DEBUG util.py:463:  Total                                           139 MB/s |  96 MB     00:00     
+DEBUG util.py:463:  Running transaction check
+DEBUG util.py:463:  Transaction check succeeded.
+DEBUG util.py:463:  Running transaction test
+DEBUG util.py:463:  Transaction test succeeded.
+DEBUG util.py:463:  Running transaction
+DEBUG util.py:463:  Installed products updated.
+DEBUG util.py:463:  Installed:
+DEBUG util.py:463:    annobin-12.98-2.el9.x86_64                                                    
+DEBUG util.py:463:    centos-sb-certs-9.0-36.el9.noarch                                             
+DEBUG util.py:463:    cpp-11.5.0-14.el9.x86_64                                                      
+DEBUG util.py:463:    crypto-policies-scripts-20260224-1.gitea0f072.el9.noarch                      
+DEBUG util.py:463:    dos2unix-7.4.2-4.el9.x86_64                                                   
+DEBUG util.py:463:    efivar-libs-38-3.el9.x86_64                                                   
+DEBUG util.py:463:    elfutils-libelf-devel-0.194-1.el9.x86_64                                      
+DEBUG util.py:463:    gcc-11.5.0-14.el9.x86_64                                                      
+DEBUG util.py:463:    gcc-plugin-annobin-11.5.0-14.el9.x86_64                                       
+DEBUG util.py:463:    git-2.52.0-1.el9.x86_64                                                       
+DEBUG util.py:463:    git-core-doc-2.52.0-1.el9.noarch                                              
+DEBUG util.py:463:    glibc-devel-2.34-262.el9.x86_64                                               
+DEBUG util.py:463:    glibc-headers-2.34-262.el9.x86_64                                             
+DEBUG util.py:463:    kernel-headers-5.14.0-691.el9.x86_64                                          
+DEBUG util.py:463:    libmpc-1.2.1-4.el9.x86_64                                                     
+DEBUG util.py:463:    libxcrypt-devel-4.4.18-3.el9.x86_64                                           
+DEBUG util.py:463:    libzstd-devel-1.5.5-1.el9.x86_64                                              
+DEBUG util.py:463:    llvm-filesystem-21.1.8-2.el9.x86_64                                           
+DEBUG util.py:463:    llvm-libs-21.1.8-2.el9.x86_64                                                 
+DEBUG util.py:463:    nspr-4.36.0-8.el9.x86_64                                                      
+DEBUG util.py:463:    nss-3.112.0-8.el9.x86_64                                                      
+DEBUG util.py:463:    nss-softokn-3.112.0-8.el9.x86_64                                              
+DEBUG util.py:463:    nss-softokn-freebl-3.112.0-8.el9.x86_64                                       
+DEBUG util.py:463:    nss-sysinit-3.112.0-8.el9.x86_64                                              
+DEBUG util.py:463:    nss-tools-3.112.0-8.el9.x86_64                                                
+DEBUG util.py:463:    nss-util-3.112.0-8.el9.x86_64                                                 
+DEBUG util.py:463:    openssl-devel-1:3.5.5-1.el9.x86_64                                            
+DEBUG util.py:463:    perl-DynaLoader-1.47-483.el9.x86_64                                           
+DEBUG util.py:463:    perl-Error-1:0.17029-7.el9.noarch                                             
+DEBUG util.py:463:    perl-Git-2.52.0-1.el9.noarch                                                  
+DEBUG util.py:463:    perl-TermReadKey-2.38-11.el9.x86_64                                           
+DEBUG util.py:463:    perl-lib-0.65-483.el9.x86_64                                                  
+DEBUG util.py:463:    pesign-115-6.el9.x86_64                                                       
+DEBUG util.py:463:    python3-3.9.25-5.el9.x86_64                                                   
+DEBUG util.py:463:    python3-libs-3.9.25-5.el9.x86_64                                              
+DEBUG util.py:463:    python3-pip-wheel-21.3.1-1.el9.noarch                                         
+DEBUG util.py:463:    python3-setuptools-wheel-53.0.0-15.el9.noarch                                 
+DEBUG util.py:463:    zlib-devel-1.2.11-40.el9.x86_64                                               
+DEBUG util.py:463:  Complete!
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:185:  kill orphans in chroot /var/lib/stream-mock/c9s-pesign-build-825735-820916/root
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: rpm -qa --root '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root' --qf '%{nevra} %{buildtime} %{size} %{pkgid} installed\n' with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell True
+DEBUG util.py:463:  rust-srpm-macros-17-4.el9.noarch 1628569449 2447 73293207465a7961b68686701a149929 installed
+DEBUG util.py:463:  publicsuffix-list-dafsa-20210518-3.el9.noarch 1644512729 68815 a486e7e01444e3373cb6e6b9418720c7 installed
+DEBUG util.py:463:  perl-srpm-macros-1-41.el9.noarch 1628565179 862 6cccf4e84e8d8ff1bfd99a5b08bc765b installed
+DEBUG util.py:463:  openblas-srpm-macros-2-11.el9.noarch 1628560331 104 472d4c6b239cbdfa1a4a1e7465c3878e installed
+DEBUG util.py:463:  ncurses-base-6.2-12.20210508.el9.noarch 1751361593 307293 cba5aaab88b1b8b214aa3d610575b35b installed
+DEBUG util.py:463:  ghc-srpm-macros-1.5.0-6.el9.noarch 1628543357 535 3c30c63eb24feef9d64bfe022fbf9f23 installed
+DEBUG util.py:463:  centos-gpg-keys-9.0-36.el9.noarch 1775596191 22949 005855ea08535814633b16a6b12224c1 installed
+DEBUG util.py:463:  centos-stream-release-9.0-36.el9.noarch 1775596191 30655 848bec6d6280630d225cb59179d43ab8 installed
+DEBUG util.py:463:  filesystem-3.16-5.el9.x86_64 1719325383 106 f9382852ec0acc644aa2248d02286438 installed
+DEBUG util.py:463:  ncurses-libs-6.2-12.20210508.el9.x86_64 1751361582 994415 9dcea9d559ec1b92d643f84a95c122e3 installed
+DEBUG util.py:463:  libgcc-11.5.0-14.el9.x86_64 1761941980 207028 46ccfb916ec529df940535fc3811471e installed
+DEBUG util.py:463:  glibc-minimal-langpack-2.34-262.el9.x86_64 1773747904 0 8c110420553fa5de47ac663572c7902f installed
+DEBUG util.py:463:  glibc-2.34-262.el9.x86_64 1773747904 6441417 d3cb1552afbd2296b490a590f70b5d72 installed
+DEBUG util.py:463:  xz-libs-5.2.5-8.el9.x86_64 1654006189 181557 65b27c8fdb646cb879de885e8d8f9d1e installed
+DEBUG util.py:463:  libzstd-1.5.5-1.el9.x86_64 1731924265 773894 c9ef1d17604ef1812b4c8396a52057a4 installed
+DEBUG util.py:463:  libstdc++-11.5.0-14.el9.x86_64 1761941980 2585625 d62e3fb2e93b311ca4fff9c299f101b9 installed
+DEBUG util.py:463:  libuuid-2.37.4-25.el9.x86_64 1768819805 37997 5721a218c453902fb0711fe1e6a84788 installed
+DEBUG util.py:463:  libattr-2.5.1-3.el9.x86_64 1628537434 29429 aec8b9f183816020e45285f0143e8850 installed
+DEBUG util.py:463:  libcap-2.48-10.el9.x86_64 1751551636 177447 73d9748a60a705a4d6a67404c4438637 installed
+DEBUG util.py:463:  crypto-policies-20260224-1.gitea0f072.el9.noarch 1772202134 101102 4227c2ddd2f55ae5644ef6f6a094580d installed
+DEBUG util.py:463:  lz4-libs-1.9.3-5.el9.x86_64 1628555809 145483 7d3dca7640cf3d38ba0f9f9615d050cd installed
+DEBUG util.py:463:  mpfr-4.1.0-10.el9.x86_64 1770637270 801155 0bff8a2a7a510fc0d127f27ce2a79ec8 installed
+DEBUG util.py:463:  unzip-6.0-59.el9.x86_64 1749651262 398475 59a1634e56df883a51b0f27a3d6b899f installed
+DEBUG util.py:463:  file-5.39-17.el9.x86_64 1771849374 102544 58103099d2846208b6ba48db67dd4b83 installed
+DEBUG util.py:463:  alternatives-1.24-2.el9.x86_64 1725536489 63489 233ce51ed15e69cb4909a1a13eaa4dd2 installed
+DEBUG util.py:463:  audit-libs-3.1.5-8.el9.x86_64 1768393681 338505 26e1cdb1043518240612f27cd9bfb835 installed
+DEBUG util.py:463:  libsepol-3.6-3.el9.x86_64 1742818154 829131 72eb8de3c8fdc36560da85a76b9e8feb installed
+DEBUG util.py:463:  gawk-5.1.0-6.el9.x86_64 1645036530 1685726 49d54aeca4767b4c1f096902535f8e65 installed
+DEBUG util.py:463:  libtasn1-4.16.0-9.el9.x86_64 1739768779 183364 a0a8ab91984108c1b0d2b9bb4fe03609 installed
+DEBUG util.py:463:  libunistring-0.9.10-15.el9.x86_64 1628553516 1643051 df2997eefd8b00af79f36b60155d2564 installed
+DEBUG util.py:463:  lua-libs-5.4.4-4.el9.x86_64 1681732544 287331 d580b400a364fe10ae66719a1533cfff installed
+DEBUG util.py:463:  libselinux-3.6-3.el9.x86_64 1738072423 176845 b59de2c8413f3c82e82c7525f8105fdb installed
+DEBUG util.py:463:  findutils-1:4.8.0-7.el9.x86_64 1720104673 1756958 f10df4e7c5fcd83ef35d96c86d9b034a installed
+DEBUG util.py:463:  shadow-utils-2:4.9-16.el9.x86_64 1765282281 3812493 6f02aee5bb029117aa641b7fa22b6382 installed
+DEBUG util.py:463:  tar-2:1.34-11.el9.x86_64 1771861692 3159915 0300dda8bb32d6078beba01932f8390c installed
+DEBUG util.py:463:  p11-kit-trust-0.26.2-1.el9.x86_64 1770715890 583257 eb3cb52a22803a11b7294ec97373c1be installed
+DEBUG util.py:463:  zstd-1.5.5-1.el9.x86_64 1731924265 1672813 0ec558f56473b9d9543419b96b0fcd53 installed
+DEBUG util.py:463:  bzip2-1.0.8-11.el9.x86_64 1767956184 94736 d3d97adf43843685ea6a52d1051fc0e9 installed
+DEBUG util.py:463:  info-6.7-15.el9.x86_64 1645432912 508035 4d0af4faf66f30b8126abd3410cdd719 installed
+DEBUG util.py:463:  patch-2.7.6-16.el9.x86_64 1628561618 265522 4efdeefb054a89e177b517c3d3ed1147 installed
+DEBUG util.py:463:  diffutils-3.7-12.el9.x86_64 1628539960 1467825 507f1a0f06465e7a20379fffcb5a941e installed
+DEBUG util.py:463:  gdbm-libs-1:1.23-1.el9.x86_64 1712672345 128586 b9b3a18b49984ae02961c57d5847b88c installed
+DEBUG util.py:463:  keyutils-libs-1.6.3-1.el9.x86_64 1666019242 55267 3c9b8438c14c5b6dd89db849f2233459 installed
+DEBUG util.py:463:  libbrotli-1.0.9-9.el9.x86_64 1768910524 782170 8666930940de1b92710a53a8eebaa678 installed
+DEBUG util.py:463:  libdb-5.3.28-57.el9.x86_64 1742885579 1897918 d190d262a458cb96a15f0b2bc8ff0f92 installed
+DEBUG util.py:463:  libedit-3.1-39.20210216cvs.el9.x86_64 1768829765 251839 9192f4abc2816b3441ef465f97292507 installed
+DEBUG util.py:463:  libgpg-error-1.42-5.el9.x86_64 1638889587 837088 366d999be50089a74158b7f0463f8531 installed
+DEBUG util.py:463:  libnghttp2-1.43.0-7.el9.x86_64 1775033419 169756 764d298732b96fbb914524124123f8b0 installed
+DEBUG util.py:463:  pkgconf-1.7.3-10.el9.x86_64 1663762953 77890 c27775732875e2aaaa07204046b2e0ae installed
+DEBUG util.py:463:  libtool-ltdl-2.4.6-46.el9.x86_64 1717763595 71568 9ff2fd24225e187217494936e56576dc installed
+DEBUG util.py:463:  ncurses-6.2-12.20210508.el9.x86_64 1751361582 624676 171a55395e2201bdf951286d7dc0d55b installed
+DEBUG util.py:463:  grep-3.6-5.el9.x86_64 1628545386 857840 b1783007ca41c6a5e2a2a6b09c72ee49 installed
+DEBUG util.py:463:  openssl-libs-1:3.5.5-1.el9.x86_64 1769606865 7478459 2afc1aeed27642812df502c9cbc199d5 installed
+DEBUG util.py:463:  ca-certificates-2025.2.80_v9.0.305-91.el9.noarch 1760120411 2791711 99d34e3d0c83ade5be6c2173cc25aee7 installed
+DEBUG util.py:463:  libblkid-2.37.4-25.el9.x86_64 1768819805 229721 d0cc82cb20821be4106f8b582e5d2870 installed
+DEBUG util.py:463:  libmount-2.37.4-25.el9.x86_64 1768819805 318333 0806f1f9cf0c05d800d79013971e24b5 installed
+DEBUG util.py:463:  cracklib-2.9.6-28.el9.x86_64 1768499133 249970 7159f217bd1f2d5538494b99abe898bc installed
+DEBUG util.py:463:  xz-5.2.5-8.el9.x86_64 1654006189 685923 7a3a1c534311e848d76428a6daddd7c0 installed
+DEBUG util.py:463:  util-linux-core-2.37.4-25.el9.x86_64 1768819805 1262839 381a2fa7dc241688365ff3b3ecadf824 installed
+DEBUG util.py:463:  libfdisk-2.37.4-25.el9.x86_64 1768819805 367763 484535c5e7c88440c46fca1903c92409 installed
+DEBUG util.py:463:  libssh-0.10.4-18.el9.x86_64 1771524009 535755 3240e85bef3365c38514610e9aa5ff61 installed
+DEBUG util.py:463:  perl-Digest-MD5-2.58-4.el9.x86_64 1628563473 61522 2300fd882680ee0c7c1abb1ae6b8ccb4 installed
+DEBUG util.py:463:  perl-FileHandle-0:2.03-483.el9.noarch 1752149200 10533 7a9d875b2723e545c33443524bc26ea5 installed
+DEBUG util.py:463:  perl-libnet-3.13-4.el9.noarch 1628564496 299357 3a4d318a43520c1ea611000b968a597c installed
+DEBUG util.py:463:  perl-base-0:2.27-483.el9.noarch 1752149200 13820 47f1a99e3352cab14bceff774c1ae80a installed
+DEBUG util.py:463:  perl-if-0:0.60.800-483.el9.noarch 1752149200 6875 d50d4a88fcd957b797ee549f74256343 installed
+DEBUG util.py:463:  perl-Time-Local-2:1.300-7.el9.noarch 1628565569 67344 56255d762b27e3f619c7ef093df999a5 installed
+DEBUG util.py:463:  perl-IO-Socket-SSL-2.073-2.el9.noarch 1718787831 616300 68df4118b07154d902cbeb71e46799e0 installed
+DEBUG util.py:463:  perl-Pod-Escapes-1:1.07-460.el9.noarch 1628565069 25764 977f680f4ab8e6be26696f8e005328be installed
+DEBUG util.py:463:  perl-Mozilla-CA-20200520-6.el9.noarch 1628564841 5866 f3ba115f552765dda50122093731bdae installed
+DEBUG util.py:463:  perl-POSIX-0:1.94-483.el9.x86_64 1752149197 240020 bc1c11690502caaae28a10b9ed31e2a5 installed
+DEBUG util.py:463:  perl-IPC-Open3-0:1.21-483.el9.noarch 1752149200 25047 cd057ea83b5da8c3d2c228971ed0de79 installed
+DEBUG util.py:463:  perl-File-Temp-1:0.231.100-4.el9.noarch 1628563998 166550 668718b957c97d218cd0ce87b6d3e36d installed
+DEBUG util.py:463:  perl-Pod-Simple-1:3.42-4.el9.noarch 1628565108 577293 051f5b7ae5eb9bcca2b122291f9bd378 installed
+DEBUG util.py:463:  perl-Socket-4:2.031-4.el9.x86_64 1628565134 124969 0d5788854b6ccd115da6a227466baf78 installed
+DEBUG util.py:463:  perl-Symbol-0:1.08-483.el9.noarch 1752149200 7847 e337de71c4148b9b6ea05c7fbd25a80e installed
+DEBUG util.py:463:  perl-podlators-1:4.14-460.el9.noarch 1628565077 288742 ad2f3ada468688fbe129418e39eaac37 installed
+DEBUG util.py:463:  perl-Fcntl-0:1.13-483.el9.x86_64 1752149197 30116 a27c9f4078d0b8e0ee57aa0215ce19a9 installed
+DEBUG util.py:463:  perl-mro-0:1.23-483.el9.x86_64 1752149197 43476 6e4b2d612c8741d7eec983b05cfb88ba installed
+DEBUG util.py:463:  perl-overloading-0:0.02-483.el9.noarch 1752149200 5894 fe3a1b4ffaf910f6cf86fe8b282e74fe installed
+DEBUG util.py:463:  perl-Errno-0:1.30-483.el9.x86_64 1752149197 9536 a38b54791a8e3550ce828e57979a3985 installed
+DEBUG util.py:463:  perl-Getopt-Std-0:1.12-483.el9.noarch 1752149200 12107 1feae3d7c798491baaa5e889c70ff5e7 installed
+DEBUG util.py:463:  perl-Scalar-List-Utils-4:1.56-462.el9.x86_64 1711036238 143128 d1a7c9b708d7a64e63cd365c3603e604 installed
+DEBUG util.py:463:  perl-Storable-1:3.21-460.el9.x86_64 1628565166 228532 119c254a858a4e8225a8f4f1b95a6fc8 installed
+DEBUG util.py:463:  perl-parent-1:0.238-460.el9.noarch 1628565026 9535 a35e48b4559776d182fedbd2b93f0867 installed
+DEBUG util.py:463:  perl-Getopt-Long-1:2.52-4.el9.noarch 1628564041 139937 0084d602dd5f3a3a608b8aa2d7d2784a installed
+DEBUG util.py:463:  perl-Exporter-5.74-461.el9.noarch 1628563640 55359 600faf3d3db9096efa1de68bfe07d62d installed
+DEBUG util.py:463:  perl-Encode-4:3.08-462.el9.x86_64 1628580079 10235418 464fc08748c13d9698ad06bba18ae510 installed
+DEBUG util.py:463:  perl-interpreter-4:5.32.1-483.el9.x86_64 1752149197 120078 ac84979454d47e782540651037540d4f installed
+DEBUG util.py:463:  openssl-1:3.5.5-1.el9.x86_64 1769606865 2273485 8dce0d1d962d62ff277c60746556ab9f installed
+DEBUG util.py:463:  pam-1.5.1-28.el9.x86_64 1765380169 1907530 6ab988397be635ce9f910dd64a3039fa installed
+DEBUG util.py:463:  openssh-9.9p1-7.el9.x86_64 1774523332 1816016 6bbc7762d4edd6c1ed0b825459bd6f31 installed
+DEBUG util.py:463:  libevent-2.1.12-8.el9.x86_64 1724156211 928082 fbe29f4553f3028b488d425e5fe289cf installed
+DEBUG util.py:463:  libcurl-7.76.1-40.el9.x86_64 1769118258 667526 f264a793a5a9e1e5d41defe109785d88 installed
+DEBUG util.py:463:  rpm-4.16.1.3-40.el9.x86_64 1763740503 2750478 3f18c4a27af17fbd1834957ba93b80c2 installed
+DEBUG util.py:463:  efi-srpm-macros-6-4.el9.noarch 1741089215 41044 d59656b35779ecddedb5526e6b33a800 installed
+DEBUG util.py:463:  git-core-2.52.0-1.el9.x86_64 1767977016 24617163 73d335e77533b1a82a0d984461242c57 installed
+DEBUG util.py:463:  elfutils-libs-0.194-1.el9.x86_64 1761836828 755869 b50169a3145b75dfb58b53b0b8acd1cd installed
+DEBUG util.py:463:  binutils-gold-2.35.2-72.el9.x86_64 1769161287 2128755 13be0c0cde7fa1bbeb14386d37289da0 installed
+DEBUG util.py:463:  elfutils-0.194-1.el9.x86_64 1761836828 3442366 ea7557f1ea154ecbba68a55bdc202aa5 installed
+DEBUG util.py:463:  debugedit-5.0-11.el9.x86_64 1750438489 194614 4556e970268f52eb5535036cfe2cf9f8 installed
+DEBUG util.py:463:  fonts-srpm-macros-1:2.0.5-7.el9.1.noarch 1631794425 56503 0be1ca4f9f113419a2dd328e5a5e5fef installed
+DEBUG util.py:463:  python-srpm-macros-3.9-54.el9.noarch 1719823107 37605 14999f3b83509523c25ed355decb1a1b installed
+DEBUG util.py:463:  redhat-rpm-config-210-1.el9.noarch 1749670400 189483 0470f4ff1bb0b051c3c33a09c55d0e90 installed
+DEBUG util.py:463:  centpkg-minimal-2.1.0-3.el9.noarch 1648692297 11300 e7ab4472c583d56a3939cd1e13cc9d92 installed
+DEBUG util.py:463:  which-2.21-30.el9.x86_64 1751558549 81900 1f21b73b2822ebccf77d5635acf76757 installed
+DEBUG util.py:463:  nspr-4.36.0-8.el9.x86_64 1769191169 320984 1864eb5c312d77a8220b0c1ec37dfcbf installed
+DEBUG util.py:463:  libmpc-1.2.1-4.el9.x86_64 1628551818 138637 e5e40dad676b06cd7f5ce6e6f6278138 installed
+DEBUG util.py:463:  nss-softokn-freebl-3.112.0-8.el9.x86_64 1769191169 1120798 dd7b0c50370f268a0207a3a1c73ec795 installed
+DEBUG util.py:463:  zlib-devel-1.2.11-40.el9.x86_64 1683629254 141092 4c656b50ef3d144589e411111e1d7dbc installed
+DEBUG util.py:463:  python3-pip-wheel-21.3.1-1.el9.noarch 1711479877 1232785 de13bdae4eecc1bcef2b53e631acb1c4 installed
+DEBUG util.py:463:  python3-3.9.25-5.el9.x86_64 1773157200 32828 1e0a74333052aa52ca798051a28c65b1 installed
+DEBUG util.py:463:  nss-sysinit-3.112.0-8.el9.x86_64 1769191169 18177 27b68b05757e9bb43a13c6a30186e07f installed
+DEBUG util.py:463:  nss-tools-3.112.0-8.el9.x86_64 1769191169 1409993 9ff5477dbf9dfdc8883ed4a0af47022b installed
+DEBUG util.py:463:  perl-Error-1:0.17029-7.el9.noarch 1628563587 79692 fa94f57d63af0a9bcefb96b7ffb7845c installed
+DEBUG util.py:463:  perl-TermReadKey-2.38-11.el9.x86_64 1628565314 66298 171ef3bc811fe5f2f7f608bf4dc00be2 installed
+DEBUG util.py:463:  llvm-libs-21.1.8-2.el9.x86_64 1771404070 129096423 e93a4834645b5800fd9969a246cb28fb installed
+DEBUG util.py:463:  kernel-headers-5.14.0-691.el9.x86_64 1775491488 6673782 84cd8301a6d04d88953f44ea369ae800 installed
+DEBUG util.py:463:  libxcrypt-devel-4.4.18-3.el9.x86_64 1628554484 31019 a63fe88a62be81dd45e3204f4612b177 installed
+DEBUG util.py:463:  gcc-11.5.0-14.el9.x86_64 1761941980 89923071 a8658029e22dc854490bf40db76e67a6 installed
+DEBUG util.py:463:  perl-Git-2.52.0-1.el9.noarch 1767977014 66985 8eb74717e2b5fa2ab643a31e9e318485 installed
+DEBUG util.py:463:  efivar-libs-38-3.el9.x86_64 1673456898 375306 cc7aa50934ac28fe579a9e35755a1597 installed
+DEBUG util.py:463:  annobin-12.98-2.el9.x86_64 1769596503 1216426 c405b5b793cbccbb9814154a2d888ee2 installed
+DEBUG util.py:463:  elfutils-libelf-devel-0.194-1.el9.x86_64 1761836828 76769 cc7ec63254f26b34af5e1186835a5c94 installed
+DEBUG util.py:463:  dos2unix-7.4.2-4.el9.x86_64 1628540077 708151 6a2974efeee99beb5dd71dbc67b0bdb1 installed
+DEBUG util.py:463:  tzdata-2026a-1.el9.noarch 1773065822 1921002 f68f5aaf13509160d06c0961019594c8 installed
+DEBUG util.py:463:  qt5-srpm-macros-5.15.9-1.el9.noarch 1681714691 492 8ec89c93045f3fb6df7200c1acc02777 installed
+DEBUG util.py:463:  pkgconf-m4-1.7.3-10.el9.noarch 1663762969 14187 a4fe05470faa432bdf2bc0da90a72878 installed
+DEBUG util.py:463:  pcre2-syntax-10.40-6.el9.noarch 1722440460 234324 4748e7d5d1f12ed1df41c89d35b3a058 installed
+DEBUG util.py:463:  ocaml-srpm-macros-6-6.el9.noarch 1628559705 745 621a996cbcddd8e3d3492467821c5a8b installed
+DEBUG util.py:463:  libssh-config-0.10.4-18.el9.noarch 1771524016 277 3081770900c32232a133ab5f253133aa installed
+DEBUG util.py:463:  coreutils-common-8.32-40.el9.x86_64 1768484012 10880539 77ec8753181077d735519b6529a93e56 installed
+DEBUG util.py:463:  centos-stream-repos-9.0-36.el9.noarch 1775596191 6854 d1ef2f633a0d921248d40db94fbdb967 installed
+DEBUG util.py:463:  setup-2.13.7-10.el9.noarch 1707295246 725932 fd3173da9bafb6e1d6afffea47d55a3f installed
+DEBUG util.py:463:  basesystem-11-13.el9.noarch 1628537561 0 7bfb02cc1aeca822f9e4d9405c010142 installed
+DEBUG util.py:463:  bash-5.1.8-9.el9.x86_64 1708011409 7738778 681f5fc99cb4c0027cc7dd860547dd4c installed
+DEBUG util.py:463:  glibc-gconv-extra-2.34-262.el9.x86_64 1773747904 8149382 9f180caae419d3a57c962e01d310c29e installed
+DEBUG util.py:463:  glibc-common-2.34-262.el9.x86_64 1773747904 1081350 6342a92ef7af2ba1a3c66326a4420d85 installed
+DEBUG util.py:463:  zlib-1.2.11-40.el9.x86_64 1683629254 202921 f83cf5ac33ff0234d9466767ad58a307 installed
+DEBUG util.py:463:  bzip2-libs-1.0.8-11.el9.x86_64 1767956184 78116 d6b9396bdee5247c9fce9fd16eb76864 installed
+DEBUG util.py:463:  elfutils-libelf-0.194-1.el9.x86_64 1761836828 1172644 1875a498c7e8be1061dd3766a2773a27 installed
+DEBUG util.py:463:  libxcrypt-4.4.18-3.el9.x86_64 1628554484 270692 17b62bc0bda4316e3dcf3662261685d4 installed
+DEBUG util.py:463:  gmp-1:6.2.0-13.el9.x86_64 1691058138 816844 44dbc752662788b6d7d5115cb6d0dc92 installed
+DEBUG util.py:463:  libacl-2.3.1-4.el9.x86_64 1696594612 40554 c708b2c282e929084ec0f0efc372898b installed
+DEBUG util.py:463:  popt-1.18-8.el9.x86_64 1628566366 130360 f6d016fe6a99581d6c0ec0e43955c05b installed
+DEBUG util.py:463:  libcom_err-1.46.5-8.el9.x86_64 1751878335 68401 0e0175672c2a57d33a6c420005318be3 installed
+DEBUG util.py:463:  readline-8.1-4.el9.x86_64 1628568923 492844 04ea87f7f650b71b09c3c80fbbc1263d installed
+DEBUG util.py:463:  dwz-0.16-1.el9.x86_64 1751024515 293356 923bd77faa08d5993ed9af95fb35a3ab installed
+DEBUG util.py:463:  file-libs-5.39-17.el9.x86_64 1771849374 8086628 321da242d26413c149cfa3cf384aabb0 installed
+DEBUG util.py:463:  sqlite-libs-3.34.1-9.el9.x86_64 1756382250 1372984 23c05d392132f1067fc068512c6aad00 installed
+DEBUG util.py:463:  libcap-ng-0.8.2-7.el9.x86_64 1644930750 75196 46e0b55fb2904dfe43b24ee2c94b3c1a installed
+DEBUG util.py:463:  libffi-3.4.2-8.el9.x86_64 1681740417 65761 4bb756aae8cbb82168f5d2245c5a969b installed
+DEBUG util.py:463:  libsigsegv-2.13-4.el9.x86_64 1628552820 50338 8d6efb1981489cae3ba03919e0a84d34 installed
+DEBUG util.py:463:  libsmartcols-2.37.4-25.el9.x86_64 1768819805 134787 d646a6fe94c90c916674c4f42ac8fb7a installed
+DEBUG util.py:463:  p11-kit-0.26.2-1.el9.x86_64 1770715890 2936332 9ad0023a4e8dc391cf0b579e12b145aa installed
+DEBUG util.py:463:  libidn2-2.3.0-7.el9.x86_64 1628550537 253460 b999cef1924e493741546dad040d6b64 installed
+DEBUG util.py:463:  pcre2-10.40-6.el9.x86_64 1722440456 652298 222f5febd3e951089e8cd09010c01787 installed
+DEBUG util.py:463:  sed-4.8-10.el9.x86_64 1769440657 812407 e6488a727a8b8b6b309e4c56554a19f3 installed
+DEBUG util.py:463:  libsemanage-3.6-5.el9.x86_64 1740730263 307174 eaed00d10a849df19b5d55bb349ca60a installed
+DEBUG util.py:463:  libutempter-1.2.1-6.el9.x86_64 1628554085 59409 ce999580e2b5f894fc54fe1b4bd09850 installed
+DEBUG util.py:463:  libpsl-0.21.1-5.el9.x86_64 1628552331 78600 48e5ec8c64476be40b82088b405be4ae installed
+DEBUG util.py:463:  zip-3.0-35.el9.x86_64 1676457149 741159 07aa037eb9408f2f848569827cd3559f installed
+DEBUG util.py:463:  groff-base-1.22.4-10.el9.x86_64 1633944960 4040774 6f382ca641a7b920bd2f194a36b9a1ef installed
+DEBUG util.py:463:  libxml2-2.9.13-14.el9.x86_64 1763043402 1959260 8762e815ff992ec4e707f1217c0e2855 installed
+DEBUG util.py:463:  ed-1.14.2-12.el9.x86_64 1628540213 129923 038028fe8dfd324b820e16200786a15e installed
+DEBUG util.py:463:  cpio-2.13-16.el9.x86_64 1631604799 1088156 8743fccbe23852587a7ef16a73f19f85 installed
+DEBUG util.py:463:  expat-2.5.0-6.el9.x86_64 1764683259 313379 3417f5e5ddb259b0d40ac31a868534b8 installed
+DEBUG util.py:463:  json-c-0.14-11.el9.x86_64 1631617016 79282 3be710938d8b71abae0b12826f2b27d5 installed
+DEBUG util.py:463:  less-590-6.el9.x86_64 1751463935 364648 0bd2459eee7a4582809c0986ccc0bb3e installed
+DEBUG util.py:463:  libcbor-0.7.0-5.el9.x86_64 1628549688 99993 595519f7b2452af7db9b5062131acaa3 installed
+DEBUG util.py:463:  libeconf-0.4.1-5.el9.x86_64 1765293277 45707 11fecf5197930afa44853e885dc46747 installed
+DEBUG util.py:463:  libgomp-11.5.0-14.el9.x86_64 1761941980 421709 ffb477d423047474a51f4b12edcfd76d installed
+DEBUG util.py:463:  libgcrypt-1.10.0-11.el9.x86_64 1722525565 1398402 a0781794779b169a78184364aee1f2eb installed
+DEBUG util.py:463:  libpkgconf-1.7.3-10.el9.x86_64 1663762953 75425 6d784dbd338488f9a990f3870ce06e48 installed
+DEBUG util.py:463:  pkgconf-pkg-config-1.7.3-10.el9.x86_64 1663762953 1203 557e5f2bf85dce295401d6e30f51eabe installed
+DEBUG util.py:463:  libverto-0.3.2-3.el9.x86_64 1628554245 30365 49717f919565ae8f0e70dc4def4d01f6 installed
+DEBUG util.py:463:  pcre-8.44-4.el9.x86_64 1713357639 537728 b1ea83d87fcb8d3d5586d59af686cd44 installed
+DEBUG util.py:463:  openssl-fips-provider-1:3.5.5-1.el9.x86_64 1769606865 2591490 ff5659de49cb701b1a5c353e4f623af1 installed
+DEBUG util.py:463:  coreutils-8.32-40.el9.x86_64 1768484012 5899898 cd9bcf644625a62152ac38998d908d72 installed
+DEBUG util.py:463:  krb5-libs-1.21.1-8.el9.x86_64 1746462481 2503193 6f0028c2a03f5a5eebe6c6f13869bbb7 installed
+DEBUG util.py:463:  systemd-libs-252-67.el9.x86_64 1771867316 1814728 c9a1842cd706a7bc3ae2ee8e3f007ad2 installed
+DEBUG util.py:463:  gzip-1.12-1.el9.x86_64 1650569887 377013 d100c7f7b4f855aeb3d8676072292699 installed
+DEBUG util.py:463:  libarchive-3.5.3-8.el9.x86_64 1774350843 906174 c3b947a0a08d77efe2dfa0945526b406 installed
+DEBUG util.py:463:  cracklib-dicts-2.9.6-28.el9.x86_64 1768499133 9815154 459bd1893e276d8cb2b9e82041aa31a3 installed
+DEBUG util.py:463:  libfido2-1.13.0-2.el9.x86_64 1699456888 246862 89903d7667844d756da1228185335b93 installed
+DEBUG util.py:463:  cyrus-sasl-lib-2.1.27-21.el9.x86_64 1663006598 2380384 30b42ad4b265d75bc95db77acd35598e installed
+DEBUG util.py:463:  perl-Digest-1.19-4.el9.noarch 1628563396 36844 556e6f718ba9a6360fa39fb18d536aa0 installed
+DEBUG util.py:463:  perl-B-0:1.80-483.el9.x86_64 1752149197 504445 da042e29d13c42f761d839b459ead4cd installed
+DEBUG util.py:463:  perl-Data-Dumper-2.174-462.el9.x86_64 1628562913 111869 7ecb1b2e3a41395091b00413afff991d installed
+DEBUG util.py:463:  perl-AutoLoader-0:5.74-483.el9.noarch 1752149200 22038 dae1b95080d7c68562864ecb6a451b32 installed
+DEBUG util.py:463:  perl-URI-5.09-3.el9.noarch 1628565665 216915 b03fb11680933808dbfa5ed1bc6be6cf installed
+DEBUG util.py:463:  perl-IO-Socket-IP-0.41-5.el9.noarch 1628564340 100240 fc6b5e9831a4bbafe3036ad6c07bd0cd installed
+DEBUG util.py:463:  perl-File-Path-2.18-4.el9.noarch 1628563880 65333 e84dcd48672e858db99bf4abb31adefd installed
+DEBUG util.py:463:  perl-Net-SSLeay-1.94-3.el9.x86_64 1748252779 1520305 94a860edaedf3c9341f6eca13fad0ab7 installed
+DEBUG util.py:463:  perl-Text-Tabs+Wrap-2013.0523-460.el9.noarch 1629764707 24828 4ddd39d2645c0d3a03a7fc505a69d03f installed
+DEBUG util.py:463:  perl-Class-Struct-0:0.66-483.el9.noarch 1752149200 26954 bc3e4035f4704dd76df3136f492035ad installed
+DEBUG util.py:463:  perl-Term-ANSIColor-5.01-461.el9.noarch 1628565314 100303 0bdc632c00af8ea7fccf10c3a8aeb385 installed
+DEBUG util.py:463:  perl-subs-0:1.03-483.el9.noarch 1752149200 3061 6ba23f8f3bf774262d624fad39f2257f installed
+DEBUG util.py:463:  perl-Term-Cap-1.17-460.el9.noarch 1628565308 29851 df13642162893be1ec21d401f866b7f7 installed
+DEBUG util.py:463:  perl-HTTP-Tiny-0.076-462.el9.noarch 1705477316 150675 3c54aff636d01b3b76e48030d477d990 installed
+DEBUG util.py:463:  perl-SelectSaver-0:1.02-483.el9.noarch 1752149200 3171 367c0b56d220a92697ea69d1a71de723 installed
+DEBUG util.py:463:  perl-File-stat-0:1.09-483.el9.noarch 1752149200 13950 bf04c0019c56540c7c99705518f6e8c9 installed
+DEBUG util.py:463:  perl-Pod-Perldoc-3.28.01-461.el9.noarch 1628565124 170960 7e2f1a7c0900c86834fc555f5c3bd0b9 installed
+DEBUG util.py:463:  perl-Text-ParseWords-3.30-460.el9.noarch 1628565448 13101 51cd796a12a1506353fefddcf48ede0a installed
+DEBUG util.py:463:  perl-IO-0:1.43-483.el9.x86_64 1752149197 163137 9223da86f1dac92b4e528d9109fc6d5d installed
+DEBUG util.py:463:  perl-Pod-Usage-4:2.01-4.el9.noarch 1628565107 87186 cf143f7c6da00856ecd8ce53db1b388f installed
+DEBUG util.py:463:  perl-File-Basename-0:2.85-483.el9.noarch 1752149200 15340 78a0d44b4b7c1bc8055ff6e2491d9209 installed
+DEBUG util.py:463:  perl-MIME-Base64-3.16-4.el9.x86_64 1628564750 48145 1190c3bd08b43b3064f439bca71ca347 installed
+DEBUG util.py:463:  perl-constant-1.33-461.el9.noarch 1628562746 27104 ee5c312a7c1613a45b24c022d97fb08e installed
+DEBUG util.py:463:  perl-overload-0:1.31-483.el9.noarch 1752149200 72822 6716723e3ad42ae510410c246c58c245 installed
+DEBUG util.py:463:  perl-vars-0:1.05-483.el9.noarch 1752149200 4927 e632282514e102b2eaa658d6864ab221 installed
+DEBUG util.py:463:  perl-Carp-1.50-460.el9.noarch 1628562498 47889 8aa3a6891f26697353b428ce0a184f8d installed
+DEBUG util.py:463:  perl-PathTools-3.78-461.el9.x86_64 1628565073 182534 367a2f6e64401c56f25dc4559c5806f6 installed
+DEBUG util.py:463:  perl-libs-4:5.32.1-483.el9.x86_64 1752149197 8953882 4134571a081d79a476f42663bc11e4ed installed
+DEBUG util.py:463:  kernel-srpm-macros-1.0-14.el9.noarch 1755009210 16948 1a89c0c43d6ff2fd6d4bde26e40f53ea installed
+DEBUG util.py:463:  libpwquality-1.4.4-8.el9.x86_64 1628552427 416376 0b62322fb735de082781bbefe37e1e6e installed
+DEBUG util.py:463:  util-linux-2.37.4-25.el9.x86_64 1768819805 11147007 573d7d2d6fd4f1783bb8ddadc9e5770c installed
+DEBUG util.py:463:  openssh-clients-9.9p1-7.el9.x86_64 1774523332 2816114 6301217a3ee7d98200ab771d4f4d5f4c installed
+DEBUG util.py:463:  openldap-2.6.8-4.el9.x86_64 1739381086 1087281 7a6fd8b2f946b5882a2bc52b669d746b installed
+DEBUG util.py:463:  curl-7.76.1-40.el9.x86_64 1769118258 684521 1b9fc0c312527b8abc733a674933d591 installed
+DEBUG util.py:463:  rpm-libs-4.16.1.3-40.el9.x86_64 1763740503 773076 116112c58fd065748145c65d373afad4 installed
+DEBUG util.py:463:  lua-srpm-macros-1-6.el9.noarch 1628555741 1314 0fdd144bbbee9bc020012ff761b15a17 installed
+DEBUG util.py:463:  elfutils-default-yama-scope-0.194-1.el9.noarch 1761836833 1810 5f00bb30b557b8c6f08f5993f5aadb35 installed
+DEBUG util.py:463:  elfutils-debuginfod-client-0.194-1.el9.x86_64 1761836828 81177 78aad938e5a68441876e2ee541d9a182 installed
+DEBUG util.py:463:  binutils-2.35.2-72.el9.x86_64 1769161287 25215155 3076c494a4c4068ed306192faad4ed30 installed
+DEBUG util.py:463:  gdb-minimal-16.3-3.el9.x86_64 1771605522 15230457 b23544ef57008b655bba3a4cde925b90 installed
+DEBUG util.py:463:  rpm-build-libs-4.16.1.3-40.el9.x86_64 1763740503 198446 246c383ab01be411b9be3f117140771b installed
+DEBUG util.py:463:  go-srpm-macros-3.8.1-1.el9.noarch 1759527278 62484 7e0367dfaf0c078c64b4aad87d99de96 installed
+DEBUG util.py:463:  pyproject-srpm-macros-1.18.5-1.el9.noarch 1764604202 1945 593d906019a35ee4c0cfd0e8274314c8 installed
+DEBUG util.py:463:  rpm-build-4.16.1.3-40.el9.x86_64 1763740503 150065 98d5325dd09401608632ccfa190fb188 installed
+DEBUG util.py:463:  make-1:4.3-8.el9.x86_64 1706904750 1719894 63525a4cfacb7b409195d59d53450e4e installed
+DEBUG util.py:463:  rh-dupsign-macros-1.7-1.el9.noarch 1627956582 5685 a1ebf430a2b4446aca935d33e71ec023 installed
+DEBUG util.py:463:  nss-util-3.112.0-8.el9.x86_64 1769191169 238032 7ffae5f6e7468ab710371de16dd6d632 installed
+DEBUG util.py:463:  cpp-11.5.0-14.el9.x86_64 1761941980 30664262 77f63b29c751f4e8d04c68581553197b installed
+DEBUG util.py:463:  nss-softokn-3.112.0-8.el9.x86_64 1769191169 1350979 fcad1013cc1eaa09255af5d3d7ca6593 installed
+DEBUG util.py:463:  python3-setuptools-wheel-53.0.0-15.el9.noarch 1750338656 562657 69cc4ac9710a75e77e568d5cc215a702 installed
+DEBUG util.py:463:  python3-libs-3.9.25-5.el9.x86_64 1773157200 33021481 d32f1e36ed6517fba239017def7b97ec installed
+DEBUG util.py:463:  crypto-policies-scripts-20260224-1.gitea0f072.el9.noarch 1772202134 272783 b804fe6ba2bbb9c3c27729734910c5f1 installed
+DEBUG util.py:463:  nss-3.112.0-8.el9.x86_64 1769191169 1985090 c34034c7162ec88fc2e7ad72c3ebd5b4 installed
+DEBUG util.py:463:  perl-lib-0:0.65-483.el9.x86_64 1752149197 9673 876bcfff471508f26dbb73e4a751587d installed
+DEBUG util.py:463:  perl-DynaLoader-0:1.47-483.el9.x86_64 1752149197 33065 2e2a31d52c143f62ee04b51d66cd7c95 installed
+DEBUG util.py:463:  llvm-filesystem-21.1.8-2.el9.x86_64 1771404070 0 ab179cb5aec07a973fa4ee24dde53050 installed
+DEBUG util.py:463:  libzstd-devel-1.5.5-1.el9.x86_64 1731924265 202817 ffa080b51cc9498287f3d5897ec501a1 installed
+DEBUG util.py:463:  glibc-headers-2.34-262.el9.x86_64 1773747904 2181870 ce551284ee550fce81f45842df545c44 installed
+DEBUG util.py:463:  glibc-devel-2.34-262.el9.x86_64 1773747904 47528 2d2c3c22cb14120b9d1fb76cc6f6c48f installed
+DEBUG util.py:463:  git-core-doc-2.52.0-1.el9.noarch 1767977014 19416975 044e1625f1c6de0415be35a026aea762 installed
+DEBUG util.py:463:  git-2.52.0-1.el9.x86_64 1767977016 57736 74b7981552703d69a28a95c7aa2bfed1 installed
+DEBUG util.py:463:  pesign-115-6.el9.x86_64 1675291538 762101 188a9a1873bf231873abd7c1e2bc5127 installed
+DEBUG util.py:463:  gcc-plugin-annobin-11.5.0-14.el9.x86_64 1761941980 57762 5aa3dada33d896a415caa8b5f6cb028a installed
+DEBUG util.py:463:  openssl-devel-1:3.5.5-1.el9.x86_64 1769606865 5370402 18063c5e24db713149924eac7d9cdfbe installed
+DEBUG util.py:463:  centos-sb-certs-9.0-36.el9.noarch 1775596191 16375 2fbf708b603996e58d86df76c78f0aa3 installed
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG backend.py:821:  Copying packages to result dir
+DEBUG util.py:185:  kill orphans in chroot /var/lib/stream-mock/c9s-pesign-build-825735-820916/root
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
