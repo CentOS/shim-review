@@ -3,7 +3,7 @@ FROM quay.io/centos/centos:stream9
 WORKDIR /root
 RUN dnf -y install dnf-plugins-core rpm-build
 COPY rpmmacros /root/.rpmmacros
-RUN curl -kLOf https://kojihub.stream.rdu2.redhat.com/kojifiles/packages/shim-unsigned-x64/16.1/1.el9.centos/src/shim-unsigned-x64-16.1-1.el9.centos.src.rpm
+RUN curl -kLOf https://people.redhat.com/mlewando/centos-shim-src/shim-unsigned-x64-16.1-1.el9.centos.src.rpm
 RUN rpm -ivh shim-unsigned-x64-16.1-1.el9.centos.src.rpm
 RUN sed -i 's/linux32 -B/linux32/g' /builddir/build/SPECS/shim-unsigned-x64.spec
 RUN dnf builddep -y --enablerepo=crb /builddir/build/SPECS/shim-unsigned-x64.spec
