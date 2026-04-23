@@ -289,8 +289,7 @@ no changes since last time
 *******************************************************************************
 ### What is the SHA256 hash of your final shim binary?
 *******************************************************************************
-c5fd4700d77dddf32e47f0ff201ef247532bab333c7bf474e0106f3945064d8c  shimx64.efi
-
+cb030e8ccd78ae18a76b38119e8f2f16aba55c4ecfb077fbd2c8c53ba6ef21e3  shimx64.efi
 *******************************************************************************
 ### How do you manage and protect the keys used in your shim?
 Describe the security strategy that is used for key protection. This can range from using hardware tokens like HSMs or Smartcards, air-gapped vaults, physical safes to other good practices.
