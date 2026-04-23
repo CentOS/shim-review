@@ -275,8 +275,8 @@ yes: `podman build .` is all you need to do.
 ### Which files in this repo are the logs for your build?
 This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 *******************************************************************************
-build.log: https://kojihub.stream.rdu2.redhat.com/kojifiles/packages/shim-unsigned-x64/16.1/1.el9.centos/data/logs/x86_64/build.log
-root.log: https://kojihub.stream.rdu2.redhat.com/kojifiles/packages/shim-unsigned-x64/16.1/1.el9.centos/data/logs/x86_64/root.log
+build.log: https://kojihub.stream.centos.org/kojifiles/packages/shim-unsigned-x64/16.1/2.el9.centos/data/logs/x86_64/build.log
+root.log: https://kojihub.stream.centos.org/kojifiles/packages/shim-unsigned-x64/16.1/2.el9.centos/data/logs/x86_64/root.log
 
 *******************************************************************************
 ### What changes were made in the distro's secure boot chain since your SHIM was last signed?
@@ -289,7 +289,7 @@ no changes since last time
 *******************************************************************************
 ### What is the SHA256 hash of your final shim binary?
 *******************************************************************************
-8bc2c501e23fc7dc7cacee9ad31b061d6bce73b623ef4f6888b00561a4b3b245  shimx64.efi
+42edac9d6b816ad119fc53a56f3031165108b55037388b1b2189b212709155fa  shimx64.efi
 
 *******************************************************************************
 ### How do you manage and protect the keys used in your shim?

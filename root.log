@@ -1,8 +1,8 @@
 INFO buildroot.py:602:  Mock Version: 5.4
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/result
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/result
 INFO buildroot.py:284:  calling preinit hooks
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/usr/bin/lscpu'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
@@ -35,143 +35,143 @@ DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/bin/free'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:463:                total        used        free      shared  buff/cache   available
-DEBUG util.py:463:  Mem:      131997612     1355628   113085260     4096568    17556724   125295992
-DEBUG util.py:463:  Swap:       2097148      129424     1967724
+DEBUG util.py:463:  Mem:      131997612     1289076   112343428     4092716    18365108   125366400
+DEBUG util.py:463:  Swap:       2097148       92304     2004844
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/df', '-H', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root', '/var/cache/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/df', '-H', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root', '/var/cache/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:463:  Filesystem                   Size  Used Avail Use% Mounted on
-DEBUG util.py:463:  /dev/mapper/vg_x86--05-root  417G  6.9G  389G   2% /
-DEBUG util.py:463:  /dev/mapper/vg_x86--05-root  417G  6.9G  389G   2% /
+DEBUG util.py:463:  /dev/mapper/vg_x86--05-root  417G  5.7G  390G   2% /
+DEBUG util.py:463:  /dev/mapper/vg_x86--05-root  417G  5.7G  390G   2% /
 DEBUG util.py:610:  Child return code was: 0
 DEBUG buildroot.py:658:  create skeleton dirs
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/rpm
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/rpm
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/yum
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/yum
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/dbus
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/dbus
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/log
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/log
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/cache/dnf
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/cache/dnf
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/cache/yum
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/cache/yum
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/rpm
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/rpm
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/tmp
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/tmp
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/tmp/ccache
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/tmp/ccache
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/tmp
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/tmp
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf/vars
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf/vars
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/yum.repos.d
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/yum.repos.d
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/yum
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/yum
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/mapper
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/mapper
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/lib/rpm
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/lib/rpm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/lib/yum
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/lib/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/lib/dbus
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/lib/dbus
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/log
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/log
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/cache/dnf
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/cache/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/cache/yum
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/cache/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/rpm
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/rpm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/tmp
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/tmp
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/tmp/ccache
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/tmp/ccache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/tmp
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/tmp
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/dnf
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/dnf/vars
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/dnf/vars
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/yum.repos.d
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/yum.repos.d
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/yum
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/pts
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/pts
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/shm
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/shm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/mapper
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/mapper
 DEBUG buildroot.py:802:  kernel version == 4.18.0-553.27.1.el8_10.x86_64
-DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/fstab
-DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/yum/yum.conf
-DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf/dnf.conf
-DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/log/yum.log
-DEBUG buildroot.py:298:  rootdir = /var/lib/stream-mock/c9s-pesign-build-825735-820916/root
-DEBUG buildroot.py:299:  resultdir = /var/lib/stream-mock/c9s-pesign-build-825735-820916/result
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/fstab
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/yum/yum.conf
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/dnf/dnf.conf
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/log/yum.log
+DEBUG buildroot.py:298:  rootdir = /var/lib/stream-mock/c9s-pesign-build-838526-821153/root
+DEBUG buildroot.py:299:  resultdir = /var/lib/stream-mock/c9s-pesign-build-838526-821153/result
 DEBUG package_manager.py:56:  searching for 'dnf' package manager or alternatives
 INFO buildroot.py:175:  Package manager dnf detected and used (fallback)
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/mock
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/mock
-DEBUG file_util.py:158:  Updating files in /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust with files from /etc/pki/ca-trust
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/./extracted
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/./extracted
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/./source
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/./source
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/java
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/java
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/pem
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/pem
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/edk2
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/edk2
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/openssl
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/openssl
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/source/anchors
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/source/anchors
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/source/blacklist
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/source/blacklist
-DEBUG file_util.py:158:  Updating files in /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source with files from /usr/share/pki/ca-trust-source
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source/./anchors
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source/./anchors
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source/./blacklist
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source/./blacklist
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/mock
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/mock
+DEBUG file_util.py:158:  Updating files in /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust with files from /etc/pki/ca-trust
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/./extracted
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/./extracted
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/./source
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/./source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/extracted/java
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/extracted/java
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/extracted/pem
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/extracted/pem
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/extracted/edk2
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/extracted/edk2
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/extracted/openssl
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/extracted/openssl
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/source/anchors
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/source/anchors
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/source/blacklist
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/source/blacklist
+DEBUG file_util.py:158:  Updating files in /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/usr/share/pki/ca-trust-source with files from /usr/share/pki/ca-trust-source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/usr/share/pki/ca-trust-source
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/usr/share/pki/ca-trust-source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/usr/share/pki/ca-trust-source/./anchors
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/usr/share/pki/ca-trust-source/./anchors
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/usr/share/pki/ca-trust-source/./blacklist
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/usr/share/pki/ca-trust-source/./blacklist
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/dnf
 DEBUG package_manager.py:689:  configure DNF vars
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/proc', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:610:  Child return code was: 0
-DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys
-DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys
-DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/sys', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/proc', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/sys', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.kr4sluwu', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys/fs/selinux
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/shm
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/installation-homedir
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/installation-homedir
-DEBUG package_manager.py:289:  ['/usr/bin/dnf-3', '--installroot', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=versionlock', 'install', '@build']
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/pts
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/usr/bin/dnf-3', '--installroot', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=versionlock', 'install', '@build', '--setopt=tsflags=nocontexts'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.903ted5g', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys/fs/selinux
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/installation-homedir
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/installation-homedir
+DEBUG package_manager.py:289:  ['/usr/bin/dnf-3', '--installroot', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=versionlock', 'install', '@build']
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/usr/bin/dnf-3', '--installroot', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=versionlock', 'install', '@build', '--setopt=tsflags=nocontexts'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8'} and shell False
 DEBUG util.py:461:  Unable to detect release version (use '--releasever' to specify release version)
 DEBUG util.py:463:  Updating Subscription Management repositories.
 DEBUG util.py:463:  Unable to read consumer identity
 DEBUG util.py:463:  This system is not registered with an entitlement server. You can use subscription-manager to register.
-DEBUG util.py:463:  Last metadata expiration check: 0:00:02 ago on Mon Apr 13 15:19:35 2026.
+DEBUG util.py:463:  Last metadata expiration check: 0:00:03 ago on Thu Apr 23 10:25:49 2026.
 DEBUG util.py:463:  Dependencies resolved.
 DEBUG util.py:463:  ================================================================================
 DEBUG util.py:463:   Package                      Arch    Version                      Repo    Size
@@ -245,10 +245,10 @@ DEBUG util.py:463:   groff-base                   x86_64  1.22.4-10.el9         
 DEBUG util.py:463:   json-c                       x86_64  0.14-11.el9                  build   42 k
 DEBUG util.py:463:   kernel-srpm-macros           noarch  1.0-14.el9                   build   14 k
 DEBUG util.py:463:   keyutils-libs                x86_64  1.6.3-1.el9                  build   31 k
-DEBUG util.py:463:   krb5-libs                    x86_64  1.21.1-8.el9                 build  755 k
+DEBUG util.py:463:   krb5-libs                    x86_64  1.21.1-9.el9                 build  755 k
 DEBUG util.py:463:   less                         x86_64  590-6.el9                    build  160 k
 DEBUG util.py:463:   libacl                       x86_64  2.3.1-4.el9                  build   22 k
-DEBUG util.py:463:   libarchive                   x86_64  3.5.3-8.el9                  build  387 k
+DEBUG util.py:463:   libarchive                   x86_64  3.5.3-9.el9                  build  387 k
 DEBUG util.py:463:   libattr                      x86_64  2.5.1-3.el9                  build   18 k
 DEBUG util.py:463:   libblkid                     x86_64  2.37.4-25.el9                build  105 k
 DEBUG util.py:463:   libbrotli                    x86_64  1.0.9-9.el9                  build  312 k
@@ -301,8 +301,8 @@ DEBUG util.py:463:   ncurses-libs                 x86_64  6.2-12.20210508.el9   
 DEBUG util.py:463:   ocaml-srpm-macros            noarch  6-6.el9                      build  7.7 k
 DEBUG util.py:463:   openblas-srpm-macros         noarch  2-11.el9                     build  7.3 k
 DEBUG util.py:463:   openldap                     x86_64  2.6.8-4.el9                  build  266 k
-DEBUG util.py:463:   openssh                      x86_64  9.9p1-7.el9                  build  420 k
-DEBUG util.py:463:   openssh-clients              x86_64  9.9p1-7.el9                  build  767 k
+DEBUG util.py:463:   openssh                      x86_64  9.9p1-8.el9                  build  421 k
+DEBUG util.py:463:   openssh-clients              x86_64  9.9p1-8.el9                  build  767 k
 DEBUG util.py:463:   openssl                      x86_64  1:3.5.5-1.el9                build  1.4 M
 DEBUG util.py:463:   openssl-fips-provider        x86_64  1:3.5.5-1.el9                build  814 k
 DEBUG util.py:463:   openssl-libs                 x86_64  1:3.5.5-1.el9                build  2.3 M
@@ -337,7 +337,7 @@ DEBUG util.py:463:   perl-IO-Socket-SSL           noarch  2.073-2.el9           
 DEBUG util.py:463:   perl-IPC-Open3               noarch  1.21-483.el9                 build   21 k
 DEBUG util.py:463:   perl-MIME-Base64             x86_64  3.16-4.el9                   build   30 k
 DEBUG util.py:463:   perl-Mozilla-CA              noarch  20200520-6.el9               build   12 k
-DEBUG util.py:463:   perl-Net-SSLeay              x86_64  1.94-3.el9                   build  390 k
+DEBUG util.py:463:   perl-Net-SSLeay              x86_64  1.94-4.el9                   build  390 k
 DEBUG util.py:463:   perl-POSIX                   x86_64  1.94-483.el9                 build   95 k
 DEBUG util.py:463:   perl-PathTools               x86_64  3.78-461.el9                 build   85 k
 DEBUG util.py:463:   perl-Pod-Escapes             noarch  1:1.07-460.el9               build   20 k
@@ -384,7 +384,7 @@ DEBUG util.py:463:   rpm-libs                     x86_64  4.16.1.3-40.el9       
 DEBUG util.py:463:   rust-srpm-macros             noarch  17-4.el9                     build  9.2 k
 DEBUG util.py:463:   setup                        noarch  2.13.7-10.el9                build  140 k
 DEBUG util.py:463:   sqlite-libs                  x86_64  3.34.1-9.el9                 build  642 k
-DEBUG util.py:463:   systemd-libs                 x86_64  252-67.el9                   build  658 k
+DEBUG util.py:463:   systemd-libs                 x86_64  252-68.el9                   build  657 k
 DEBUG util.py:463:   tzdata                       noarch  2026a-1.el9                  build  496 k
 DEBUG util.py:463:   util-linux-core              x86_64  2.37.4-25.el9                build  431 k
 DEBUG util.py:463:   xz-libs                      x86_64  5.2.5-8.el9                  build   92 k
@@ -400,7 +400,7 @@ DEBUG util.py:463:  Total download size: 71 M
 DEBUG util.py:463:  Installed size: 254 M
 DEBUG util.py:463:  Downloading Packages:
 DEBUG util.py:463:  --------------------------------------------------------------------------------
-DEBUG util.py:463:  Total                                            93 MB/s |  71 MB     00:00     
+DEBUG util.py:463:  Total                                            97 MB/s |  71 MB     00:00     
 DEBUG util.py:463:  Running transaction check
 DEBUG util.py:463:  Transaction check succeeded.
 DEBUG util.py:463:  Running transaction test
@@ -463,10 +463,10 @@ DEBUG util.py:463:    info-6.7-15.el9.x86_64
 DEBUG util.py:463:    json-c-0.14-11.el9.x86_64                                                     
 DEBUG util.py:463:    kernel-srpm-macros-1.0-14.el9.noarch                                          
 DEBUG util.py:463:    keyutils-libs-1.6.3-1.el9.x86_64                                              
-DEBUG util.py:463:    krb5-libs-1.21.1-8.el9.x86_64                                                 
+DEBUG util.py:463:    krb5-libs-1.21.1-9.el9.x86_64                                                 
 DEBUG util.py:463:    less-590-6.el9.x86_64                                                         
 DEBUG util.py:463:    libacl-2.3.1-4.el9.x86_64                                                     
-DEBUG util.py:463:    libarchive-3.5.3-8.el9.x86_64                                                 
+DEBUG util.py:463:    libarchive-3.5.3-9.el9.x86_64                                                 
 DEBUG util.py:463:    libattr-2.5.1-3.el9.x86_64                                                    
 DEBUG util.py:463:    libblkid-2.37.4-25.el9.x86_64                                                 
 DEBUG util.py:463:    libbrotli-1.0.9-9.el9.x86_64                                                  
@@ -520,8 +520,8 @@ DEBUG util.py:463:    ncurses-libs-6.2-12.20210508.el9.x86_64
 DEBUG util.py:463:    ocaml-srpm-macros-6-6.el9.noarch                                              
 DEBUG util.py:463:    openblas-srpm-macros-2-11.el9.noarch                                          
 DEBUG util.py:463:    openldap-2.6.8-4.el9.x86_64                                                   
-DEBUG util.py:463:    openssh-9.9p1-7.el9.x86_64                                                    
-DEBUG util.py:463:    openssh-clients-9.9p1-7.el9.x86_64                                            
+DEBUG util.py:463:    openssh-9.9p1-8.el9.x86_64                                                    
+DEBUG util.py:463:    openssh-clients-9.9p1-8.el9.x86_64                                            
 DEBUG util.py:463:    openssl-1:3.5.5-1.el9.x86_64                                                  
 DEBUG util.py:463:    openssl-fips-provider-1:3.5.5-1.el9.x86_64                                    
 DEBUG util.py:463:    openssl-libs-1:3.5.5-1.el9.x86_64                                             
@@ -557,7 +557,7 @@ DEBUG util.py:463:    perl-IO-Socket-SSL-2.073-2.el9.noarch
 DEBUG util.py:463:    perl-IPC-Open3-1.21-483.el9.noarch                                            
 DEBUG util.py:463:    perl-MIME-Base64-3.16-4.el9.x86_64                                            
 DEBUG util.py:463:    perl-Mozilla-CA-20200520-6.el9.noarch                                         
-DEBUG util.py:463:    perl-Net-SSLeay-1.94-3.el9.x86_64                                             
+DEBUG util.py:463:    perl-Net-SSLeay-1.94-4.el9.x86_64                                             
 DEBUG util.py:463:    perl-POSIX-1.94-483.el9.x86_64                                                
 DEBUG util.py:463:    perl-PathTools-3.78-461.el9.x86_64                                            
 DEBUG util.py:463:    perl-Pod-Escapes-1:1.07-460.el9.noarch                                        
@@ -609,7 +609,7 @@ DEBUG util.py:463:    sed-4.8-10.el9.x86_64
 DEBUG util.py:463:    setup-2.13.7-10.el9.noarch                                                    
 DEBUG util.py:463:    shadow-utils-2:4.9-16.el9.x86_64                                              
 DEBUG util.py:463:    sqlite-libs-3.34.1-9.el9.x86_64                                               
-DEBUG util.py:463:    systemd-libs-252-67.el9.x86_64                                                
+DEBUG util.py:463:    systemd-libs-252-68.el9.x86_64                                                
 DEBUG util.py:463:    tar-2:1.34-11.el9.x86_64                                                      
 DEBUG util.py:463:    tzdata-2026a-1.el9.noarch                                                     
 DEBUG util.py:463:    unzip-6.0-59.el9.x86_64                                                       
@@ -623,36 +623,36 @@ DEBUG util.py:463:    zlib-1.2.11-40.el9.x86_64
 DEBUG util.py:463:    zstd-1.5.5-1.el9.x86_64                                                       
 DEBUG util.py:463:  Complete!
 DEBUG util.py:610:  Child return code was: 0
-DEBUG util.py:185:  kill orphans in chroot /var/lib/stream-mock/c9s-pesign-build-825735-820916/root
-DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/os-release
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/RPMS
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/RPMS
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/SPECS
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/SPECS
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/SRPMS
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/SRPMS
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/SOURCES
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/SOURCES
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/BUILD
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/BUILD
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/BUILDROOT
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/BUILDROOT
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/originals
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/originals
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir
+DEBUG util.py:185:  kill orphans in chroot /var/lib/stream-mock/c9s-pesign-build-838526-821153/root
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/os-release
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/RPMS
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/RPMS
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/SPECS
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/SPECS
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/SRPMS
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/SRPMS
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/SOURCES
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/SOURCES
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/BUILD
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/BUILD
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/BUILDROOT
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/BUILDROOT
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/originals
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/originals
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['userdel', '-f', 'mockbuild', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['userdel', '-f', 'mockbuild', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:461:  configuration error - unknown item 'HMAC_CRYPTO_ALGO' (notify administrator)
 DEBUG util.py:461:  userdel: user 'mockbuild' does not exist
 DEBUG util.py:610:  Child return code was: 6
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['groupdel', 'mock', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['groupdel', 'mock', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:461:  configuration error - unknown item 'HMAC_CRYPTO_ALGO' (notify administrator)
 DEBUG util.py:610:  Child return code was: 6
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['groupadd', 'mock', '-g', '135', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['groupadd', 'mock', '-g', '135', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:461:  configuration error - unknown item 'HMAC_CRYPTO_ALGO' (notify administrator)
 DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
 DEBUG util.py:461:  Higher version of database is expected!
@@ -666,7 +666,7 @@ DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue
 DEBUG util.py:461:  Could not open available domains
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['useradd', 'mockbuild', '-o', '-u', '988', '-g', '135', '-N', '-d', '/builddir', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['useradd', 'mockbuild', '-o', '-u', '988', '-g', '135', '-N', '-d', '/builddir', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:461:  configuration error - unknown item 'HMAC_CRYPTO_ALGO' (notify administrator)
 DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
 DEBUG util.py:461:  Higher version of database is expected!
@@ -681,9 +681,9 @@ DEBUG util.py:461:  Could not open available domains
 DEBUG util.py:461:  useradd: warning: the home directory already exists.
 DEBUG util.py:461:  Not copying any file from skel directory into it.
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/.initialized
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/.initialized
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/rpm', '-qa', '--root', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/rpm', '-qa', '--root', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:463:  rust-srpm-macros-17-4.el9.noarch
 DEBUG util.py:463:  publicsuffix-list-dafsa-20210518-3.el9.noarch
 DEBUG util.py:463:  perl-srpm-macros-1-41.el9.noarch
@@ -775,7 +775,7 @@ DEBUG util.py:463:  perl-Encode-3.08-462.el9.x86_64
 DEBUG util.py:463:  perl-interpreter-5.32.1-483.el9.x86_64
 DEBUG util.py:463:  openssl-3.5.5-1.el9.x86_64
 DEBUG util.py:463:  pam-1.5.1-28.el9.x86_64
-DEBUG util.py:463:  openssh-9.9p1-7.el9.x86_64
+DEBUG util.py:463:  openssh-9.9p1-8.el9.x86_64
 DEBUG util.py:463:  libevent-2.1.12-8.el9.x86_64
 DEBUG util.py:463:  libcurl-7.76.1-40.el9.x86_64
 DEBUG util.py:463:  rpm-4.16.1.3-40.el9.x86_64
@@ -844,10 +844,10 @@ DEBUG util.py:463:  libverto-0.3.2-3.el9.x86_64
 DEBUG util.py:463:  pcre-8.44-4.el9.x86_64
 DEBUG util.py:463:  openssl-fips-provider-3.5.5-1.el9.x86_64
 DEBUG util.py:463:  coreutils-8.32-40.el9.x86_64
-DEBUG util.py:463:  krb5-libs-1.21.1-8.el9.x86_64
-DEBUG util.py:463:  systemd-libs-252-67.el9.x86_64
+DEBUG util.py:463:  krb5-libs-1.21.1-9.el9.x86_64
+DEBUG util.py:463:  systemd-libs-252-68.el9.x86_64
 DEBUG util.py:463:  gzip-1.12-1.el9.x86_64
-DEBUG util.py:463:  libarchive-3.5.3-8.el9.x86_64
+DEBUG util.py:463:  libarchive-3.5.3-9.el9.x86_64
 DEBUG util.py:463:  cracklib-dicts-2.9.6-28.el9.x86_64
 DEBUG util.py:463:  libfido2-1.13.0-2.el9.x86_64
 DEBUG util.py:463:  cyrus-sasl-lib-2.1.27-21.el9.x86_64
@@ -858,7 +858,7 @@ DEBUG util.py:463:  perl-AutoLoader-5.74-483.el9.noarch
 DEBUG util.py:463:  perl-URI-5.09-3.el9.noarch
 DEBUG util.py:463:  perl-IO-Socket-IP-0.41-5.el9.noarch
 DEBUG util.py:463:  perl-File-Path-2.18-4.el9.noarch
-DEBUG util.py:463:  perl-Net-SSLeay-1.94-3.el9.x86_64
+DEBUG util.py:463:  perl-Net-SSLeay-1.94-4.el9.x86_64
 DEBUG util.py:463:  perl-Text-Tabs+Wrap-2013.0523-460.el9.noarch
 DEBUG util.py:463:  perl-Class-Struct-0.66-483.el9.noarch
 DEBUG util.py:463:  perl-Term-ANSIColor-5.01-461.el9.noarch
@@ -882,7 +882,7 @@ DEBUG util.py:463:  perl-libs-5.32.1-483.el9.x86_64
 DEBUG util.py:463:  kernel-srpm-macros-1.0-14.el9.noarch
 DEBUG util.py:463:  libpwquality-1.4.4-8.el9.x86_64
 DEBUG util.py:463:  util-linux-2.37.4-25.el9.x86_64
-DEBUG util.py:463:  openssh-clients-9.9p1-7.el9.x86_64
+DEBUG util.py:463:  openssh-clients-9.9p1-8.el9.x86_64
 DEBUG util.py:463:  openldap-2.6.8-4.el9.x86_64
 DEBUG util.py:463:  curl-7.76.1-40.el9.x86_64
 DEBUG util.py:463:  rpm-libs-4.16.1.3-40.el9.x86_64
@@ -954,10 +954,10 @@ info-6.7-15.el9.x86_64
 json-c-0.14-11.el9.x86_64
 kernel-srpm-macros-1.0-14.el9.noarch
 keyutils-libs-1.6.3-1.el9.x86_64
-krb5-libs-1.21.1-8.el9.x86_64
+krb5-libs-1.21.1-9.el9.x86_64
 less-590-6.el9.x86_64
 libacl-2.3.1-4.el9.x86_64
-libarchive-3.5.3-8.el9.x86_64
+libarchive-3.5.3-9.el9.x86_64
 libattr-2.5.1-3.el9.x86_64
 libblkid-2.37.4-25.el9.x86_64
 libbrotli-1.0.9-9.el9.x86_64
@@ -1011,8 +1011,8 @@ ncurses-libs-6.2-12.20210508.el9.x86_64
 ocaml-srpm-macros-6-6.el9.noarch
 openblas-srpm-macros-2-11.el9.noarch
 openldap-2.6.8-4.el9.x86_64
-openssh-9.9p1-7.el9.x86_64
-openssh-clients-9.9p1-7.el9.x86_64
+openssh-9.9p1-8.el9.x86_64
+openssh-clients-9.9p1-8.el9.x86_64
 openssl-3.5.5-1.el9.x86_64
 openssl-fips-provider-3.5.5-1.el9.x86_64
 openssl-libs-3.5.5-1.el9.x86_64
@@ -1048,7 +1048,7 @@ perl-IO-Socket-SSL-2.073-2.el9.noarch
 perl-IPC-Open3-1.21-483.el9.noarch
 perl-MIME-Base64-3.16-4.el9.x86_64
 perl-Mozilla-CA-20200520-6.el9.noarch
-perl-Net-SSLeay-1.94-3.el9.x86_64
+perl-Net-SSLeay-1.94-4.el9.x86_64
 perl-POSIX-1.94-483.el9.x86_64
 perl-PathTools-3.78-461.el9.x86_64
 perl-Pod-Escapes-1.07-460.el9.noarch
@@ -1100,7 +1100,7 @@ sed-4.8-10.el9.x86_64
 setup-2.13.7-10.el9.noarch
 shadow-utils-4.9-16.el9.x86_64
 sqlite-libs-3.34.1-9.el9.x86_64
-systemd-libs-252-67.el9.x86_64
+systemd-libs-252-68.el9.x86_64
 tar-1.34-11.el9.x86_64
 tzdata-2026a-1.el9.noarch
 unzip-6.0-59.el9.x86_64
@@ -1112,35 +1112,35 @@ xz-libs-5.2.5-8.el9.x86_64
 zip-3.0-35.el9.x86_64
 zlib-1.2.11-40.el9.x86_64
 zstd-1.5.5-1.el9.x86_64
-DEBUG util.py:185:  kill orphans in chroot /var/lib/stream-mock/c9s-pesign-build-825735-820916/root
+DEBUG util.py:185:  kill orphans in chroot /var/lib/stream-mock/c9s-pesign-build-838526-821153/root
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 INFO buildroot.py:602:  Mock Version: 5.4
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/result
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/result
 INFO buildroot.py:284:  calling preinit hooks
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/usr/bin/lscpu'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
@@ -1173,103 +1173,103 @@ DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/bin/free'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:463:                total        used        free      shared  buff/cache   available
-DEBUG util.py:463:  Mem:      131997612     1357488   112680272     4096592    17959852   125294108
-DEBUG util.py:463:  Swap:       2097148      129424     1967724
+DEBUG util.py:463:  Mem:      131997612     1297996   111940164     4092716    18759452   125357480
+DEBUG util.py:463:  Swap:       2097148       92304     2004844
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/df', '-H', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root', '/var/cache/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/df', '-H', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root', '/var/cache/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:463:  Filesystem                   Size  Used Avail Use% Mounted on
-DEBUG util.py:463:  /dev/mapper/vg_x86--05-root  417G  7.3G  388G   2% /
-DEBUG util.py:463:  /dev/mapper/vg_x86--05-root  417G  7.3G  388G   2% /
+DEBUG util.py:463:  /dev/mapper/vg_x86--05-root  417G  6.2G  389G   2% /
+DEBUG util.py:463:  /dev/mapper/vg_x86--05-root  417G  6.2G  389G   2% /
 DEBUG util.py:610:  Child return code was: 0
 DEBUG buildroot.py:658:  create skeleton dirs
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/rpm
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/yum
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/dbus
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/log
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/cache/dnf
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/cache/yum
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/rpm
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/tmp
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/tmp/ccache
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/tmp
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf/vars
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/yum.repos.d
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/yum
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/mapper
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/mapper
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/lib/rpm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/lib/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/lib/dbus
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/log
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/cache/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/cache/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/rpm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/tmp
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/tmp/ccache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/tmp
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/dnf/vars
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/yum.repos.d
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/pts
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/shm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/mapper
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/mapper
 DEBUG buildroot.py:802:  kernel version == 4.18.0-553.27.1.el8_10.x86_64
-DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/fstab
-DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/yum/yum.conf
-DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf/dnf.conf
-DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/log/yum.log
-DEBUG buildroot.py:298:  rootdir = /var/lib/stream-mock/c9s-pesign-build-825735-820916/root
-DEBUG buildroot.py:299:  resultdir = /var/lib/stream-mock/c9s-pesign-build-825735-820916/result
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/fstab
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/yum/yum.conf
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/dnf/dnf.conf
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/log/yum.log
+DEBUG buildroot.py:298:  rootdir = /var/lib/stream-mock/c9s-pesign-build-838526-821153/root
+DEBUG buildroot.py:299:  resultdir = /var/lib/stream-mock/c9s-pesign-build-838526-821153/result
 DEBUG package_manager.py:56:  searching for 'dnf' package manager or alternatives
 INFO buildroot.py:175:  Package manager dnf detected and used (fallback)
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/mock
-DEBUG file_util.py:158:  Updating files in /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust with files from /etc/pki/ca-trust
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/./extracted
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/./source
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/java
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/pem
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/edk2
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/openssl
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/source/anchors
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/source/blacklist
-DEBUG file_util.py:158:  Updating files in /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source with files from /usr/share/pki/ca-trust-source
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source/./anchors
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source/./blacklist
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/mock
+DEBUG file_util.py:158:  Updating files in /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust with files from /etc/pki/ca-trust
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/./extracted
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/./source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/extracted/java
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/extracted/pem
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/extracted/edk2
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/extracted/openssl
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/source/anchors
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/source/blacklist
+DEBUG file_util.py:158:  Updating files in /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/usr/share/pki/ca-trust-source with files from /usr/share/pki/ca-trust-source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/usr/share/pki/ca-trust-source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/usr/share/pki/ca-trust-source/./anchors
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/usr/share/pki/ca-trust-source/./blacklist
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/dnf
 DEBUG package_manager.py:689:  configure DNF vars
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/proc', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:610:  Child return code was: 0
-DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys
-DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys
-DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/sys', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/proc', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/sys', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.m6kyvn0d', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys/fs/selinux
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/shm
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/pts
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['userdel', '-f', 'mockbuild', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.e4g_jxmv', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys/fs/selinux
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['userdel', '-f', 'mockbuild', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:461:  configuration error - unknown item 'HMAC_CRYPTO_ALGO' (notify administrator)
 DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
 DEBUG util.py:461:  Higher version of database is expected!
@@ -1283,7 +1283,7 @@ DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue
 DEBUG util.py:461:  Could not open available domains
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['groupdel', 'mock', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['groupdel', 'mock', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:461:  configuration error - unknown item 'HMAC_CRYPTO_ALGO' (notify administrator)
 DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
 DEBUG util.py:461:  Higher version of database is expected!
@@ -1297,7 +1297,7 @@ DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue
 DEBUG util.py:461:  Could not open available domains
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['groupadd', 'mock', '-g', '135', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['groupadd', 'mock', '-g', '135', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:461:  configuration error - unknown item 'HMAC_CRYPTO_ALGO' (notify administrator)
 DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
 DEBUG util.py:461:  Higher version of database is expected!
@@ -1311,7 +1311,7 @@ DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue
 DEBUG util.py:461:  Could not open available domains
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['useradd', 'mockbuild', '-o', '-u', '988', '-g', '135', '-N', '-d', '/builddir', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['useradd', 'mockbuild', '-o', '-u', '988', '-g', '135', '-N', '-d', '/builddir', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:461:  configuration error - unknown item 'HMAC_CRYPTO_ALGO' (notify administrator)
 DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
 DEBUG util.py:461:  Higher version of database is expected!
@@ -1327,41 +1327,41 @@ DEBUG util.py:461:  useradd: warning: the home directory already exists.
 DEBUG util.py:461:  Not copying any file from skel directory into it.
 DEBUG util.py:461:  Creating mailbox file: File exists
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/.initialized
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/.initialized
 INFO backend.py:391:  Running in chroot: ['uname -r']
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['uname -r'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell True
 DEBUG util.py:463:  4.18.0-553.27.1.el8_10.x86_64
 DEBUG util.py:610:  Child return code was: 0
-DEBUG util.py:185:  kill orphans in chroot /var/lib/stream-mock/c9s-pesign-build-825735-820916/root
+DEBUG util.py:185:  kill orphans in chroot /var/lib/stream-mock/c9s-pesign-build-838526-821153/root
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 INFO buildroot.py:602:  Mock Version: 5.4
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/result
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/result
 INFO buildroot.py:284:  calling preinit hooks
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/usr/bin/lscpu'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
@@ -1394,102 +1394,102 @@ DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['/bin/free'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:463:                total        used        free      shared  buff/cache   available
-DEBUG util.py:463:  Mem:      131997612     1432712   112598648     4096588    17966252   125218892
-DEBUG util.py:463:  Swap:       2097148      129424     1967724
+DEBUG util.py:463:  Mem:      131997612     1313556   111922084     4092716    18761972   125342424
+DEBUG util.py:463:  Swap:       2097148       92304     2004844
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/df', '-H', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root', '/var/cache/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/df', '-H', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root', '/var/cache/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:463:  Filesystem                   Size  Used Avail Use% Mounted on
-DEBUG util.py:463:  /dev/mapper/vg_x86--05-root  417G  7.3G  388G   2% /
-DEBUG util.py:463:  /dev/mapper/vg_x86--05-root  417G  7.3G  388G   2% /
+DEBUG util.py:463:  /dev/mapper/vg_x86--05-root  417G  6.2G  389G   2% /
+DEBUG util.py:463:  /dev/mapper/vg_x86--05-root  417G  6.2G  389G   2% /
 DEBUG util.py:610:  Child return code was: 0
 DEBUG buildroot.py:658:  create skeleton dirs
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/rpm
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/yum
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/dbus
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/log
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/cache/dnf
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/cache/yum
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/rpm
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/tmp
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/tmp/ccache
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/tmp
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf/vars
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/yum.repos.d
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/yum.repos.d
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/yum
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/mapper
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/mapper
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/lib/rpm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/lib/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/lib/dbus
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/log
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/cache/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/cache/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/rpm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/tmp
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/tmp/ccache
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/tmp
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/dnf/vars
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/yum.repos.d
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/yum.repos.d
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/yum
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/pts
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/shm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/mapper
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/mapper
 DEBUG buildroot.py:802:  kernel version == 4.18.0-553.27.1.el8_10.x86_64
-DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/fstab
-DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/yum/yum.conf
-DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf/dnf.conf
-DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/log/yum.log
-DEBUG buildroot.py:298:  rootdir = /var/lib/stream-mock/c9s-pesign-build-825735-820916/root
-DEBUG buildroot.py:299:  resultdir = /var/lib/stream-mock/c9s-pesign-build-825735-820916/result
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/fstab
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/yum/yum.conf
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/dnf/dnf.conf
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/log/yum.log
+DEBUG buildroot.py:298:  rootdir = /var/lib/stream-mock/c9s-pesign-build-838526-821153/root
+DEBUG buildroot.py:299:  resultdir = /var/lib/stream-mock/c9s-pesign-build-838526-821153/result
 DEBUG package_manager.py:56:  searching for 'dnf' package manager or alternatives
 INFO buildroot.py:175:  Package manager dnf detected and used (fallback)
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/mock
-DEBUG file_util.py:158:  Updating files in /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust with files from /etc/pki/ca-trust
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/./extracted
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/./source
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/java
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/pem
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/edk2
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/extracted/openssl
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/source/anchors
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/pki/ca-trust/source/blacklist
-DEBUG file_util.py:158:  Updating files in /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source with files from /usr/share/pki/ca-trust-source
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source/./anchors
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/usr/share/pki/ca-trust-source/./blacklist
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc/dnf
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/mock
+DEBUG file_util.py:158:  Updating files in /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust with files from /etc/pki/ca-trust
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/./extracted
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/./source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/extracted/java
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/extracted/pem
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/extracted/edk2
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/extracted/openssl
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/source/anchors
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/pki/ca-trust/source/blacklist
+DEBUG file_util.py:158:  Updating files in /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/usr/share/pki/ca-trust-source with files from /usr/share/pki/ca-trust-source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/usr/share/pki/ca-trust-source
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/usr/share/pki/ca-trust-source/./anchors
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/usr/share/pki/ca-trust-source/./blacklist
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc/dnf
 DEBUG package_manager.py:689:  configure DNF vars
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/proc', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:610:  Child return code was: 0
-DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys
-DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys
-DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/sys', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/proc', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/sys', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.yzgqq86u', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys/fs/selinux
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/shm
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/etc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/pts
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.ddgv5q82', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys/fs/selinux
+DEBUG util.py:636:  child environment: None
+DEBUG util.py:558:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:610:  Child return code was: 0
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/etc
 DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: ['rpm', '-q', 'rpm', 'rpm-sequoia', 'python3-dnf', 'python3-dnf-plugins-core', 'yum', 'yum-utils', 'dnf5', 'dnf5-plugins'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:463:  rpm-4.14.3-32.el8_10.x86_64
@@ -1507,23 +1507,23 @@ INFO package_manager.py:195:  Buildroot is handled by package management from ho
   python3-dnf-plugins-core-4.0.21-25.el8.noarch
   yum-4.7.0-21.el8_10.noarch
   yum-utils-4.0.21-25.el8.noarch
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/RPMS
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/RPMS
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/SPECS
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/SPECS
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/SRPMS
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/SRPMS
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/SOURCES
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/BUILD
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/BUILD
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/BUILDROOT
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/BUILDROOT
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/originals
-DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir/build/originals
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/builddir
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/RPMS
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/RPMS
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/SPECS
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/SPECS
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/SRPMS
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/SRPMS
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/SOURCES
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/BUILD
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/BUILD
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/BUILDROOT
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/BUILDROOT
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/originals
+DEBUG file_util.py:21:  created dir: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir/build/originals
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/builddir
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['userdel', '-f', 'mockbuild', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['userdel', '-f', 'mockbuild', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:461:  configuration error - unknown item 'HMAC_CRYPTO_ALGO' (notify administrator)
 DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
 DEBUG util.py:461:  Higher version of database is expected!
@@ -1537,7 +1537,7 @@ DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue
 DEBUG util.py:461:  Could not open available domains
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['groupdel', 'mock', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['groupdel', 'mock', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:461:  configuration error - unknown item 'HMAC_CRYPTO_ALGO' (notify administrator)
 DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
 DEBUG util.py:461:  Higher version of database is expected!
@@ -1551,7 +1551,7 @@ DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue
 DEBUG util.py:461:  Could not open available domains
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['groupadd', 'mock', '-g', '135', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['groupadd', 'mock', '-g', '135', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:461:  configuration error - unknown item 'HMAC_CRYPTO_ALGO' (notify administrator)
 DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
 DEBUG util.py:461:  Higher version of database is expected!
@@ -1565,7 +1565,7 @@ DEBUG util.py:461:  Removing cache files in /var/lib/sss/db should fix the issue
 DEBUG util.py:461:  Could not open available domains
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['useradd', 'mockbuild', '-o', '-u', '988', '-g', '135', '-N', '-d', '/builddir', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['useradd', 'mockbuild', '-o', '-u', '988', '-g', '135', '-N', '-d', '/builddir', '--prefix', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:461:  configuration error - unknown item 'HMAC_CRYPTO_ALGO' (notify administrator)
 DEBUG util.py:461:  [sss_cache] [sysdb_domain_cache_connect] (0x0010): DB version too old [0.22], expected [0.24] for domain implicit_files!
 DEBUG util.py:461:  Higher version of database is expected!
@@ -1581,19 +1581,19 @@ DEBUG util.py:461:  useradd: warning: the home directory already exists.
 DEBUG util.py:461:  Not copying any file from skel directory into it.
 DEBUG util.py:461:  Creating mailbox file: File exists
 DEBUG util.py:610:  Child return code was: 0
-DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/.initialized
+DEBUG file_util.py:30:  touching file: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/.initialized
 DEBUG buildroot.py:621:  removing 3 rpm db files
-DEBUG buildroot.py:626:  nuke_rpm_db: removing /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/rpm/__db.001
-DEBUG buildroot.py:626:  nuke_rpm_db: removing /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/rpm/__db.003
-DEBUG buildroot.py:626:  nuke_rpm_db: removing /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/var/lib/rpm/__db.002
+DEBUG buildroot.py:626:  nuke_rpm_db: removing /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/lib/rpm/__db.001
+DEBUG buildroot.py:626:  nuke_rpm_db: removing /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/lib/rpm/__db.003
+DEBUG buildroot.py:626:  nuke_rpm_db: removing /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/var/lib/rpm/__db.002
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/rpm', '-Uvh', '--nodeps', '/builddir/build/originals/shim-unsigned-x64-16.1-1.el9.centos.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/rpm', '-Uvh', '--nodeps', '/builddir/build/originals/shim-unsigned-x64-16.1-2.el9.centos.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:461:  warning: Found bdb_ro Packages database while attempting sqlite backend: using bdb_ro backend.
 DEBUG util.py:463:  Updating / installing...
-DEBUG util.py:463:  shim-unsigned-x64-16.1-1.el9.centos   ########################################
+DEBUG util.py:463:  shim-unsigned-x64-16.1-2.el9.centos   ########################################
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/rpm', '-qpl', '/builddir/build/originals/shim-unsigned-x64-16.1-1.el9.centos.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/rpm', '-qpl', '/builddir/build/originals/shim-unsigned-x64-16.1-2.el9.centos.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:461:  warning: Found bdb_ro Packages database while attempting sqlite backend: using bdb_ro backend.
 DEBUG util.py:463:  centos_vendordb.esl
 DEBUG util.py:463:  sbat.centos.csv
@@ -1606,10 +1606,10 @@ DEBUG util.py:636:  child environment: None
 DEBUG util.py:558:  Executing command: case $(rpmbuild --help) in *--noclean*) exit 0; esac; exit 1 with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell True
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-825735-820916/root/installation-homedir
-DEBUG package_manager.py:289:  ['/usr/bin/dnf-3', 'builddep', '--installroot', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=versionlock', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root//builddir/build/SRPMS/shim-unsigned-x64-16.1-1.el9.centos.src.rpm']
+DEBUG file_util.py:18:  ensuring that dir exists: /var/lib/stream-mock/c9s-pesign-build-838526-821153/root/installation-homedir
+DEBUG package_manager.py:289:  ['/usr/bin/dnf-3', 'builddep', '--installroot', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=versionlock', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root//builddir/build/SRPMS/shim-unsigned-x64-16.1-2.el9.centos.src.rpm']
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/usr/bin/dnf-3', 'builddep', '--installroot', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=versionlock', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root//builddir/build/SRPMS/shim-unsigned-x64-16.1-1.el9.centos.src.rpm', '--setopt=tsflags=nocontexts'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/usr/bin/dnf-3', 'builddep', '--installroot', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=versionlock', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root//builddir/build/SRPMS/shim-unsigned-x64-16.1-2.el9.centos.src.rpm', '--setopt=tsflags=nocontexts'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8'} and shell False
 DEBUG util.py:463:  Updating Subscription Management repositories.
 DEBUG util.py:463:  Unable to read consumer identity
 DEBUG util.py:463:  This system is not registered with an entitlement server. You can use subscription-manager to register.
@@ -1637,7 +1637,7 @@ DEBUG util.py:463:   gcc-plugin-annobin         x86_64   11.5.0-14.el9          
 DEBUG util.py:463:   git-core-doc               noarch   2.52.0-1.el9                 build   2.8 M
 DEBUG util.py:463:   glibc-devel                x86_64   2.34-262.el9                 build    36 k
 DEBUG util.py:463:   glibc-headers              x86_64   2.34-262.el9                 build   443 k
-DEBUG util.py:463:   kernel-headers             x86_64   5.14.0-691.el9               build   1.7 M
+DEBUG util.py:463:   kernel-headers             x86_64   5.14.0-697.el9               build   1.7 M
 DEBUG util.py:463:   libmpc                     x86_64   1.2.1-4.el9                  build    61 k
 DEBUG util.py:463:   libxcrypt-devel            x86_64   4.4.18-3.el9                 build    28 k
 DEBUG util.py:463:   libzstd-devel              x86_64   1.5.5-1.el9                  build    50 k
@@ -1667,7 +1667,7 @@ DEBUG util.py:463:  Total download size: 96 M
 DEBUG util.py:463:  Installed size: 314 M
 DEBUG util.py:463:  Downloading Packages:
 DEBUG util.py:463:  --------------------------------------------------------------------------------
-DEBUG util.py:463:  Total                                           139 MB/s |  96 MB     00:00     
+DEBUG util.py:463:  Total                                           151 MB/s |  96 MB     00:00     
 DEBUG util.py:463:  Running transaction check
 DEBUG util.py:463:  Transaction check succeeded.
 DEBUG util.py:463:  Running transaction test
@@ -1688,7 +1688,7 @@ DEBUG util.py:463:    git-2.52.0-1.el9.x86_64
 DEBUG util.py:463:    git-core-doc-2.52.0-1.el9.noarch                                              
 DEBUG util.py:463:    glibc-devel-2.34-262.el9.x86_64                                               
 DEBUG util.py:463:    glibc-headers-2.34-262.el9.x86_64                                             
-DEBUG util.py:463:    kernel-headers-5.14.0-691.el9.x86_64                                          
+DEBUG util.py:463:    kernel-headers-5.14.0-697.el9.x86_64                                          
 DEBUG util.py:463:    libmpc-1.2.1-4.el9.x86_64                                                     
 DEBUG util.py:463:    libxcrypt-devel-4.4.18-3.el9.x86_64                                           
 DEBUG util.py:463:    libzstd-devel-1.5.5-1.el9.x86_64                                              
@@ -1715,9 +1715,9 @@ DEBUG util.py:463:    python3-setuptools-wheel-53.0.0-15.el9.noarch
 DEBUG util.py:463:    zlib-devel-1.2.11-40.el9.x86_64                                               
 DEBUG util.py:463:  Complete!
 DEBUG util.py:610:  Child return code was: 0
-DEBUG util.py:185:  kill orphans in chroot /var/lib/stream-mock/c9s-pesign-build-825735-820916/root
+DEBUG util.py:185:  kill orphans in chroot /var/lib/stream-mock/c9s-pesign-build-838526-821153/root
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: rpm -qa --root '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root' --qf '%{nevra} %{buildtime} %{size} %{pkgid} installed\n' with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell True
+DEBUG util.py:558:  Executing command: rpm -qa --root '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root' --qf '%{nevra} %{buildtime} %{size} %{pkgid} installed\n' with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell True
 DEBUG util.py:463:  rust-srpm-macros-17-4.el9.noarch 1628569449 2447 73293207465a7961b68686701a149929 installed
 DEBUG util.py:463:  publicsuffix-list-dafsa-20210518-3.el9.noarch 1644512729 68815 a486e7e01444e3373cb6e6b9418720c7 installed
 DEBUG util.py:463:  perl-srpm-macros-1-41.el9.noarch 1628565179 862 6cccf4e84e8d8ff1bfd99a5b08bc765b installed
@@ -1809,7 +1809,7 @@ DEBUG util.py:463:  perl-Encode-4:3.08-462.el9.x86_64 1628580079 10235418 464fc0
 DEBUG util.py:463:  perl-interpreter-4:5.32.1-483.el9.x86_64 1752149197 120078 ac84979454d47e782540651037540d4f installed
 DEBUG util.py:463:  openssl-1:3.5.5-1.el9.x86_64 1769606865 2273485 8dce0d1d962d62ff277c60746556ab9f installed
 DEBUG util.py:463:  pam-1.5.1-28.el9.x86_64 1765380169 1907530 6ab988397be635ce9f910dd64a3039fa installed
-DEBUG util.py:463:  openssh-9.9p1-7.el9.x86_64 1774523332 1816016 6bbc7762d4edd6c1ed0b825459bd6f31 installed
+DEBUG util.py:463:  openssh-9.9p1-8.el9.x86_64 1776156920 1816016 876578eb7bb87d07eecb7a7055c8075f installed
 DEBUG util.py:463:  libevent-2.1.12-8.el9.x86_64 1724156211 928082 fbe29f4553f3028b488d425e5fe289cf installed
 DEBUG util.py:463:  libcurl-7.76.1-40.el9.x86_64 1769118258 667526 f264a793a5a9e1e5d41defe109785d88 installed
 DEBUG util.py:463:  rpm-4.16.1.3-40.el9.x86_64 1763740503 2750478 3f18c4a27af17fbd1834957ba93b80c2 installed
@@ -1835,7 +1835,7 @@ DEBUG util.py:463:  nss-tools-3.112.0-8.el9.x86_64 1769191169 1409993 9ff5477dbf
 DEBUG util.py:463:  perl-Error-1:0.17029-7.el9.noarch 1628563587 79692 fa94f57d63af0a9bcefb96b7ffb7845c installed
 DEBUG util.py:463:  perl-TermReadKey-2.38-11.el9.x86_64 1628565314 66298 171ef3bc811fe5f2f7f608bf4dc00be2 installed
 DEBUG util.py:463:  llvm-libs-21.1.8-2.el9.x86_64 1771404070 129096423 e93a4834645b5800fd9969a246cb28fb installed
-DEBUG util.py:463:  kernel-headers-5.14.0-691.el9.x86_64 1775491488 6673782 84cd8301a6d04d88953f44ea369ae800 installed
+DEBUG util.py:463:  kernel-headers-5.14.0-697.el9.x86_64 1776846950 6674463 5cfda7ede9f6a17fbcc2b240c45a0142 installed
 DEBUG util.py:463:  libxcrypt-devel-4.4.18-3.el9.x86_64 1628554484 31019 a63fe88a62be81dd45e3204f4612b177 installed
 DEBUG util.py:463:  gcc-11.5.0-14.el9.x86_64 1761941980 89923071 a8658029e22dc854490bf40db76e67a6 installed
 DEBUG util.py:463:  perl-Git-2.52.0-1.el9.noarch 1767977014 66985 8eb74717e2b5fa2ab643a31e9e318485 installed
@@ -1897,10 +1897,10 @@ DEBUG util.py:463:  libverto-0.3.2-3.el9.x86_64 1628554245 30365 49717f919565ae8
 DEBUG util.py:463:  pcre-8.44-4.el9.x86_64 1713357639 537728 b1ea83d87fcb8d3d5586d59af686cd44 installed
 DEBUG util.py:463:  openssl-fips-provider-1:3.5.5-1.el9.x86_64 1769606865 2591490 ff5659de49cb701b1a5c353e4f623af1 installed
 DEBUG util.py:463:  coreutils-8.32-40.el9.x86_64 1768484012 5899898 cd9bcf644625a62152ac38998d908d72 installed
-DEBUG util.py:463:  krb5-libs-1.21.1-8.el9.x86_64 1746462481 2503193 6f0028c2a03f5a5eebe6c6f13869bbb7 installed
-DEBUG util.py:463:  systemd-libs-252-67.el9.x86_64 1771867316 1814728 c9a1842cd706a7bc3ae2ee8e3f007ad2 installed
+DEBUG util.py:463:  krb5-libs-1.21.1-9.el9.x86_64 1772115236 2503186 d1c10a9570258f030f78bfea887950a5 installed
+DEBUG util.py:463:  systemd-libs-252-68.el9.x86_64 1775630531 1814736 b7ae7fef5d1509aeaca37a7e4a96c421 installed
 DEBUG util.py:463:  gzip-1.12-1.el9.x86_64 1650569887 377013 d100c7f7b4f855aeb3d8676072292699 installed
-DEBUG util.py:463:  libarchive-3.5.3-8.el9.x86_64 1774350843 906174 c3b947a0a08d77efe2dfa0945526b406 installed
+DEBUG util.py:463:  libarchive-3.5.3-9.el9.x86_64 1776159035 906150 bcb784e7462adc3e065feb3a3857464a installed
 DEBUG util.py:463:  cracklib-dicts-2.9.6-28.el9.x86_64 1768499133 9815154 459bd1893e276d8cb2b9e82041aa31a3 installed
 DEBUG util.py:463:  libfido2-1.13.0-2.el9.x86_64 1699456888 246862 89903d7667844d756da1228185335b93 installed
 DEBUG util.py:463:  cyrus-sasl-lib-2.1.27-21.el9.x86_64 1663006598 2380384 30b42ad4b265d75bc95db77acd35598e installed
@@ -1911,7 +1911,7 @@ DEBUG util.py:463:  perl-AutoLoader-0:5.74-483.el9.noarch 1752149200 22038 dae1b
 DEBUG util.py:463:  perl-URI-5.09-3.el9.noarch 1628565665 216915 b03fb11680933808dbfa5ed1bc6be6cf installed
 DEBUG util.py:463:  perl-IO-Socket-IP-0.41-5.el9.noarch 1628564340 100240 fc6b5e9831a4bbafe3036ad6c07bd0cd installed
 DEBUG util.py:463:  perl-File-Path-2.18-4.el9.noarch 1628563880 65333 e84dcd48672e858db99bf4abb31adefd installed
-DEBUG util.py:463:  perl-Net-SSLeay-1.94-3.el9.x86_64 1748252779 1520305 94a860edaedf3c9341f6eca13fad0ab7 installed
+DEBUG util.py:463:  perl-Net-SSLeay-1.94-4.el9.x86_64 1775646278 1518770 7e133cad04f8282fce200e505c3cf5fb installed
 DEBUG util.py:463:  perl-Text-Tabs+Wrap-2013.0523-460.el9.noarch 1629764707 24828 4ddd39d2645c0d3a03a7fc505a69d03f installed
 DEBUG util.py:463:  perl-Class-Struct-0:0.66-483.el9.noarch 1752149200 26954 bc3e4035f4704dd76df3136f492035ad installed
 DEBUG util.py:463:  perl-Term-ANSIColor-5.01-461.el9.noarch 1628565314 100303 0bdc632c00af8ea7fccf10c3a8aeb385 installed
@@ -1935,7 +1935,7 @@ DEBUG util.py:463:  perl-libs-4:5.32.1-483.el9.x86_64 1752149197 8953882 4134571
 DEBUG util.py:463:  kernel-srpm-macros-1.0-14.el9.noarch 1755009210 16948 1a89c0c43d6ff2fd6d4bde26e40f53ea installed
 DEBUG util.py:463:  libpwquality-1.4.4-8.el9.x86_64 1628552427 416376 0b62322fb735de082781bbefe37e1e6e installed
 DEBUG util.py:463:  util-linux-2.37.4-25.el9.x86_64 1768819805 11147007 573d7d2d6fd4f1783bb8ddadc9e5770c installed
-DEBUG util.py:463:  openssh-clients-9.9p1-7.el9.x86_64 1774523332 2816114 6301217a3ee7d98200ab771d4f4d5f4c installed
+DEBUG util.py:463:  openssh-clients-9.9p1-8.el9.x86_64 1776156920 2815994 83a61b7d7d37083d2d70ffcff6e9a37e installed
 DEBUG util.py:463:  openldap-2.6.8-4.el9.x86_64 1739381086 1087281 7a6fd8b2f946b5882a2bc52b669d746b installed
 DEBUG util.py:463:  curl-7.76.1-40.el9.x86_64 1769118258 684521 1b9fc0c312527b8abc733a674933d591 installed
 DEBUG util.py:463:  rpm-libs-4.16.1.3-40.el9.x86_64 1763740503 773076 116112c58fd065748145c65d373afad4 installed
@@ -1972,28 +1972,28 @@ DEBUG util.py:463:  centos-sb-certs-9.0-36.el9.noarch 1775596191 16375 2fbf708b6
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
 DEBUG backend.py:821:  Copying packages to result dir
-DEBUG util.py:185:  kill orphans in chroot /var/lib/stream-mock/c9s-pesign-build-825735-820916/root
+DEBUG util.py:185:  kill orphans in chroot /var/lib/stream-mock/c9s-pesign-build-838526-821153/root
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
 DEBUG util.py:636:  child environment: None
-DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-825735-820916/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:558:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/stream-mock/c9s-pesign-build-838526-821153/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:610:  Child return code was: 0
