@@ -258,8 +258,7 @@ This ensures that your new shim+GRUB2 can no longer chainload those older GRUB2 
 
 If this is your first application or you're using a new CA certificate, please say so here.
 *******************************************************************************
-We are reusing the CA2. We have bumped the grub2 SBAT level to grub,5 to prevent
-vulnerable binaries from booting.
+We are reusing the CA2 from a previous post GRUB CVE shim (summer 2025).
 
 *******************************************************************************
 ### Is the Dockerfile in your repository the recipe for reproducing the building of your shim binary?
@@ -275,8 +274,8 @@ yes: `podman build .` is all you need to do.
 ### Which files in this repo are the logs for your build?
 This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 *******************************************************************************
-build.log: https://kojihub.stream.rdu2.redhat.com/kojifiles/vol/koji02/packages/shim-unsigned-x64/16.1/1.el10.centos/data/logs/x86_64/build.log
-root.log: https://kojihub.stream.rdu2.redhat.com/kojifiles/vol/koji02/packages/shim-unsigned-x64/16.1/1.el10.centos/data/logs/x86_64/root.log
+build.log: https://kojihub.stream.centos.org/kojifiles/packages/shim-unsigned-x64/16.1/2.el10.centos/data/logs/x86_64/build.log
+root.log: https://kojihub.stream.centos.org/kojifiles/packages/shim-unsigned-x64/16.1/2.el10.centos/data/logs/x86_64/root.log
 
 *******************************************************************************
 ### What changes were made in the distro's secure boot chain since your SHIM was last signed?
