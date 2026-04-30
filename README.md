@@ -334,6 +334,14 @@ grub.centos,2,Red Hat,grub2,2.06-126.el9,mailto:secalert@redhat.com
 
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 kernel.centos,1,Red Hat,kernel-core,5.14.0-692.el9.x86_64,mailto:secalert@redhat.com
+
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+linux,1,Red Hat,linux,5.14.0-688.el9.x86_64,mailto:secalert@redhat.com
+linux.centos,1,Red Hat,linux,5.14.0-688.el9.x86_64,mailto:secalert@redhat.com
+kernel-uki-virt.centos,1,Red Hat,kernel-uki-virt,5.14.0-688.el9.x86_64,mailto:secalert@redhat.com
+kernel.centos,1,Red Hat,kernel-core,5.14.0-688.el9.x86_64,mailto:secalert@redhat.com
+systemd,1,The systemd Developers,systemd,252,https://systemd.io/
+systemd.centos,1,CentOS Stream,systemd,252-67.el9,mailto:secalert@redhat.com
 ```
 
 *******************************************************************************
@@ -366,7 +374,7 @@ https://kojihub.stream.rdu2.redhat.com/koji/buildinfo?buildID=100952
 ### If your shim launches any other components apart from your bootloader, please provide further details on what is launched.
 Hint: The most common case here will be a firmware updater like fwupd.
 *******************************************************************************
-fwupd, systemd-stub for UKIs
+systemd-stub for UKIs
 
 *******************************************************************************
 ### If your GRUB2 or systemd-boot launches any other binaries that are not the Linux kernel in SecureBoot mode, please provide further details on what is launched and how it enforces Secureboot lockdown.
