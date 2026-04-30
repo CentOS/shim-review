@@ -332,6 +332,12 @@ grub.rh,2,Red Hat,grub2,2.12-46.el10,mailto:secalert@redhat.com
 grub.centos,2,Red Hat,grub2,2.12-46.el10,mailto:secalert@redhat.com
 
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+systemd-stub,1,The systemd Developers,systemd,257,https://systemd.io/
+systemd-stub.centos,1,CentOS Stream,systemd,257-24.el10-g2897882,mailto:secalert@redhat.com
+kernel.centos,1,Red Hat,kernel-core,6.12.0-224.el10.x86_64,mailto:secalert@redhat.com
+kernel-uki-virt.centos,1,Red Hat,kernel-uki-virt,6.12.0-224.el10.x86_64,mailto:secalert@redhat.com
+
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 kernel.centos,1,Red Hat,kernel-core,6.12.0-221.el10.x86_64,mailto:secalert@redhat.com
 ```
 
@@ -365,7 +371,7 @@ https://kojihub.stream.rdu2.redhat.com/koji/buildinfo?buildID=105089
 ### If your shim launches any other components apart from your bootloader, please provide further details on what is launched.
 Hint: The most common case here will be a firmware updater like fwupd.
 *******************************************************************************
-fwupd, systemd-stub for UKIs
+systemd-stub for UKIs
 
 *******************************************************************************
 ### If your GRUB2 or systemd-boot launches any other binaries that are not the Linux kernel in SecureBoot mode, please provide further details on what is launched and how it enforces Secureboot lockdown.
