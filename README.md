@@ -258,8 +258,7 @@ This ensures that your new shim+GRUB2 can no longer chainload those older GRUB2 
 
 If this is your first application or you're using a new CA certificate, please say so here.
 *******************************************************************************
-We are reusing the CA2. We have bumped the grub2 SBAT level to grub,5 to prevent
-vulnerable binaries from booting.
+We are reusing the CA2 from a previous post GRUB CVE submission (summer 2025).
 
 *******************************************************************************
 ### Is the Dockerfile in your repository the recipe for reproducing the building of your shim binary?
